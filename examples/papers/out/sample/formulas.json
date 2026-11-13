@@ -1,0 +1,607 @@
+{
+ "schema": 1,
+ "source": "paper.md",
+ "formulas": [
+  {
+   "id": "f1",
+   "kind": "inline",
+   "latex": "S_t",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "Let $S_t$ be the price of a stock that follows a geometric Brownian motion with drift $\\mu$ and volatility $\\sigma$ .",
+   "symbols": [
+    "S_t"
+   ],
+   "offset": [
+    113,
+    118
+   ],
+   "raw": "$S_t$"
+  },
+  {
+   "id": "f2",
+   "kind": "inline",
+   "latex": "\\mu",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "Let $S_t$ be the price of a stock that follows a geometric Brownian motion with drift $\\mu$ and volatility $\\sigma$ .",
+   "symbols": [
+    "\\mu"
+   ],
+   "offset": [
+    197,
+    202
+   ],
+   "raw": "$\\mu$"
+  },
+  {
+   "id": "f3",
+   "kind": "inline",
+   "latex": "\\sigma",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "Let $S_t$ be the price of a stock that follows a geometric Brownian motion with drift $\\mu$ and volatility $\\sigma$ .",
+   "symbols": [
+    "\\sigma"
+   ],
+   "offset": [
+    220,
+    228
+   ],
+   "raw": "$\\sigma$"
+  },
+  {
+   "id": "f4",
+   "kind": "inline",
+   "latex": "K",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "The price of a European call option with strike $K$ and maturity $T$ is",
+   "symbols": [
+    "K"
+   ],
+   "offset": [
+    280,
+    283
+   ],
+   "raw": "$K$"
+  },
+  {
+   "id": "f5",
+   "kind": "inline",
+   "latex": "T",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "The price of a European call option with strike $K$ and maturity $T$ is",
+   "symbols": [
+    "T"
+   ],
+   "offset": [
+    299,
+    302
+   ],
+   "raw": "$T$"
+  },
+  {
+   "id": "f6",
+   "kind": "display",
+   "latex": "C = S_0 N(d_1) - K e^{-rT} N(d_2),",
+   "number": "1",
+   "numbers": [
+    "1"
+   ],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "The price of a European call option with strike $K$ and maturity $T$ is $$C = S_0 N(d_1) - K e^{-rT} N(d_2),$$ where $r$ denotes the risk-free interest rate and $N$ is the standard normal distribution function.",
+   "symbols": [
+    "C",
+    "S_0",
+    "N",
+    "d_1",
+    "K",
+    "r",
+    "T",
+    "d_2"
+   ],
+   "offset": [
+    308,
+    354
+   ],
+   "raw": "$$C = S_0 N(d_1) - K e^{-rT} N(d_2), \\tag{1}$$",
+   "python": "eq_1_C",
+   "parse_error": null
+  },
+  {
+   "id": "f7",
+   "kind": "inline",
+   "latex": "r",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "where $r$ denotes the risk-free interest rate and $N$ is the standard normal distribution function.",
+   "symbols": [
+    "r"
+   ],
+   "offset": [
+    363,
+    366
+   ],
+   "raw": "$r$"
+  },
+  {
+   "id": "f8",
+   "kind": "inline",
+   "latex": "N",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "where $r$ denotes the risk-free interest rate and $N$ is the standard normal distribution function.",
+   "symbols": [
+    "N"
+   ],
+   "offset": [
+    409,
+    412
+   ],
+   "raw": "$N$"
+  },
+  {
+   "id": "f9",
+   "kind": "display",
+   "latex": "d_1 = \\frac{\\ln(S_0/K) + (r + \\sigma^2/2)T}{\\sigma\\sqrt{T}}",
+   "number": "2",
+   "numbers": [
+    "2"
+   ],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "The two arguments are $$d_1 = \\frac{\\ln(S_0/K) + (r + \\sigma^2/2)T}{\\sigma\\sqrt{T}}$$ and",
+   "symbols": [
+    "d_1",
+    "S_0",
+    "K",
+    "r",
+    "\\sigma",
+    "T"
+   ],
+   "offset": [
+    483,
+    554
+   ],
+   "raw": "$$d_1 = \\frac{\\ln(S_0/K) + (r + \\sigma^2/2)T}{\\sigma\\sqrt{T}} \\tag{2}$$",
+   "python": "eq_2_d_1",
+   "parse_error": null
+  },
+  {
+   "id": "f10",
+   "kind": "display",
+   "latex": "d_2 = d_1 - \\sigma\\sqrt{T}.",
+   "number": "3",
+   "numbers": [
+    "3"
+   ],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "and $$d_2 = d_1 - \\sigma\\sqrt{T}.$$",
+   "symbols": [
+    "d_2",
+    "d_1",
+    "\\sigma",
+    "T"
+   ],
+   "offset": [
+    561,
+    600
+   ],
+   "raw": "$$d_2 = d_1 - \\sigma\\sqrt{T}. \\tag{3}$$",
+   "python": "eq_3_d_2",
+   "parse_error": null
+  },
+  {
+   "id": "f11",
+   "kind": "inline",
+   "latex": "P",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "Put-call parity links the call to the put price $P$ through $C - P = S_0 - K e^{-rT}$ .",
+   "symbols": [
+    "P"
+   ],
+   "offset": [
+    651,
+    654
+   ],
+   "raw": "$P$"
+  },
+  {
+   "id": "f12",
+   "kind": "inline",
+   "latex": "C - P = S_0 - K e^{-rT}",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "1 The Black–Scholes model",
+   "sentence": "Put-call parity links the call to the put price $P$ through $C - P = S_0 - K e^{-rT}$ .",
+   "symbols": [
+    "C",
+    "P",
+    "S_0",
+    "K",
+    "r",
+    "T"
+   ],
+   "offset": [
+    665,
+    690
+   ],
+   "raw": "$C - P = S_0 - K e^{-rT}$"
+  },
+  {
+   "id": "f13",
+   "kind": "display",
+   "latex": "\\mathbf{E}[R_i] = r_f + \\beta_i (\\mathbf{E}[R_m] - r_f),",
+   "number": "4",
+   "numbers": [
+    "4"
+   ],
+   "page": 1,
+   "section": "2 Risk and return",
+   "sentence": "The capital asset pricing model states that $$\\mathbf{E}[R_i] = r_f + \\beta_i (\\mathbf{E}[R_m] - r_f),$$ where $r_f$ is the risk-free rate and $\\beta_i$ is the sensitivity of asset $i$ to the market.",
+   "symbols": [
+    "\\mathbf{E}",
+    "R_i",
+    "r_f",
+    "\\beta_i",
+    "R_m"
+   ],
+   "offset": [
+    761,
+    829
+   ],
+   "raw": "$$\\mathbf{E}[R_i] = r_f + \\beta_i (\\mathbf{E}[R_m] - r_f), \\tag{4}$$",
+   "python": null,
+   "parse_error": "contains \\mathbf{E} (expectation, probability, set or series notation)"
+  },
+  {
+   "id": "f14",
+   "kind": "inline",
+   "latex": "r_f",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "2 Risk and return",
+   "sentence": "where $r_f$ is the risk-free rate and $\\beta_i$ is the sensitivity of asset $i$ to the market.",
+   "symbols": [
+    "r_f"
+   ],
+   "offset": [
+    838,
+    843
+   ],
+   "raw": "$r_f$"
+  },
+  {
+   "id": "f15",
+   "kind": "inline",
+   "latex": "\\beta_i",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "2 Risk and return",
+   "sentence": "where $r_f$ is the risk-free rate and $\\beta_i$ is the sensitivity of asset $i$ to the market.",
+   "symbols": [
+    "\\beta_i"
+   ],
+   "offset": [
+    872,
+    881
+   ],
+   "raw": "$\\beta_i$"
+  },
+  {
+   "id": "f16",
+   "kind": "inline",
+   "latex": "i",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "2 Risk and return",
+   "sentence": "where $r_f$ is the risk-free rate and $\\beta_i$ is the sensitivity of asset $i$ to the market.",
+   "symbols": [
+    "i"
+   ],
+   "offset": [
+    912,
+    915
+   ],
+   "raw": "$i$"
+  },
+  {
+   "id": "f17",
+   "kind": "inline",
+   "latex": "\\mu_p",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "2 Risk and return",
+   "sentence": "The Sharpe ratio of a portfolio with mean return $\\mu_p$ and volatility $\\sigma_p$ is",
+   "symbols": [
+    "\\mu_p"
+   ],
+   "offset": [
+    982,
+    989
+   ],
+   "raw": "$\\mu_p$"
+  },
+  {
+   "id": "f18",
+   "kind": "inline",
+   "latex": "\\sigma_p",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "2 Risk and return",
+   "sentence": "The Sharpe ratio of a portfolio with mean return $\\mu_p$ and volatility $\\sigma_p$ is",
+   "symbols": [
+    "\\sigma_p"
+   ],
+   "offset": [
+    1007,
+    1017
+   ],
+   "raw": "$\\sigma_p$"
+  },
+  {
+   "id": "f19",
+   "kind": "display",
+   "latex": "SR = \\frac{\\mu_p - r_f}{\\sigma_p}.",
+   "number": "5",
+   "numbers": [
+    "5"
+   ],
+   "page": 1,
+   "section": "2 Risk and return",
+   "sentence": "The Sharpe ratio of a portfolio with mean return $\\mu_p$ and volatility $\\sigma_p$ is $$SR = \\frac{\\mu_p - r_f}{\\sigma_p}.$$",
+   "symbols": [
+    "SR",
+    "\\mu_p",
+    "r_f",
+    "\\sigma_p"
+   ],
+   "offset": [
+    1023,
+    1069
+   ],
+   "raw": "$$SR = \\frac{\\mu_p - r_f}{\\sigma_p}. \\tag{5}$$",
+   "python": "eq_5_SR",
+   "parse_error": null
+  },
+  {
+   "id": "f20",
+   "kind": "inline",
+   "latex": "\\beta_i",
+   "number": null,
+   "numbers": [],
+   "page": 1,
+   "section": "2 Risk and return",
+   "sentence": "",
+   "symbols": [
+    "\\beta_i"
+   ],
+   "offset": [
+    1083,
+    1092
+   ],
+   "raw": "$\\beta_i$"
+  },
+  {
+   "id": "f21",
+   "kind": "inline",
+   "latex": "X",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "2 Risk and return",
+   "sentence": "A cash flow $X$ received at time $T$ is worth $Xe^{-rT}$ today.",
+   "symbols": [
+    "X"
+   ],
+   "offset": [
+    1340,
+    1343
+   ],
+   "raw": "$X$"
+  },
+  {
+   "id": "f22",
+   "kind": "inline",
+   "latex": "T",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "2 Risk and return",
+   "sentence": "A cash flow $X$ received at time $T$ is worth $Xe^{-rT}$ today.",
+   "symbols": [
+    "T"
+   ],
+   "offset": [
+    1363,
+    1366
+   ],
+   "raw": "$T$"
+  },
+  {
+   "id": "f23",
+   "kind": "inline",
+   "latex": "Xe^{-rT}",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "2 Risk and return",
+   "sentence": "A cash flow $X$ received at time $T$ is worth $Xe^{-rT}$ today.",
+   "symbols": [
+    "X",
+    "r",
+    "T"
+   ],
+   "offset": [
+    1378,
+    1388
+   ],
+   "raw": "$Xe^{-rT}$"
+  },
+  {
+   "id": "f24",
+   "kind": "inline",
+   "latex": "y",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "2 Risk and return",
+   "sentence": "With annual compounding at rate $y$ the present value of a bond paying coupon $c$ for $n$ years and face value $F$ is",
+   "symbols": [
+    "y"
+   ],
+   "offset": [
+    1430,
+    1433
+   ],
+   "raw": "$y$"
+  },
+  {
+   "id": "f25",
+   "kind": "inline",
+   "latex": "c",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "2 Risk and return",
+   "sentence": "With annual compounding at rate $y$ the present value of a bond paying coupon $c$ for $n$ years and face value $F$ is",
+   "symbols": [
+    "c"
+   ],
+   "offset": [
+    1478,
+    1481
+   ],
+   "raw": "$c$"
+  },
+  {
+   "id": "f26",
+   "kind": "inline",
+   "latex": "n",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "2 Risk and return",
+   "sentence": "With annual compounding at rate $y$ the present value of a bond paying coupon $c$ for $n$ years and face value $F$ is",
+   "symbols": [
+    "n"
+   ],
+   "offset": [
+    1488,
+    1491
+   ],
+   "raw": "$n$"
+  },
+  {
+   "id": "f27",
+   "kind": "inline",
+   "latex": "F",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "2 Risk and return",
+   "sentence": "With annual compounding at rate $y$ the present value of a bond paying coupon $c$ for $n$ years and face value $F$ is",
+   "symbols": [
+    "F"
+   ],
+   "offset": [
+    1515,
+    1518
+   ],
+   "raw": "$F$"
+  },
+  {
+   "id": "f28",
+   "kind": "display",
+   "latex": "PV = \\sum_{k=1}^n \\frac{c}{(1+y)^k} + \\frac{F}{(1+y)^n}.",
+   "number": "6",
+   "numbers": [
+    "6"
+   ],
+   "page": 2,
+   "section": "3 Discounting",
+   "sentence": "With annual compounding at rate $y$ the present value of a bond paying coupon $c$ for $n$ years and face value $F$ is $$PV = \\sum_{k=1}^n \\frac{c}{(1+y)^k} + \\frac{F}{(1+y)^n}.$$",
+   "symbols": [
+    "PV",
+    "k",
+    "n",
+    "c",
+    "y",
+    "F"
+   ],
+   "offset": [
+    1543,
+    1611
+   ],
+   "raw": "$$PV = \\sum_{k=1}^n \\frac{c}{(1+y)^k} + \\frac{F}{(1+y)^n}. \\tag{6}$$",
+   "python": "eq_6_PV",
+   "parse_error": null
+  },
+  {
+   "id": "f29",
+   "kind": "inline",
+   "latex": "\\ln(S_T/S_0)",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "3 Discounting",
+   "sentence": "The continuously compounded return over a period is $\\ln(S_T/S_0)$ , and its expected value under the risk-neutral measure is $(r - \\sigma^2/2)T$ .",
+   "symbols": [
+    "S_T",
+    "S_0"
+   ],
+   "offset": [
+    1666,
+    1680
+   ],
+   "raw": "$\\ln(S_T/S_0)$"
+  },
+  {
+   "id": "f30",
+   "kind": "inline",
+   "latex": "(r - \\sigma^2/2)T",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "3 Discounting",
+   "sentence": "The continuously compounded return over a period is $\\ln(S_T/S_0)$ , and its expected value under the risk-neutral measure is $(r - \\sigma^2/2)T$ .",
+   "symbols": [
+    "r",
+    "\\sigma",
+    "T"
+   ],
+   "offset": [
+    1741,
+    1760
+   ],
+   "raw": "$(r - \\sigma^2/2)T$"
+  }
+ ]
+}

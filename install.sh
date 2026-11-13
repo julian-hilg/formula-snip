@@ -30,6 +30,10 @@ if ! pipx list --short 2>/dev/null | grep -q '^marker-pdf '; then
   say "Installing marker-pdf (downloads PyTorch, takes a few minutes)"
   pipx install marker-pdf
 fi
+# sympy's LaTeX parser (used by `formula-snip convert` for formulas.py) needs this runtime
+if ! pipx runpip marker-pdf show antlr4-python3-runtime >/dev/null 2>&1; then
+  pipx inject marker-pdf "antlr4-python3-runtime==4.11.*"
+fi
 
 # 4. llama.cpp (marker's OCR model runs on llama-server)
 if ! command -v llama-server >/dev/null; then

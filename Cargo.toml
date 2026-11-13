@@ -10,6 +10,7 @@ categories = ["gui", "science"]
 
 [dependencies]
 anyhow = "1"
+rfd = { version = "0.15", default-features = false, features = ["gtk3"] }
 arboard = { version = "3", features = ["image-data"] }
 dirs = "5"
 eframe = "0.29"

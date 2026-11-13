@@ -7,6 +7,7 @@ mod backend;
 mod capture;
 mod config;
 mod hotkey;
+mod paper;
 mod reopen;
 
 use eframe::egui;
@@ -14,11 +15,19 @@ use std::path::PathBuf;
 
 const USAGE: &str = "formula-snip            start the tray app
 formula-snip --show     start with the panel open
-formula-snip FILE...    start and recognise these images
-formula-snip --image FILE...   print LaTeX for images and exit (no GUI)";
+formula-snip FILE...    start and recognise these images (a PDF opens in the Paper tab)
+formula-snip --image FILE...   print LaTeX for images and exit (no GUI)
+formula-snip convert PAPER.pdf --out DIR [--pages 1-12] [--mode ocr|fast|balanced] [--force] [--json]
+                        PDF -> DIR/paper.md, images/, meta.json, formulas.json, variables.json, formulas.py
+formula-snip formulas PAPER.md [--out DIR] [--json]
+                        formula registry for an existing Markdown file
+(formula-snip convert --help shows all options; docs/convert.md describes the output)";
 
 fn main() -> eframe::Result<()> {
     let args: Vec<String> = std::env::args().skip(1).collect();
+    if matches!(args.first().map(String::as_str), Some("convert" | "formulas")) {
+        std::process::exit(backend::run_tool(&config::Config::load().python_path(), &args));
+    }
     if args.iter().any(|a| a == "-h" || a == "--help") {
         println!("{USAGE}");
         return Ok(());

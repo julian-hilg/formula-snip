@@ -22,3 +22,14 @@ jobs:
           path: |
             target/release/formula-snip
             target/release/formula-snip.exe
+
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install sympy "antlr4-python3-runtime==4.11.*" pypdfium2
+      # the end-to-end conversion test skips itself without marker-pdf
+      - run: python -m unittest discover -s backend/tests -v

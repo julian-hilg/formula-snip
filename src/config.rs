@@ -15,6 +15,8 @@ pub struct Config {
     pub python: String,
     /// Open the panel after every snip.
     pub show_panel_after_snip: bool,
+    /// Where the Paper tab writes conversions. Empty = the Downloads folder.
+    pub papers_dir: String,
 }
 
 impl Default for Config {
@@ -23,6 +25,7 @@ impl Default for Config {
             hotkey: String::new(),
             python: String::new(),
             show_panel_after_snip: true,
+            papers_dir: String::new(),
         }
     }
 }
@@ -49,6 +52,14 @@ impl Config {
         if let Ok(s) = serde_json::to_string_pretty(self) {
             let _ = std::fs::write(path(), s);
         }
+    }
+
+    /// The folder conversions from the Paper tab go to.
+    pub fn papers_dir(&self) -> PathBuf {
+        if !self.papers_dir.trim().is_empty() {
+            return PathBuf::from(self.papers_dir.trim());
+        }
+        dirs::download_dir().or_else(dirs::home_dir).unwrap_or_else(std::env::temp_dir)
     }
 
     /// The configured Python, or the usual `pipx install marker-pdf` location, or `python3`.

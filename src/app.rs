@@ -1,6 +1,6 @@
 //! The panel UI (egui), the tray icon, the global shortcut and the background worker.
 
-use crate::{backend::Backend, capture, config::Config, hotkey};
+use crate::{backend::Backend, capture, config::Config, hotkey, paper};
 use eframe::egui::{self, Color32, ColorImage, RichText, TextureHandle, ViewportCommand};
 use global_hotkey::{GlobalHotKeyEvent, GlobalHotKeyManager, HotKeyState};
 use std::collections::HashMap;
@@ -229,6 +229,12 @@ fn build_tray(tx: Sender<Job>, ctx: egui::Context, flags: Flags) {
 
 // ---------------------------------------------------------------- the app
 
+#[derive(Clone, Copy, PartialEq)]
+enum Tab {
+    Snip,
+    Paper,
+}
+
 pub struct App {
     shared: Arc<Mutex<Shared>>,
     tx: Sender<Job>,
@@ -241,6 +247,11 @@ pub struct App {
     recording: bool,
     textures: HashMap<u64, TextureHandle>,
     copied: Option<(&'static str, Instant)>,
+    tab: Tab,
+    paper: Arc<Mutex<paper::State>>,
+    paper_pdf: Option<PathBuf>,
+    paper_pages: String,
+    paper_error: Option<String>,
 }
 
 impl App {
@@ -255,8 +266,13 @@ impl App {
             let (shared, ctx, show_after, flags, python) = (shared.clone(), ctx.clone(), show_after.clone(), flags.clone(), config.python_path());
             std::thread::spawn(move || worker(rx, shared, ctx, show_after, flags, python));
         }
+        let mut first_pdf = None;
         for p in open {
-            let _ = tx.send(Job::File(p));
+            if is_pdf(&p) {
+                first_pdf.get_or_insert(p);
+            } else {
+                let _ = tx.send(Job::File(p));
+            }
         }
         build_tray(tx.clone(), ctx.clone(), flags.clone());
         {
@@ -285,6 +301,11 @@ impl App {
             recording: false,
             textures: HashMap::new(),
             copied: None,
+            tab: if first_pdf.is_some() { Tab::Paper } else { Tab::Snip },
+            paper: Arc::new(Mutex::new(paper::State::default())),
+            paper_pdf: first_pdf,
+            paper_pages: String::new(),
+            paper_error: None,
         };
         app.register_hotkey();
         app
@@ -331,13 +352,131 @@ impl App {
 
     fn copy_button(&mut self, ui: &mut egui::Ui, label: &'static str, text: String) {
         let done = matches!(self.copied, Some((l, t)) if l == label && t.elapsed().as_secs_f32() < 1.2);
-        if ui.button(if done { "✔ Copied" } else { label }).clicked() {
+        if ui.button(if done { "Copied" } else { label }).clicked() {
             ui.ctx().copy_text(text);
             self.copied = Some((label, Instant::now()));
         }
         if done {
             ui.ctx().request_repaint_after(std::time::Duration::from_millis(300));
         }
+    }
+
+    /// The Paper tab: PDF -> Markdown + formula registry, via `formula-snip convert`.
+    fn paper_tab(&mut self, ui: &mut egui::Ui) {
+        let phase = self.paper.lock().unwrap().phase.clone();
+        let running = matches!(phase, paper::Phase::Running { .. } | paper::Phase::Cancelling);
+
+        if !running {
+            let name = self.paper_pdf.as_ref().and_then(|p| p.file_name()).map(|n| n.to_string_lossy().into_owned());
+            let title = name.clone().unwrap_or_else(|| "Drop a PDF here".into());
+            let sub = format!("{} up to {} pages, converted locally", if name.is_some() { "Ready to convert," } else { "or choose one," }, paper::MAX_PAGES);
+            drop_zone(ui, 90.0, &title, &sub);
+            ui.add_space(6.0);
+            egui::Grid::new("paper_form").num_columns(2).spacing([8.0, 6.0]).show(ui, |ui| {
+                ui.label("PDF:");
+                ui.horizontal(|ui| {
+                    if ui.button("Choose PDF …").clicked() {
+                        if let Some(p) = rfd::FileDialog::new().add_filter("PDF", &["pdf", "PDF"]).pick_file() {
+                            self.paper_pdf = Some(p);
+                            self.paper_error = None;
+                        }
+                    }
+                    if let Some(p) = &self.paper_pdf {
+                        ui.add(egui::Label::new(RichText::new(tilde(p)).weak()).truncate()).on_hover_text(p.display().to_string());
+                    }
+                });
+                ui.end_row();
+                ui.label("Pages:");
+                ui.horizontal(|ui| {
+                    ui.add(egui::TextEdit::singleline(&mut self.paper_pages).hint_text("all").desired_width(90.0));
+                    ui.weak("e.g. 1-12 or 1,3,5-7");
+                });
+                ui.end_row();
+                ui.label("Save to:");
+                ui.horizontal(|ui| {
+                    if ui.button("Change …").clicked() {
+                        if let Some(d) = rfd::FileDialog::new().set_directory(self.config.papers_dir()).pick_folder() {
+                            self.config.papers_dir = d.display().to_string();
+                            self.config.save();
+                        }
+                    }
+                    if !self.config.papers_dir.is_empty() && ui.button("Downloads").on_hover_text("Back to the default").clicked() {
+                        self.config.papers_dir.clear();
+                        self.config.save();
+                    }
+                    let dir = self.config.papers_dir();
+                    ui.add(egui::Label::new(RichText::new(tilde(&dir)).weak()).truncate()).on_hover_text(dir.display().to_string());
+                });
+                ui.end_row();
+            });
+            ui.add_space(6.0);
+            let can = self.paper_pdf.is_some();
+            if ui.add_enabled(can, egui::Button::new("Convert")).clicked() {
+                if let Some(pdf) = self.paper_pdf.clone() {
+                    let dir = self.config.papers_dir();
+                    let out = paper::out_dir(&dir, &pdf);
+                    let started = std::fs::create_dir_all(&dir).map_err(anyhow::Error::from).and_then(|_| {
+                        paper::start(&self.config.python_path(), &pdf, &out, &self.paper_pages, self.paper.clone(), ui.ctx().clone())
+                    });
+                    self.paper_error = started.err().map(|e| format!("{e:#}"));
+                }
+            }
+        }
+
+        ui.add_space(6.0);
+        match phase {
+            paper::Phase::Idle => {}
+            paper::Phase::Running { text, done, total } => {
+                ui.horizontal(|ui| {
+                    ui.spinner();
+                    ui.label(text);
+                });
+                if total > 0 {
+                    ui.add(egui::ProgressBar::new(done as f32 / total as f32).text(format!("{done} of {total} pages")));
+                }
+                if ui.button("Cancel").on_hover_text("Finished batches are kept: converting again resumes").clicked() {
+                    paper::cancel(&self.paper);
+                }
+            }
+            paper::Phase::Cancelling => {
+                ui.horizontal(|ui| {
+                    ui.spinner();
+                    ui.label("Stopping …");
+                });
+            }
+            paper::Phase::Done { out, summary, secs } => {
+                ui.label(RichText::new(format!("Done in {secs:.0} s")).strong());
+                for line in &summary {
+                    ui.label(line);
+                }
+                ui.add(egui::Label::new(RichText::new(tilde(&out)).weak()).truncate()).on_hover_text(out.display().to_string());
+                ui.horizontal(|ui| {
+                    if ui.button("Open folder").clicked() {
+                        paper::open(&out);
+                    }
+                    if ui.button("Open paper.md").clicked() {
+                        paper::open(&out.join("paper.md"));
+                    }
+                    self.copy_button(ui, "Copy path", out.display().to_string());
+                });
+            }
+            paper::Phase::Failed(msg) => {
+                ui.colored_label(Color32::RED, msg);
+                ui.weak(format!("Log: {}", tilde(&paper::log_path())));
+            }
+            paper::Phase::Cancelled => {
+                ui.weak("Cancelled. Finished batches are kept, so converting again continues where it stopped.");
+            }
+        }
+        if let Some(err) = &self.paper_error {
+            ui.colored_label(Color32::RED, err);
+        }
+        ui.add_space(4.0);
+        ui.weak(format!(
+            "Writes paper.md, images, formulas.json, variables.json and formulas.py into a folder named after the PDF. \
+             The panel takes up to {} pages per PDF; the command line (formula-snip convert) has no limit.",
+            paper::MAX_PAGES
+        ));
     }
 
     fn texture(&mut self, ctx: &egui::Context, e: &Entry) -> TextureHandle {
@@ -357,7 +496,14 @@ impl eframe::App for App {
         }
         for f in ctx.input(|i| i.raw.dropped_files.clone()) {
             if let Some(p) = f.path {
-                let _ = self.tx.send(Job::File(p));
+                if is_pdf(&p) {
+                    self.paper_pdf = Some(p);
+                    self.paper_error = None;
+                    self.tab = Tab::Paper;
+                } else {
+                    let _ = self.tx.send(Job::File(p));
+                    self.tab = Tab::Snip;
+                }
             }
         }
         if self.recording {
@@ -393,6 +539,15 @@ impl eframe::App for App {
                 ui.colored_label(Color32::RED, msg);
             }
             ui.horizontal(|ui| {
+                ui.selectable_value(&mut self.tab, Tab::Snip, "Snip");
+                ui.selectable_value(&mut self.tab, Tab::Paper, "Paper");
+            });
+            ui.separator();
+            if self.tab == Tab::Paper {
+                self.paper_tab(ui);
+                return;
+            }
+            ui.horizontal(|ui| {
                 let can = ocr == Ocr::Ready;
                 let busy = self.flags.busy.load(Ordering::Relaxed);
                 if ui.add_enabled(can && !busy, egui::Button::new("New Snip")).clicked() {
@@ -425,7 +580,7 @@ impl eframe::App for App {
                             });
                         }
                         Status::Failed(msg) => {
-                            ui.colored_label(Color32::RED, format!("⚠ {msg}"));
+                            ui.colored_label(Color32::RED, msg);
                         }
                         Status::Done => {
                             let latex = e.latex.clone();
@@ -490,8 +645,12 @@ impl eframe::App for App {
     }
 }
 
+fn is_pdf(p: &std::path::Path) -> bool {
+    p.extension().is_some_and(|e| e.eq_ignore_ascii_case("pdf"))
+}
+
 /// Show paths with `~` instead of the home folder.
-fn tilde(p: &std::path::Path) -> String {
+pub fn tilde(p: &std::path::Path) -> String {
     let s = p.display().to_string();
     match dirs::home_dir() {
         Some(h) if s.starts_with(&*h.to_string_lossy()) => format!("~{}", &s[h.to_string_lossy().len()..]),

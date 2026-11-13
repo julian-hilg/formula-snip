@@ -1,0 +1,1582 @@
+{
+ "schema": 1,
+ "source": "paper.md",
+ "variables": [
+  {
+   "symbol": "\\sigma",
+   "ident": "sigma",
+   "first": {
+    "formula": "f1",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f1",
+    "f7",
+    "f20",
+    "f34",
+    "f35",
+    "f47",
+    "f48",
+    "f49",
+    "f63",
+    "f65",
+    "f169",
+    "f260",
+    "f263",
+    "f266",
+    "f269",
+    "f277"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "C",
+   "ident": "C",
+   "first": {
+    "formula": "f2",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f2"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "D",
+   "ident": "D",
+   "first": {
+    "formula": "f2",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f2",
+    "f3",
+    "f11",
+    "f12",
+    "f44",
+    "f167",
+    "f192",
+    "f194",
+    "f196",
+    "f224",
+    "f244",
+    "f245",
+    "f254",
+    "f262",
+    "f265",
+    "f267",
+    "f270",
+    "f271",
+    "f273",
+    "f278"
+   ],
+   "definition": "the risk-free discount",
+   "definitions": [
+    {
+     "text": "the risk-free discount",
+     "pattern": "with",
+     "sentence": "For a normalized call price $c = C/D/F$ , with $D$ the risk-free discount, $F$ the forward, and moneyness $k = \\log K/F$ at strike $K$ , the general form is",
+     "page": 2,
+     "section": "1 Introduction"
+    }
+   ]
+  },
+  {
+   "symbol": "F",
+   "ident": "F",
+   "first": {
+    "formula": "f2",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f2",
+    "f4",
+    "f5",
+    "f40",
+    "f41",
+    "f44",
+    "f281"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "c",
+   "ident": "c",
+   "first": {
+    "formula": "f2",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f2",
+    "f7",
+    "f14",
+    "f35",
+    "f37",
+    "f40",
+    "f43",
+    "f55",
+    "f59",
+    "f65",
+    "f98",
+    "f100",
+    "f102",
+    "f107",
+    "f119",
+    "f121",
+    "f131",
+    "f139",
+    "f179",
+    "f182",
+    "f191",
+    "f202",
+    "f217",
+    "f221",
+    "f225",
+    "f236",
+    "f237",
+    "f238",
+    "f239",
+    "f240",
+    "f241",
+    "f243",
+    "f246",
+    "f248",
+    "f251",
+    "f252",
+    "f256",
+    "f257",
+    "f260",
+    "f263",
+    "f264",
+    "f269",
+    "f274",
+    "f277",
+    "f280",
+    "f285"
+   ],
+   "definition": "the call",
+   "definitions": [
+    {
+     "text": "the call",
+     "pattern": "apposition",
+     "sentence": "For $k < 0$ , the call $c$ is in the money.",
+     "page": 4,
+     "section": "2 Implied Volatility is a Quantile"
+    }
+   ]
+  },
+  {
+   "symbol": "K",
+   "ident": "K",
+   "first": {
+    "formula": "f5",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f5",
+    "f6",
+    "f40",
+    "f41",
+    "f67",
+    "f166",
+    "f185",
+    "f279",
+    "f280",
+    "f285"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "k",
+   "ident": "k",
+   "first": {
+    "formula": "f5",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f5",
+    "f7",
+    "f9",
+    "f14",
+    "f15",
+    "f17",
+    "f18",
+    "f19",
+    "f21",
+    "f22",
+    "f24",
+    "f25",
+    "f31",
+    "f33",
+    "f35",
+    "f36",
+    "f39",
+    "f41",
+    "f43",
+    "f45",
+    "f46",
+    "f47",
+    "f52",
+    "f55",
+    "f57",
+    "f58",
+    "f61",
+    "f62",
+    "f65",
+    "f66",
+    "f68",
+    "f70",
+    "f72",
+    "f73",
+    "f75",
+    "f80",
+    "f84",
+    "f86",
+    "f87",
+    "f88",
+    "f89",
+    "f91",
+    "f92",
+    "f93",
+    "f97",
+    "f98",
+    "f99",
+    "f100",
+    "f101",
+    "f105",
+    "f107",
+    "f115",
+    "f118",
+    "f119",
+    "f121",
+    "f129",
+    "f131",
+    "f137",
+    "f138",
+    "f142",
+    "f168",
+    "f172",
+    "f173",
+    "f176",
+    "f178",
+    "f182",
+    "f183",
+    "f184",
+    "f190",
+    "f191",
+    "f197",
+    "f198",
+    "f199",
+    "f201",
+    "f203",
+    "f204",
+    "f211",
+    "f212",
+    "f215",
+    "f216",
+    "f218",
+    "f220",
+    "f221",
+    "f222",
+    "f226",
+    "f230",
+    "f231",
+    "f232",
+    "f235",
+    "f237",
+    "f238",
+    "f241",
+    "f243",
+    "f256",
+    "f259",
+    "f260",
+    "f263",
+    "f264",
+    "f266",
+    "f268",
+    "f269",
+    "f272",
+    "f276",
+    "f283",
+    "f284"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "Q_k",
+   "ident": "Q_k",
+   "first": {
+    "formula": "f7",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f7",
+    "f8",
+    "f14"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "T",
+   "ident": "T",
+   "first": {
+    "formula": "f7",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f7",
+    "f20",
+    "f34",
+    "f35",
+    "f47",
+    "f49",
+    "f98",
+    "f99",
+    "f100",
+    "f101",
+    "f169",
+    "f258",
+    "f269",
+    "f277"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "Q_0",
+   "ident": "Q_0",
+   "first": {
+    "formula": "f10",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f10"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\Phi",
+   "ident": "Phi",
+   "first": {
+    "formula": "f10",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f10",
+    "f21",
+    "f23",
+    "f29",
+    "f58",
+    "f94",
+    "f142",
+    "f277"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{F}_{IG}",
+   "ident": "mathcal_F_IG",
+   "first": {
+    "formula": "f13",
+    "page": 2,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f13",
+    "f14",
+    "f26",
+    "f29",
+    "f33",
+    "f35",
+    "f47",
+    "f52"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\eta_k",
+   "ident": "eta_k",
+   "first": {
+    "formula": "f14",
+    "page": 3,
+    "section": "1 Introduction"
+   },
+   "formulas": [
+    "f14",
+    "f15",
+    "f16",
+    "f18",
+    "f42",
+    "f46",
+    "f47",
+    "f60",
+    "f61",
+    "f62"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "v",
+   "ident": "v",
+   "first": {
+    "formula": "f20",
+    "page": 4,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f20",
+    "f21",
+    "f23",
+    "f32",
+    "f33",
+    "f34",
+    "f58",
+    "f69",
+    "f70",
+    "f80",
+    "f126",
+    "f130",
+    "f131",
+    "f132",
+    "f133",
+    "f134",
+    "f135",
+    "f136",
+    "f137",
+    "f138",
+    "f139",
+    "f140",
+    "f141",
+    "f142",
+    "f156",
+    "f207",
+    "f217"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "c_{BS}",
+   "ident": "c_BS",
+   "first": {
+    "formula": "f21",
+    "page": 4,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f21",
+    "f23",
+    "f33",
+    "f70",
+    "f80",
+    "f87",
+    "f89",
+    "f90",
+    "f91",
+    "f92",
+    "f93",
+    "f100",
+    "f104",
+    "f108",
+    "f115",
+    "f131",
+    "f137",
+    "f139"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\lambda",
+   "ident": "lambda_",
+   "first": {
+    "formula": "f26",
+    "page": 4,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f26",
+    "f28",
+    "f29",
+    "f30"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mu",
+   "ident": "mu",
+   "first": {
+    "formula": "f26",
+    "page": 4,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f26",
+    "f27",
+    "f29",
+    "f31"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "x",
+   "ident": "x",
+   "first": {
+    "formula": "f29",
+    "page": 4,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f29",
+    "f32",
+    "f92",
+    "f93",
+    "f173",
+    "f183",
+    "f187",
+    "f189",
+    "f198",
+    "f212",
+    "f228",
+    "f230",
+    "f231",
+    "f232",
+    "f281",
+    "f282"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\tilde{c}",
+   "ident": "tilde_c",
+   "first": {
+    "formula": "f38",
+    "page": 4,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f38",
+    "f40",
+    "f56"
+   ],
+   "definition": "the out-of-the-money counterpart",
+   "definitions": [
+    {
+     "text": "the out-of-the-money counterpart",
+     "pattern": "apposition",
+     "sentence": "It is related to the out-of-the-money counterpart $\\tilde{c}$ of same volatility and log-moneyness $-k$ by",
+     "page": 4,
+     "section": "2 Implied Volatility is a Quantile"
+    }
+   ]
+  },
+  {
+   "symbol": "p",
+   "ident": "p",
+   "first": {
+    "formula": "f43",
+    "page": 5,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f43",
+    "f44",
+    "f46",
+    "f47"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "P",
+   "ident": "P",
+   "first": {
+    "formula": "f44",
+    "page": 5,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f44",
+    "f248",
+    "f249"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "w",
+   "ident": "w",
+   "first": {
+    "formula": "f49",
+    "page": 5,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f49",
+    "f52",
+    "f53",
+    "f55",
+    "f64",
+    "f69",
+    "f70",
+    "f76",
+    "f77",
+    "f78",
+    "f80",
+    "f82",
+    "f87",
+    "f88",
+    "f89",
+    "f90",
+    "f91",
+    "f92",
+    "f93",
+    "f96",
+    "f97",
+    "f99",
+    "f100",
+    "f101",
+    "f103",
+    "f105",
+    "f107",
+    "f108",
+    "f109",
+    "f115",
+    "f119",
+    "f127",
+    "f128",
+    "f130",
+    "f131",
+    "f139",
+    "f169",
+    "f179",
+    "f182",
+    "f191",
+    "f202",
+    "f205",
+    "f207",
+    "f217",
+    "f221",
+    "f223",
+    "f226",
+    "f227",
+    "f229",
+    "f230",
+    "f232",
+    "f235",
+    "f236",
+    "f237",
+    "f238",
+    "f239",
+    "f241",
+    "f242",
+    "f243",
+    "f253",
+    "f256",
+    "f269"
+   ],
+   "definition": "derivatives of the observed surfaces",
+   "definitions": [
+    {
+     "text": "derivatives of the observed surfaces",
+     "pattern": "where",
+     "sentence": "Subscripts on $c$ and $w$ denote derivatives of the observed surfaces.",
+     "page": 8,
+     "section": "3.3 No-arbitrage in Variance-Space"
+    }
+   ]
+  },
+  {
+   "symbol": "G",
+   "ident": "G",
+   "first": {
+    "formula": "f50",
+    "page": 5,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f50",
+    "f51",
+    "f54",
+    "f66",
+    "f70",
+    "f73",
+    "f80",
+    "f86",
+    "f222"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "I",
+   "ident": "I",
+   "first": {
+    "formula": "f50",
+    "page": 5,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f50",
+    "f51",
+    "f54",
+    "f66",
+    "f70",
+    "f73",
+    "f80",
+    "f86",
+    "f222"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{F}_{GIG}",
+   "ident": "mathcal_F_GIG",
+   "first": {
+    "formula": "f52",
+    "page": 5,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f52",
+    "f55",
+    "f118",
+    "f221"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{F}_{\\sqrt{Z_k/T}}",
+   "ident": "mathcal_F_sqrt_Z_k_T",
+   "first": {
+    "formula": "f65",
+    "page": 6,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f65"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "Z_k",
+   "ident": "Z_k",
+   "first": {
+    "formula": "f66",
+    "page": 6,
+    "section": "2 Implied Volatility is a Quantile"
+   },
+   "formulas": [
+    "f66",
+    "f79",
+    "f80",
+    "f81",
+    "f83",
+    "f86",
+    "f107",
+    "f222"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "Y_k",
+   "ident": "Y_k",
+   "first": {
+    "formula": "f70",
+    "page": 7,
+    "section": "3.1 Probabilistic Interpretation"
+   },
+   "formulas": [
+    "f70",
+    "f74",
+    "f79"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "B_t",
+   "ident": "B_t",
+   "first": {
+    "formula": "f71",
+    "page": 7,
+    "section": "3.1 Probabilistic Interpretation"
+   },
+   "formulas": [
+    "f71",
+    "f72"
+   ],
+   "definition": "standard Brownian motion and define",
+   "definitions": [
+    {
+     "text": "standard Brownian motion and define",
+     "pattern": "let",
+     "sentence": "Let $B_t$ denote standard Brownian motion and define",
+     "page": 7,
+     "section": "3.1 Probabilistic Interpretation"
+    }
+   ]
+  },
+  {
+   "symbol": "\\tau_k",
+   "ident": "tau_k",
+   "first": {
+    "formula": "f72",
+    "page": 7,
+    "section": "3.1 Probabilistic Interpretation"
+   },
+   "formulas": [
+    "f72",
+    "f73"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "t",
+   "ident": "t",
+   "first": {
+    "formula": "f72",
+    "page": 7,
+    "section": "3.1 Probabilistic Interpretation"
+   },
+   "formulas": [
+    "f72"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "f_k",
+   "ident": "f_k",
+   "first": {
+    "formula": "f85",
+    "page": 7,
+    "section": "3.2 Greeks in Variance-Space"
+   },
+   "formulas": [
+    "f85",
+    "f89",
+    "f90",
+    "f91",
+    "f92",
+    "f93",
+    "f108",
+    "f109",
+    "f120",
+    "f226"
+   ],
+   "definition": "the density of $Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$ , and write the primitive Black–Scholes price in variance coordinates as $c_{BS}(k, w)$",
+   "definitions": [
+    {
+     "text": "the density of $Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$ , and write the primitive Black–Scholes price in variance coordinates as $c_{BS}(k, w)$",
+     "pattern": "let",
+     "sentence": "Let $f_k$ denote the density of $Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$ , and write the primitive Black–Scholes price in variance coordinates as $c_{BS}(k, w)$ .",
+     "page": 7,
+     "section": "3.2 Greeks in Variance-Space"
+    }
+   ]
+  },
+  {
+   "symbol": "\\phi",
+   "ident": "phi",
+   "first": {
+    "formula": "f95",
+    "page": 8,
+    "section": "3.2 Greeks in Variance-Space"
+   },
+   "formulas": [
+    "f95",
+    "f137"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "T_1",
+   "ident": "T_1",
+   "first": {
+    "formula": "f106",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f106",
+    "f107"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "T_2",
+   "ident": "T_2",
+   "first": {
+    "formula": "f106",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f106",
+    "f107"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "c_T",
+   "ident": "c_T",
+   "first": {
+    "formula": "f108",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f108"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "w_T",
+   "ident": "w_T",
+   "first": {
+    "formula": "f108",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f108",
+    "f110"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "c_k",
+   "ident": "c_k",
+   "first": {
+    "formula": "f111",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f111",
+    "f114",
+    "f122",
+    "f123",
+    "f125"
+   ],
+   "definition": "the observed surface expresses",
+   "definitions": [
+    {
+     "text": "the observed surface expresses",
+     "pattern": "apposition",
+     "sentence": "In the forward direction, the chain rule along the observed surface expresses $c_k$ and $c_{kk}$ as combinations of the variance-Greeks and the smile derivatives $w_k, w_{kk}$ .",
+     "page": 9,
+     "section": "3.3 No-arbitrage in Variance-Space"
+    },
+    {
+     "text": "the observed call slope",
+     "pattern": "apposition",
+     "sentence": "Butterfly no-arbitrage is now a quadratic lower bound on the implied-variance curvature $w_{kk}$ in terms of the observed call slope $c_k$ , with coefficients given by partials of the variance quantile map.",
+     "page": 9,
+     "section": "3.3 No-arbitrage in Variance-Space"
+    }
+   ]
+  },
+  {
+   "symbol": "c_{kk}",
+   "ident": "c_kk",
+   "first": {
+    "formula": "f112",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f112",
+    "f114",
+    "f122"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "w_k",
+   "ident": "w_k",
+   "first": {
+    "formula": "f113",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f113",
+    "f115",
+    "f116"
+   ],
+   "definition": "the slope",
+   "definitions": [
+    {
+     "text": "the slope",
+     "pattern": "apposition",
+     "sentence": "Butterfly no-arbitrage is therefore a sign condition on the same Greek hierarchy from above—moneyness sensitivity, moneyness curvature, variance-vega, variance-vanna, variance-volga—combined with the slope $w_k$ and curvature $w_{kk}$ of the variance smile (cp.",
+     "page": 9,
+     "section": "3.3 No-arbitrage in Variance-Space"
+    }
+   ]
+  },
+  {
+   "symbol": "w_{kk}",
+   "ident": "w_kk",
+   "first": {
+    "formula": "f113",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f113",
+    "f115",
+    "f117",
+    "f123",
+    "f124"
+   ],
+   "definition": "the implied-variance curvature",
+   "definitions": [
+    {
+     "text": "the implied-variance curvature",
+     "pattern": "apposition",
+     "sentence": "Butterfly no-arbitrage is now a quadratic lower bound on the implied-variance curvature $w_{kk}$ in terms of the observed call slope $c_k$ , with coefficients given by partials of the variance quantile map.",
+     "page": 9,
+     "section": "3.3 No-arbitrage in Variance-Space"
+    }
+   ]
+  },
+  {
+   "symbol": "q",
+   "ident": "q",
+   "first": {
+    "formula": "f118",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f118",
+    "f119"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "u",
+   "ident": "u",
+   "first": {
+    "formula": "f118",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f118",
+    "f231",
+    "f232",
+    "f233"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "q_u",
+   "ident": "q_u",
+   "first": {
+    "formula": "f120",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f120",
+    "f123"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "q_{kk}",
+   "ident": "q_kk",
+   "first": {
+    "formula": "f123",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f123"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "q_{ku}",
+   "ident": "q_ku",
+   "first": {
+    "formula": "f123",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f123"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "q_{uu}",
+   "ident": "q_uu",
+   "first": {
+    "formula": "f123",
+    "page": 9,
+    "section": "3.3 No-arbitrage in Variance-Space"
+   },
+   "formulas": [
+    "f123"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\pi",
+   "ident": "pi",
+   "first": {
+    "formula": "f137",
+    "page": 10,
+    "section": "4 Numerical Evaluation"
+   },
+   "formulas": [
+    "f137",
+    "f173",
+    "f183",
+    "f198",
+    "f212",
+    "f226",
+    "f230",
+    "f235",
+    "f237"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\Delta",
+   "ident": "Delta",
+   "first": {
+    "formula": "f139",
+    "page": 10,
+    "section": "4 Numerical Evaluation"
+   },
+   "formulas": [
+    "f139",
+    "f141",
+    "f142",
+    "f157"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "n",
+   "ident": "n",
+   "first": {
+    "formula": "f164",
+    "page": 14,
+    "section": "References"
+   },
+   "formulas": [
+    "f164"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\chi",
+   "ident": "chi",
+   "first": {
+    "formula": "f165",
+    "page": 17,
+    "section": "A.1 Alternatives to the inverse Gaussian representation"
+   },
+   "formulas": [
+    "f165",
+    "f206"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\chi_1",
+   "ident": "chi_1",
+   "first": {
+    "formula": "f170",
+    "page": 17,
+    "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma"
+   },
+   "formulas": [
+    "f170",
+    "f175"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\Gamma",
+   "ident": "Gamma",
+   "first": {
+    "formula": "f171",
+    "page": 17,
+    "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma"
+   },
+   "formulas": [
+    "f171",
+    "f208"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{F}_{\\chi,k}",
+   "ident": "mathcal_F_chi_k",
+   "first": {
+    "formula": "f173",
+    "page": 17,
+    "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma"
+   },
+   "formulas": [
+    "f173",
+    "f174",
+    "f177",
+    "f179"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\omega",
+   "ident": "omega",
+   "first": {
+    "formula": "f173",
+    "page": 17,
+    "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma"
+   },
+   "formulas": [
+    "f173",
+    "f176",
+    "f181",
+    "f183",
+    "f186",
+    "f187",
+    "f198",
+    "f199",
+    "f203"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{F}_{\\Gamma,k}",
+   "ident": "mathcal_F_Gamma_k",
+   "first": {
+    "formula": "f182",
+    "page": 18,
+    "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma"
+   },
+   "formulas": [
+    "f182",
+    "f183"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\alpha",
+   "ident": "alpha",
+   "first": {
+    "formula": "f186",
+    "page": 18,
+    "section": "A.1.2 Incomplete Bessel- $K$"
+   },
+   "formulas": [
+    "f186",
+    "f187",
+    "f246",
+    "f247"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{B}_{\\alpha}",
+   "ident": "mathcal_B_alpha",
+   "first": {
+    "formula": "f186",
+    "page": 18,
+    "section": "A.1.2 Incomplete Bessel- $K$"
+   },
+   "formulas": [
+    "f186"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "z",
+   "ident": "z",
+   "first": {
+    "formula": "f186",
+    "page": 18,
+    "section": "A.1.2 Incomplete Bessel- $K$"
+   },
+   "formulas": [
+    "f186",
+    "f187"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{B}_{\\alpha,z}",
+   "ident": "mathcal_B_alpha_z",
+   "first": {
+    "formula": "f187",
+    "page": 18,
+    "section": "A.1.2 Incomplete Bessel- $K$"
+   },
+   "formulas": [
+    "f187",
+    "f188"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{B}_{1/2,k/2}",
+   "ident": "mathcal_B_1_2_k_2",
+   "first": {
+    "formula": "f191",
+    "page": 18,
+    "section": "A.1.2 Incomplete Bessel- $K$"
+   },
+   "formulas": [
+    "f191",
+    "f195"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{B}_{1/2}",
+   "ident": "mathcal_B_1_2",
+   "first": {
+    "formula": "f191",
+    "page": 18,
+    "section": "A.1.2 Incomplete Bessel- $K$"
+   },
+   "formulas": [
+    "f191"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "K_{1/2}",
+   "ident": "K_1_2",
+   "first": {
+    "formula": "f193",
+    "page": 18,
+    "section": "A.1.2 Incomplete Bessel- $K$"
+   },
+   "formulas": [
+    "f193"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{F}_{\\ell,k}",
+   "ident": "mathcal_F_ell_k",
+   "first": {
+    "formula": "f198",
+    "page": 19,
+    "section": "A.1.3 Tilted Levy"
+   },
+   "formulas": [
+    "f198",
+    "f200",
+    "f202"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{F}_{N,k}",
+   "ident": "mathcal_F_N_k",
+   "first": {
+    "formula": "f212",
+    "page": 19,
+    "section": "A.1.4 Tilted half-normal / Nakagami"
+   },
+   "formulas": [
+    "f212",
+    "f213",
+    "f217"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\nu",
+   "ident": "nu",
+   "first": {
+    "formula": "f212",
+    "page": 19,
+    "section": "A.1.4 Tilted half-normal / Nakagami"
+   },
+   "formulas": [
+    "f212",
+    "f215",
+    "f218",
+    "f219"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mathcal{F}_{GIG,k}",
+   "ident": "mathcal_F_GIG_k",
+   "first": {
+    "formula": "f230",
+    "page": 20,
+    "section": "A.2 The Quantile is not D-finite"
+   },
+   "formulas": [
+    "f230",
+    "f235",
+    "f236"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "A",
+   "ident": "A",
+   "first": {
+    "formula": "f233",
+    "page": 20,
+    "section": "A.2 The Quantile is not D-finite"
+   },
+   "formulas": [
+    "f233",
+    "f234"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "o",
+   "ident": "o",
+   "first": {
+    "formula": "f237",
+    "page": 21,
+    "section": "A.2 The Quantile is not D-finite"
+   },
+   "formulas": [
+    "f237"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "c_0",
+   "ident": "c_0",
+   "first": {
+    "formula": "f246",
+    "page": 21,
+    "section": "A.2 The Quantile is not D-finite"
+   },
+   "formulas": [
+    "f246",
+    "f248",
+    "f251"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "r",
+   "ident": "r",
+   "first": {
+    "formula": "f248",
+    "page": 21,
+    "section": "A.2 The Quantile is not D-finite"
+   },
+   "formulas": [
+    "f248",
+    "f250"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "S",
+   "ident": "S",
+   "first": {
+    "formula": "f279",
+    "page": 22,
+    "section": "A.2 The Quantile is not D-finite"
+   },
+   "formulas": [
+    "f279",
+    "f285"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "e",
+   "ident": "e",
+   "first": {
+    "formula": "f279",
+    "page": 22,
+    "section": "A.2 The Quantile is not D-finite"
+   },
+   "formulas": [
+    "f279",
+    "f280"
+   ],
+   "definition": null,
+   "definitions": []
+  }
+ ]
+}

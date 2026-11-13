@@ -27,7 +27,7 @@ What the installer does:
 1. **Linux only:** installs the GTK / tray libraries with `apt` if they're missing.
 2. Installs **Rust** (rustup) if `cargo` is missing.
 3. Installs **pipx**, plus Python on Windows, if missing.
-4. Installs **marker-pdf** with `pipx install marker-pdf`, which provides the local OCR model, and **llama.cpp**, whose `llama-server` runs it (`brew install llama.cpp`, or `winget install ggml.llamacpp` on Windows).
+4. Installs **marker-pdf** with `pipx install marker-pdf`, which provides the local OCR model, and **llama.cpp**, whose `llama-server` runs it (`brew install llama.cpp`, or `winget install ggml.llamacpp` on Windows). It also adds `antlr4-python3-runtime` 4.11 to marker's environment: sympy's LaTeX parser needs it for the `formulas.py` that `formula-snip convert` writes.
 5. Builds and installs the app:
    - macOS: `/Applications/FormulaSnip.app`
    - Linux: `~/.local/bin/formula-snip` and an app-menu entry
@@ -55,6 +55,7 @@ Paste this into your coding agent on the target computer:
 
 ```bash
 pipx install marker-pdf             # OCR model
+pipx inject marker-pdf "antlr4-python3-runtime==4.11.*"   # for formula-snip convert → formulas.py
 brew install llama.cpp              # runs the model (Windows: winget install ggml.llamacpp)
 cargo build --release               # app
 ./target/release/formula-snip --show

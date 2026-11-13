@@ -16,6 +16,7 @@ Runs fully offline on macOS, Windows and Linux, so it works as a local alternati
 - **Private.** OCR runs locally with the open-source [marker](https://github.com/datalab-to/marker) / surya model. Nothing leaves your computer.
 - **Text and math.** A single formula gives bare LaTeX. A paragraph gives text with `$inline$` and `\[display\]` math.
 - **Small and fast.** One native Rust binary (~5 MB). The model stays loaded in a background helper.
+- **Whole papers too.** The panel's *Paper* tab, or `formula-snip convert paper.pdf --out DIR`, turns a PDF into Markdown with `$…$` math and tables. It also writes a registry of every formula and symbol and a generated `formulas.py`. See [Papers](#papers).
 
 ## Install
 
@@ -88,6 +89,39 @@ e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3
 \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
 ```
 
+## Papers
+
+```bash
+formula-snip convert paper.pdf --out paper/            # whole PDF
+formula-snip convert paper.pdf --out paper/ --pages 1-12 --json
+formula-snip formulas notes.md --out notes/            # registry only, for any Markdown
+```
+
+In the panel, open the **Paper** tab, then drop a PDF or click *Choose PDF …*. A page range is optional. Click *Convert*.
+- The result goes into a folder named after the PDF, in *Downloads*. *Change …* picks another folder, and the choice is saved as `papers_dir` in `config.json`.
+- The panel takes up to 100 pages per PDF. Pages are converted in batches of 10 with a progress bar.
+- *Cancel* keeps the finished batches, so converting again continues where it stopped.
+- The command line has no page limit.
+
+`convert` runs marker's document pipeline locally (layout, tables, equations) and writes:
+
+| File | Contents |
+|---|---|
+| `paper.md` | Markdown with `$inline$` and `$$display$$` math, equation numbers as `\tag{N}`, Markdown tables, `<!-- page N -->` markers |
+| `images/` | the figures |
+| `formulas.json` | every formula: LaTeX, display/inline, page, section, equation number, the sentence around it |
+| `variables.json` | every symbol (`\sigma`, `r_f`, `\beta_i` …): where it first appears, which formulas use it, and its definition when the text says "where $r$ denotes …" or "let $S_t$ be …" |
+| `formulas.py` | one Python function per display formula sympy can parse. The rest are listed in `UNPARSED` with the reason. |
+| `meta.json` | source sha256, pages, marker version, timings, counts |
+
+There is no AI anywhere in the formula pipeline. The registry comes from fixed rules, the
+same input always gives the same output, and notation that could be misread is listed with
+a reason instead of being guessed. Results are cached by the PDF's sha256, so converting the
+same file again takes about a second (`--force` converts it again).
+
+[`examples/papers/`](examples/papers) has three converted papers. The output format and the
+`--json` progress events are specified in **[docs/convert.md](docs/convert.md)**.
+
 ## How it works
 
 ```
@@ -118,12 +152,14 @@ Settings are changed in the panel and saved to `config.json`:
 {
   "hotkey": "Ctrl+Alt+KeyM",
   "python": "",
-  "show_panel_after_snip": true
+  "show_panel_after_snip": true,
+  "papers_dir": ""
 }
 ```
 
 - `hotkey` uses physical key names (`KeyM`, `Digit1`, `F5`, `Semicolon` …), so it doesn't depend on keyboard layout. It's empty until you set one.
 - `python` is the interpreter that has `marker-pdf` installed. Leave it empty to auto-detect the pipx install.
+- `papers_dir` is where the Paper tab saves conversions. Leave it empty for the Downloads folder.
 
 ## Command line
 
@@ -131,7 +167,10 @@ Settings are changed in the panel and saved to `config.json`:
 formula-snip                      # tray app
 formula-snip --show               # open the panel on start
 formula-snip a.png b.png          # start and recognise these images
+formula-snip paper.pdf            # start with the PDF in the Paper tab
 formula-snip --image a.png        # print LaTeX and exit (no GUI)
+formula-snip convert a.pdf --out DIR [--pages 1-12] [--mode ocr|fast|balanced] [--batch-pages 10] [--max-pages N] [--force] [--json]
+formula-snip formulas a.md [--out DIR] [--json]
 ```
 
 ## Build from source
@@ -139,6 +178,7 @@ formula-snip --image a.png        # print LaTeX and exit (no GUI)
 ```bash
 cargo build --release             # target/release/formula-snip
 cargo test
+python3 -m unittest discover -s backend/tests   # registry tests (conversion test needs marker's Python)
 scripts/bundle-macos.sh           # macOS: target/FormulaSnip.app
 ```
 

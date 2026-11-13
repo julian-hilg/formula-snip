@@ -1,0 +1,82 @@
+{
+ "schema": 1,
+ "formula_snip": "0.1.0",
+ "created": "2026-11-10T05:51:11+00:00",
+ "source": {
+  "path": "examples/papers/schadner-2026-implied-volatility.pdf",
+  "name": "schadner-2026-implied-volatility.pdf",
+  "sha256": "9a7b2f4618280247ff134e61a87a6333c9f476c0b157899aaca20b7eea116056",
+  "page_count": 22
+ },
+ "pages": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22
+ ],
+ "converter": {
+  "name": "marker",
+  "version": "2.1.0",
+  "surya": "0.23.0",
+  "mode": "ocr",
+  "settings": {
+   "mode": "fast",
+   "force_ocr": true,
+   "ocr_full_page": false
+  }
+ },
+ "sympy": "1.14.0",
+ "cached": true,
+ "timings": {
+  "models_s": 4.22,
+  "convert_s": 100.46,
+  "formulas_s": 1.31,
+  "total_s": 1.35
+ },
+ "quality": {
+  "pages": 22,
+  "tables": 1,
+  "images": 1,
+  "display": 41,
+  "numbered": 37,
+  "inline": 244,
+  "inline_split": 0
+ },
+ "summary": {
+  "formulas": 285,
+  "display": 41,
+  "inline": 244,
+  "numbered": 37,
+  "parsed": 9,
+  "unparsed": 32,
+  "variables": 73,
+  "variables_defined": 9,
+  "variables_undefined": 64
+ },
+ "files": [
+  "paper.md",
+  "images/",
+  "formulas.json",
+  "variables.json",
+  "formulas.py",
+  "meta.json"
+ ]
+}

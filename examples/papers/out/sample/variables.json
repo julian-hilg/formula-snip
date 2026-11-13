@@ -1,0 +1,512 @@
+{
+ "schema": 1,
+ "source": "paper.md",
+ "variables": [
+  {
+   "symbol": "S_t",
+   "ident": "S_t",
+   "first": {
+    "formula": "f1",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f1"
+   ],
+   "definition": "the price of a stock that follows a geometric Brownian motion with drift $\\mu$ and volatility $\\sigma$",
+   "definitions": [
+    {
+     "text": "the price of a stock that follows a geometric Brownian motion with drift $\\mu$ and volatility $\\sigma$",
+     "pattern": "let",
+     "sentence": "Let $S_t$ be the price of a stock that follows a geometric Brownian motion with drift $\\mu$ and volatility $\\sigma$ .",
+     "page": 1,
+     "section": "1 The Black–Scholes model"
+    }
+   ]
+  },
+  {
+   "symbol": "\\mu",
+   "ident": "mu",
+   "first": {
+    "formula": "f2",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f2"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\sigma",
+   "ident": "sigma",
+   "first": {
+    "formula": "f3",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f3",
+    "f9",
+    "f10",
+    "f30"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "K",
+   "ident": "K",
+   "first": {
+    "formula": "f4",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f4",
+    "f6",
+    "f9",
+    "f12"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "T",
+   "ident": "T",
+   "first": {
+    "formula": "f5",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f5",
+    "f6",
+    "f9",
+    "f10",
+    "f12",
+    "f22",
+    "f23",
+    "f30"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "C",
+   "ident": "C",
+   "first": {
+    "formula": "f6",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f6",
+    "f12"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "N",
+   "ident": "N",
+   "first": {
+    "formula": "f6",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f6",
+    "f8"
+   ],
+   "definition": "the standard normal distribution function",
+   "definitions": [
+    {
+     "text": "the standard normal distribution function",
+     "pattern": "where",
+     "sentence": "where $r$ denotes the risk-free interest rate and $N$ is the standard normal distribution function.",
+     "page": 1,
+     "section": "1 The Black–Scholes model"
+    },
+    {
+     "text": "the risk-free interest rate",
+     "pattern": "apposition",
+     "sentence": "where $r$ denotes the risk-free interest rate and $N$ is the standard normal distribution function.",
+     "page": 1,
+     "section": "1 The Black–Scholes model"
+    }
+   ]
+  },
+  {
+   "symbol": "S_0",
+   "ident": "S_0",
+   "first": {
+    "formula": "f6",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f6",
+    "f9",
+    "f12",
+    "f29"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "d_1",
+   "ident": "d_1",
+   "first": {
+    "formula": "f6",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f6",
+    "f9",
+    "f10"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "d_2",
+   "ident": "d_2",
+   "first": {
+    "formula": "f6",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f6",
+    "f10"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "r",
+   "ident": "r",
+   "first": {
+    "formula": "f6",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f6",
+    "f7",
+    "f9",
+    "f12",
+    "f23",
+    "f30"
+   ],
+   "definition": "the risk-free interest rate",
+   "definitions": [
+    {
+     "text": "the risk-free interest rate",
+     "pattern": "where",
+     "sentence": "where $r$ denotes the risk-free interest rate and $N$ is the standard normal distribution function.",
+     "page": 1,
+     "section": "1 The Black–Scholes model"
+    }
+   ]
+  },
+  {
+   "symbol": "P",
+   "ident": "P",
+   "first": {
+    "formula": "f11",
+    "page": 1,
+    "section": "1 The Black–Scholes model"
+   },
+   "formulas": [
+    "f11",
+    "f12"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "R_i",
+   "ident": "R_i",
+   "first": {
+    "formula": "f13",
+    "page": 1,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f13"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "R_m",
+   "ident": "R_m",
+   "first": {
+    "formula": "f13",
+    "page": 1,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f13"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\beta_i",
+   "ident": "beta_i",
+   "first": {
+    "formula": "f13",
+    "page": 1,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f13",
+    "f15",
+    "f20"
+   ],
+   "definition": "the sensitivity of asset $i$ to the market",
+   "definitions": [
+    {
+     "text": "the sensitivity of asset $i$ to the market",
+     "pattern": "where",
+     "sentence": "where $r_f$ is the risk-free rate and $\\beta_i$ is the sensitivity of asset $i$ to the market.",
+     "page": 1,
+     "section": "2 Risk and return"
+    },
+    {
+     "text": "the risk-free rate",
+     "pattern": "apposition",
+     "sentence": "where $r_f$ is the risk-free rate and $\\beta_i$ is the sensitivity of asset $i$ to the market.",
+     "page": 1,
+     "section": "2 Risk and return"
+    }
+   ]
+  },
+  {
+   "symbol": "\\mathbf{E}",
+   "ident": "mathbf_E",
+   "first": {
+    "formula": "f13",
+    "page": 1,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f13"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "r_f",
+   "ident": "r_f",
+   "first": {
+    "formula": "f13",
+    "page": 1,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f13",
+    "f14",
+    "f19"
+   ],
+   "definition": "the risk-free rate",
+   "definitions": [
+    {
+     "text": "the risk-free rate",
+     "pattern": "where",
+     "sentence": "where $r_f$ is the risk-free rate and $\\beta_i$ is the sensitivity of asset $i$ to the market.",
+     "page": 1,
+     "section": "2 Risk and return"
+    }
+   ]
+  },
+  {
+   "symbol": "i",
+   "ident": "i",
+   "first": {
+    "formula": "f16",
+    "page": 1,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f16"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\mu_p",
+   "ident": "mu_p",
+   "first": {
+    "formula": "f17",
+    "page": 1,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f17",
+    "f19"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "\\sigma_p",
+   "ident": "sigma_p",
+   "first": {
+    "formula": "f18",
+    "page": 1,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f18",
+    "f19"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "SR",
+   "ident": "SR",
+   "first": {
+    "formula": "f19",
+    "page": 1,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f19"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "X",
+   "ident": "X",
+   "first": {
+    "formula": "f21",
+    "page": 2,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f21",
+    "f23"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "y",
+   "ident": "y",
+   "first": {
+    "formula": "f24",
+    "page": 2,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f24",
+    "f28"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "c",
+   "ident": "c",
+   "first": {
+    "formula": "f25",
+    "page": 2,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f25",
+    "f28"
+   ],
+   "definition": "coupon",
+   "definitions": [
+    {
+     "text": "coupon",
+     "pattern": "apposition",
+     "sentence": "With annual compounding at rate $y$ the present value of a bond paying coupon $c$ for $n$ years and face value $F$ is",
+     "page": 2,
+     "section": "2 Risk and return"
+    }
+   ]
+  },
+  {
+   "symbol": "n",
+   "ident": "n",
+   "first": {
+    "formula": "f26",
+    "page": 2,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f26",
+    "f28"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "F",
+   "ident": "F",
+   "first": {
+    "formula": "f27",
+    "page": 2,
+    "section": "2 Risk and return"
+   },
+   "formulas": [
+    "f27",
+    "f28"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "PV",
+   "ident": "PV",
+   "first": {
+    "formula": "f28",
+    "page": 2,
+    "section": "3 Discounting"
+   },
+   "formulas": [
+    "f28"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "k",
+   "ident": "k",
+   "first": {
+    "formula": "f28",
+    "page": 2,
+    "section": "3 Discounting"
+   },
+   "formulas": [
+    "f28"
+   ],
+   "definition": null,
+   "definitions": []
+  },
+  {
+   "symbol": "S_T",
+   "ident": "S_T",
+   "first": {
+    "formula": "f29",
+    "page": 2,
+    "section": "3 Discounting"
+   },
+   "formulas": [
+    "f29"
+   ],
+   "definition": null,
+   "definitions": []
+  }
+ ]
+}

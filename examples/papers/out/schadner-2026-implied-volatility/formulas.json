@@ -1,0 +1,5529 @@
+{
+ "schema": 1,
+ "source": "paper.md",
+ "formulas": [
+  {
+   "id": "f1",
+   "kind": "inline",
+   "latex": "\\sigma",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "Implied volatility $\\sigma$ is therefore not simply a model parameter but the standard coordinate in which option markets are measured, traded and managed.",
+   "symbols": [
+    "\\sigma"
+   ],
+   "offset": [
+    2168,
+    2176
+   ],
+   "raw": "$\\sigma$"
+  },
+  {
+   "id": "f2",
+   "kind": "inline",
+   "latex": "c = C/D/F",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "For a normalized call price $c = C/D/F$ , with $D$ the risk-free discount, $F$ the forward, and moneyness $k = \\log K/F$ at strike $K$ , the general form is",
+   "symbols": [
+    "c",
+    "C",
+    "D",
+    "F"
+   ],
+   "offset": [
+    2419,
+    2430
+   ],
+   "raw": "$c = C/D/F$"
+  },
+  {
+   "id": "f3",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "For a normalized call price $c = C/D/F$ , with $D$ the risk-free discount, $F$ the forward, and moneyness $k = \\log K/F$ at strike $K$ , the general form is",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    2439,
+    2442
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f4",
+   "kind": "inline",
+   "latex": "F",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "For a normalized call price $c = C/D/F$ , with $D$ the risk-free discount, $F$ the forward, and moneyness $k = \\log K/F$ at strike $K$ , the general form is",
+   "symbols": [
+    "F"
+   ],
+   "offset": [
+    2469,
+    2472
+   ],
+   "raw": "$F$"
+  },
+  {
+   "id": "f5",
+   "kind": "inline",
+   "latex": "k = \\log K/F",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "For a normalized call price $c = C/D/F$ , with $D$ the risk-free discount, $F$ the forward, and moneyness $k = \\log K/F$ at strike $K$ , the general form is",
+   "symbols": [
+    "k",
+    "K",
+    "F"
+   ],
+   "offset": [
+    2502,
+    2516
+   ],
+   "raw": "$k = \\log K/F$"
+  },
+  {
+   "id": "f6",
+   "kind": "inline",
+   "latex": "K",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "For a normalized call price $c = C/D/F$ , with $D$ the risk-free discount, $F$ the forward, and moneyness $k = \\log K/F$ at strike $K$ , the general form is",
+   "symbols": [
+    "K"
+   ],
+   "offset": [
+    2529,
+    2532
+   ],
+   "raw": "$K$"
+  },
+  {
+   "id": "f7",
+   "kind": "display",
+   "latex": "\\sigma(k, c) = \\frac{2}{\\sqrt{T}} Q_k^{-1} \\left( \\frac{1+c}{2} \\right).",
+   "number": "1",
+   "numbers": [
+    "1"
+   ],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "For a normalized call price $c = C/D/F$ , with $D$ the risk-free discount, $F$ the forward, and moneyness $k = \\log K/F$ at strike $K$ , the general form is $$\\sigma(k, c) = \\frac{2}{\\sqrt{T}} Q_k^{-1} \\left( \\frac{1+c}{2} \\right).$$",
+   "symbols": [
+    "\\sigma",
+    "k",
+    "c",
+    "T",
+    "Q_k"
+   ],
+   "offset": [
+    2556,
+    2640
+   ],
+   "raw": "$$\\sigma(k, c) = \\frac{2}{\\sqrt{T}} Q_k^{-1} \\left( \\frac{1+c}{2} \\right). \\tag{1}$$",
+   "python": "eq_1_sigma",
+   "parse_error": null
+  },
+  {
+   "id": "f8",
+   "kind": "inline",
+   "latex": "Q_k^{-1}(\\cdot)",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "The inverse function $Q_k^{-1}(\\cdot)$ is explicitly known for the at-the-forward strike $k = 0$ as the simple normal quantile, $Q_0^{-1}(\\cdot) = \\Phi^{-1}(\\cdot)$ , but its general form for all strikes has remained an unsolved puzzle.",
+   "symbols": [
+    "Q_k"
+   ],
+   "offset": [
+    2664,
+    2681
+   ],
+   "raw": "$Q_k^{-1}(\\cdot)$"
+  },
+  {
+   "id": "f9",
+   "kind": "inline",
+   "latex": "k = 0",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "The inverse function $Q_k^{-1}(\\cdot)$ is explicitly known for the at-the-forward strike $k = 0$ as the simple normal quantile, $Q_0^{-1}(\\cdot) = \\Phi^{-1}(\\cdot)$ , but its general form for all strikes has remained an unsolved puzzle.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    2734,
+    2741
+   ],
+   "raw": "$k = 0$"
+  },
+  {
+   "id": "f10",
+   "kind": "inline",
+   "latex": "Q_0^{-1}(\\cdot) = \\Phi^{-1}(\\cdot)",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "The inverse function $Q_k^{-1}(\\cdot)$ is explicitly known for the at-the-forward strike $k = 0$ as the simple normal quantile, $Q_0^{-1}(\\cdot) = \\Phi^{-1}(\\cdot)$ , but its general form for all strikes has remained an unsolved puzzle.",
+   "symbols": [
+    "Q_0",
+    "\\Phi"
+   ],
+   "offset": [
+    2775,
+    2811
+   ],
+   "raw": "$Q_0^{-1}(\\cdot) = \\Phi^{-1}(\\cdot)$"
+  },
+  {
+   "id": "f11",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "Beyond these constructive strands, Gerhold (2012) showed that implied volatility must be some* non- $D$ -finite function, ruling out a broad class of closed-form representations.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    3750,
+    3753
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f12",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "This paper identifies which* non- $D$ -finite function it is.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    3864,
+    3867
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f13",
+   "kind": "inline",
+   "latex": "\\mathcal{F}_{IG}^{-1}",
+   "number": null,
+   "numbers": [],
+   "page": 2,
+   "section": "1 Introduction",
+   "sentence": "Let $\\mathcal{F}_{IG}^{-1}$ denote the quantile function of the inverse Gaussian distribution, the core insight",
+   "symbols": [
+    "\\mathcal{F}_{IG}"
+   ],
+   "offset": [
+    3897,
+    3920
+   ],
+   "raw": "$\\mathcal{F}_{IG}^{-1}$"
+  },
+  {
+   "id": "f14",
+   "kind": "display",
+   "latex": "Q_k^{-1} \\left( \\frac{1+c}{2} \\right) = \\frac{1}{\\sqrt{\\mathcal{F}_{IG}^{-1} \\left( \\frac{1-c}{\\eta_k}, \\frac{2}{|k|}, 1 \\right)}},",
+   "number": "2",
+   "numbers": [
+    "2"
+   ],
+   "page": 3,
+   "section": "1 Introduction",
+   "sentence": "is $$Q_k^{-1} \\left( \\frac{1+c}{2} \\right) = \\frac{1}{\\sqrt{\\mathcal{F}_{IG}^{-1} \\left( \\frac{1-c}{\\eta_k}, \\frac{2}{|k|}, 1 \\right)}},$$ with $\\eta_k = \\min(1, e^k)$ marking whether the option is out-of-the-money ( $\\eta_k = 1$ for $k \\geq 0$ ) or in-the-money ( $\\eta_k = e^k$ for $k < 0$ ).",
+   "symbols": [
+    "Q_k",
+    "c",
+    "\\mathcal{F}_{IG}",
+    "\\eta_k",
+    "k"
+   ],
+   "offset": [
+    4028,
+    4171
+   ],
+   "raw": "$$Q_k^{-1} \\left( \\frac{1+c}{2} \\right) = \\frac{1}{\\sqrt{\\mathcal{F}_{IG}^{-1} \\left( \\frac{1-c}{\\eta_k}, \\frac{2}{|k|}, 1 \\right)}}, \\tag{2}$$",
+   "python": null,
+   "parse_error": "Q_k^{-1} \\left(…) is ambiguous: power of a function or product"
+  },
+  {
+   "id": "f15",
+   "kind": "inline",
+   "latex": "\\eta_k = \\min(1, e^k)",
+   "number": null,
+   "numbers": [],
+   "page": 3,
+   "section": "1 Introduction",
+   "sentence": "with $\\eta_k = \\min(1, e^k)$ marking whether the option is out-of-the-money ( $\\eta_k = 1$ for $k \\geq 0$ ) or in-the-money ( $\\eta_k = e^k$ for $k < 0$ ).",
+   "symbols": [
+    "\\eta_k",
+    "k"
+   ],
+   "offset": [
+    4179,
+    4202
+   ],
+   "raw": "$\\eta_k = \\min(1, e^k)$"
+  },
+  {
+   "id": "f16",
+   "kind": "inline",
+   "latex": "\\eta_k = 1",
+   "number": null,
+   "numbers": [],
+   "page": 3,
+   "section": "1 Introduction",
+   "sentence": "with $\\eta_k = \\min(1, e^k)$ marking whether the option is out-of-the-money ( $\\eta_k = 1$ for $k \\geq 0$ ) or in-the-money ( $\\eta_k = e^k$ for $k < 0$ ).",
+   "symbols": [
+    "\\eta_k"
+   ],
+   "offset": [
+    4253,
+    4265
+   ],
+   "raw": "$\\eta_k = 1$"
+  },
+  {
+   "id": "f17",
+   "kind": "inline",
+   "latex": "k \\geq 0",
+   "number": null,
+   "numbers": [],
+   "page": 3,
+   "section": "1 Introduction",
+   "sentence": "with $\\eta_k = \\min(1, e^k)$ marking whether the option is out-of-the-money ( $\\eta_k = 1$ for $k \\geq 0$ ) or in-the-money ( $\\eta_k = e^k$ for $k < 0$ ).",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    4272,
+    4282
+   ],
+   "raw": "$k \\geq 0$"
+  },
+  {
+   "id": "f18",
+   "kind": "inline",
+   "latex": "\\eta_k = e^k",
+   "number": null,
+   "numbers": [],
+   "page": 3,
+   "section": "1 Introduction",
+   "sentence": "with $\\eta_k = \\min(1, e^k)$ marking whether the option is out-of-the-money ( $\\eta_k = 1$ for $k \\geq 0$ ) or in-the-money ( $\\eta_k = e^k$ for $k < 0$ ).",
+   "symbols": [
+    "\\eta_k",
+    "k"
+   ],
+   "offset": [
+    4303,
+    4317
+   ],
+   "raw": "$\\eta_k = e^k$"
+  },
+  {
+   "id": "f19",
+   "kind": "inline",
+   "latex": "k < 0",
+   "number": null,
+   "numbers": [],
+   "page": 3,
+   "section": "1 Introduction",
+   "sentence": "with $\\eta_k = \\min(1, e^k)$ marking whether the option is out-of-the-money ( $\\eta_k = 1$ for $k \\geq 0$ ) or in-the-money ( $\\eta_k = e^k$ for $k < 0$ ).",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    4324,
+    4331
+   ],
+   "raw": "$k < 0$"
+  },
+  {
+   "id": "f20",
+   "kind": "inline",
+   "latex": "v = \\sigma\\sqrt{T}",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Let $v = \\sigma\\sqrt{T}$ be the total implied volatility.",
+   "symbols": [
+    "v",
+    "\\sigma",
+    "T"
+   ],
+   "offset": [
+    6475,
+    6495
+   ],
+   "raw": "$v = \\sigma\\sqrt{T}$"
+  },
+  {
+   "id": "f21",
+   "kind": "display",
+   "latex": "c_{BS}(k, v) = \\Phi\\left(-\\frac{k}{v} + \\frac{v}{2}\\right) - e^k \\Phi\\left(-\\frac{k}{v} - \\frac{v}{2}\\right).",
+   "number": "3",
+   "numbers": [
+    "3"
+   ],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "The normalized Black–Scholes European call price is $$c_{BS}(k, v) = \\Phi\\left(-\\frac{k}{v} + \\frac{v}{2}\\right) - e^k \\Phi\\left(-\\frac{k}{v} - \\frac{v}{2}\\right).$$",
+   "symbols": [
+    "c_{BS}",
+    "k",
+    "v",
+    "\\Phi"
+   ],
+   "offset": [
+    6583,
+    6704
+   ],
+   "raw": "$$c_{BS}(k, v) = \\Phi\\left(-\\frac{k}{v} + \\frac{v}{2}\\right) - e^k \\Phi\\left(-\\frac{k}{v} - \\frac{v}{2}\\right). \\tag{3}$$",
+   "python": "eq_3_c_BS",
+   "parse_error": null
+  },
+  {
+   "id": "f22",
+   "kind": "inline",
+   "latex": "k = 0",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "The case $k = 0$ collapses to $c_{BS}(0, v) = 2\\Phi(v/2) - 1$ , hence the known solution for at-the-forward.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    6716,
+    6723
+   ],
+   "raw": "$k = 0$"
+  },
+  {
+   "id": "f23",
+   "kind": "inline",
+   "latex": "c_{BS}(0, v) = 2\\Phi(v/2) - 1",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "The case $k = 0$ collapses to $c_{BS}(0, v) = 2\\Phi(v/2) - 1$ , hence the known solution for at-the-forward.",
+   "symbols": [
+    "c_{BS}",
+    "v",
+    "\\Phi"
+   ],
+   "offset": [
+    6739,
+    6770
+   ],
+   "raw": "$c_{BS}(0, v) = 2\\Phi(v/2) - 1$"
+  },
+  {
+   "id": "f24",
+   "kind": "inline",
+   "latex": "k \\neq 0",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "It remains to consider $k \\neq 0$ .",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    6842,
+    6852
+   ],
+   "raw": "$k \\neq 0$"
+  },
+  {
+   "id": "f25",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "First, take an out-of-the-money call, so $k > 0$ .",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    6897,
+    6904
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f26",
+   "kind": "inline",
+   "latex": "\\mathcal{F}_{IG}(\\cdot; \\mu, \\lambda)",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Write $\\mathcal{F}_{IG}(\\cdot; \\mu, \\lambda)$ for the inverse Gaussian distribution function with mean parameter $\\mu$ and shape parameter $\\lambda$ , following the standard parametrization in Chhikara and Folks (1989).",
+   "symbols": [
+    "\\mathcal{F}_{IG}",
+    "\\mu",
+    "\\lambda"
+   ],
+   "offset": [
+    6914,
+    6953
+   ],
+   "raw": "$\\mathcal{F}_{IG}(\\cdot; \\mu, \\lambda)$"
+  },
+  {
+   "id": "f27",
+   "kind": "inline",
+   "latex": "\\mu",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Write $\\mathcal{F}_{IG}(\\cdot; \\mu, \\lambda)$ for the inverse Gaussian distribution function with mean parameter $\\mu$ and shape parameter $\\lambda$ , following the standard parametrization in Chhikara and Folks (1989).",
+   "symbols": [
+    "\\mu"
+   ],
+   "offset": [
+    7023,
+    7028
+   ],
+   "raw": "$\\mu$"
+  },
+  {
+   "id": "f28",
+   "kind": "inline",
+   "latex": "\\lambda",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Write $\\mathcal{F}_{IG}(\\cdot; \\mu, \\lambda)$ for the inverse Gaussian distribution function with mean parameter $\\mu$ and shape parameter $\\lambda$ , following the standard parametrization in Chhikara and Folks (1989).",
+   "symbols": [
+    "\\lambda"
+   ],
+   "offset": [
+    7051,
+    7060
+   ],
+   "raw": "$\\lambda$"
+  },
+  {
+   "id": "f29",
+   "kind": "display",
+   "latex": "1 - \\mathcal{F}_{IG}(x; \\mu, \\lambda) = \\Phi\\left(-\\frac{\\sqrt{\\lambda}x}{\\mu} + \\frac{\\sqrt{\\lambda}}{\\sqrt{x}}\\right) - e^{2\\lambda/\\mu} \\Phi\\left(-\\frac{\\sqrt{\\lambda}x}{\\mu} - \\frac{\\sqrt{\\lambda}}{\\sqrt{x}}\\right).",
+   "number": "4",
+   "numbers": [
+    "4"
+   ],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Its survival function is $$1 - \\mathcal{F}_{IG}(x; \\mu, \\lambda) = \\Phi\\left(-\\frac{\\sqrt{\\lambda}x}{\\mu} + \\frac{\\sqrt{\\lambda}}{\\sqrt{x}}\\right) - e^{2\\lambda/\\mu} \\Phi\\left(-\\frac{\\sqrt{\\lambda}x}{\\mu} - \\frac{\\sqrt{\\lambda}}{\\sqrt{x}}\\right).$$",
+   "symbols": [
+    "\\mathcal{F}_{IG}",
+    "x",
+    "\\mu",
+    "\\lambda",
+    "\\Phi"
+   ],
+   "offset": [
+    7158,
+    7389
+   ],
+   "raw": "$$1 - \\mathcal{F}_{IG}(x; \\mu, \\lambda) = \\Phi\\left(-\\frac{\\sqrt{\\lambda}x}{\\mu} + \\frac{\\sqrt{\\lambda}}{\\sqrt{x}}\\right) - e^{2\\lambda/\\mu} \\Phi\\left(-\\frac{\\sqrt{\\lambda}x}{\\mu} - \\frac{\\sqrt{\\lambda}}{\\sqrt{x}}\\right). \\tag{4}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: Invalid LaTeX"
+  },
+  {
+   "id": "f30",
+   "kind": "inline",
+   "latex": "\\lambda = 1",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "With $\\lambda = 1$ , $\\mu = 2/k$ , and $x = 4/v^2$ , this becomes",
+   "symbols": [
+    "\\lambda"
+   ],
+   "offset": [
+    7397,
+    7410
+   ],
+   "raw": "$\\lambda = 1$"
+  },
+  {
+   "id": "f31",
+   "kind": "inline",
+   "latex": "\\mu = 2/k",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "With $\\lambda = 1$ , $\\mu = 2/k$ , and $x = 4/v^2$ , this becomes",
+   "symbols": [
+    "\\mu",
+    "k"
+   ],
+   "offset": [
+    7414,
+    7425
+   ],
+   "raw": "$\\mu = 2/k$"
+  },
+  {
+   "id": "f32",
+   "kind": "inline",
+   "latex": "x = 4/v^2",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "With $\\lambda = 1$ , $\\mu = 2/k$ , and $x = 4/v^2$ , this becomes",
+   "symbols": [
+    "x",
+    "v"
+   ],
+   "offset": [
+    7433,
+    7444
+   ],
+   "raw": "$x = 4/v^2$"
+  },
+  {
+   "id": "f33",
+   "kind": "display",
+   "latex": "c_{BS}(k, v) = 1 - \\mathcal{F}_{IG} \\left( \\frac{4}{v^2}; \\frac{2}{k}, 1 \\right), \\quad k > 0,",
+   "number": "5",
+   "numbers": [
+    "5"
+   ],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "With $\\lambda = 1$ , $\\mu = 2/k$ , and $x = 4/v^2$ , this becomes $$c_{BS}(k, v) = 1 - \\mathcal{F}_{IG} \\left( \\frac{4}{v^2}; \\frac{2}{k}, 1 \\right), \\quad k > 0,$$ inverting Eq. (5) and using $\\sigma = v/\\sqrt{T}$ gives",
+   "symbols": [
+    "c_{BS}",
+    "k",
+    "v",
+    "\\mathcal{F}_{IG}"
+   ],
+   "offset": [
+    7461,
+    7567
+   ],
+   "raw": "$$c_{BS}(k, v) = 1 - \\mathcal{F}_{IG} \\left( \\frac{4}{v^2}; \\frac{2}{k}, 1 \\right), \\quad k > 0, \\tag{5}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: Invalid LaTeX"
+  },
+  {
+   "id": "f34",
+   "kind": "inline",
+   "latex": "\\sigma = v/\\sqrt{T}",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "inverting Eq. (5) and using $\\sigma = v/\\sqrt{T}$ gives",
+   "symbols": [
+    "\\sigma",
+    "v",
+    "T"
+   ],
+   "offset": [
+    7598,
+    7619
+   ],
+   "raw": "$\\sigma = v/\\sqrt{T}$"
+  },
+  {
+   "id": "f35",
+   "kind": "display",
+   "latex": "\\sigma(k, c) = \\frac{2}{\\sqrt{T}} \\frac{1}{\\sqrt{\\mathcal{F}_{IG}^{-1} \\left(1 - c; \\frac{2}{k}, 1\\right)}}, \\quad k > 0.",
+   "number": "6",
+   "numbers": [
+    "6"
+   ],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "inverting Eq. (5) and using $\\sigma = v/\\sqrt{T}$ gives $$\\sigma(k, c) = \\frac{2}{\\sqrt{T}} \\frac{1}{\\sqrt{\\mathcal{F}_{IG}^{-1} \\left(1 - c; \\frac{2}{k}, 1\\right)}}, \\quad k > 0.$$",
+   "symbols": [
+    "\\sigma",
+    "k",
+    "c",
+    "T",
+    "\\mathcal{F}_{IG}"
+   ],
+   "offset": [
+    7628,
+    7761
+   ],
+   "raw": "$$\\sigma(k, c) = \\frac{2}{\\sqrt{T}} \\frac{1}{\\sqrt{\\mathcal{F}_{IG}^{-1} \\left(1 - c; \\frac{2}{k}, 1\\right)}}, \\quad k > 0. \\tag{6}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: Invalid LaTeX"
+  },
+  {
+   "id": "f36",
+   "kind": "inline",
+   "latex": "k < 0",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "For $k < 0$ , the call $c$ is in the money.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    7794,
+    7801
+   ],
+   "raw": "$k < 0$"
+  },
+  {
+   "id": "f37",
+   "kind": "inline",
+   "latex": "c",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "For $k < 0$ , the call $c$ is in the money.",
+   "symbols": [
+    "c"
+   ],
+   "offset": [
+    7814,
+    7817
+   ],
+   "raw": "$c$"
+  },
+  {
+   "id": "f38",
+   "kind": "inline",
+   "latex": "\\tilde{c}",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "It is related to the out-of-the-money counterpart $\\tilde{c}$ of same volatility and log-moneyness $-k$ by",
+   "symbols": [
+    "\\tilde{c}"
+   ],
+   "offset": [
+    7887,
+    7898
+   ],
+   "raw": "$\\tilde{c}$"
+  },
+  {
+   "id": "f39",
+   "kind": "inline",
+   "latex": "-k",
+   "number": null,
+   "numbers": [],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "It is related to the out-of-the-money counterpart $\\tilde{c}$ of same volatility and log-moneyness $-k$ by",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    7938,
+    7942
+   ],
+   "raw": "$-k$"
+  },
+  {
+   "id": "f40",
+   "kind": "display",
+   "latex": "1 - \\tilde{c} = \\frac{1 - c}{K/F}.",
+   "number": "7",
+   "numbers": [
+    "7"
+   ],
+   "page": 4,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "It is related to the out-of-the-money counterpart $\\tilde{c}$ of same volatility and log-moneyness $-k$ by $$1 - \\tilde{c} = \\frac{1 - c}{K/F}.$$",
+   "symbols": [
+    "\\tilde{c}",
+    "c",
+    "K",
+    "F"
+   ],
+   "offset": [
+    7948,
+    7994
+   ],
+   "raw": "$$1 - \\tilde{c} = \\frac{1 - c}{K/F}. \\tag{7}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: Invalid LaTeX"
+  },
+  {
+   "id": "f41",
+   "kind": "inline",
+   "latex": "K/F = e^k",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Hence, a division by gross moneys $K/F = e^k$ projects the ITM call back to the OTM region, $\\eta_k$ in Eq. (2) is just a formal handling of that.^1",
+   "symbols": [
+    "K",
+    "F",
+    "k"
+   ],
+   "offset": [
+    8048,
+    8059
+   ],
+   "raw": "$K/F = e^k$"
+  },
+  {
+   "id": "f42",
+   "kind": "inline",
+   "latex": "\\eta_k",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Hence, a division by gross moneys $K/F = e^k$ projects the ITM call back to the OTM region, $\\eta_k$ in Eq. (2) is just a formal handling of that.^1",
+   "symbols": [
+    "\\eta_k"
+   ],
+   "offset": [
+    8108,
+    8116
+   ],
+   "raw": "$\\eta_k$"
+  },
+  {
+   "id": "f43",
+   "kind": "display",
+   "latex": "c - p = 1 - e^k.",
+   "number": "8",
+   "numbers": [
+    "8"
+   ],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "The corresponding put formula follows from put-call parity, $$c - p = 1 - e^k.$$",
+   "symbols": [
+    "c",
+    "p",
+    "k"
+   ],
+   "offset": [
+    8238,
+    8266
+   ],
+   "raw": "$$c - p = 1 - e^k. \\tag{8}$$",
+   "python": "eq_8",
+   "parse_error": null
+  },
+  {
+   "id": "f44",
+   "kind": "inline",
+   "latex": "p = P/D/F",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "For a put with normalized price $p = P/D/F$ and $k \\neq 0$ , the probability argument in the inverse Gaussian quantile is $(e^k - p)/\\eta_k$ .",
+   "symbols": [
+    "p",
+    "P",
+    "D",
+    "F"
+   ],
+   "offset": [
+    8301,
+    8312
+   ],
+   "raw": "$p = P/D/F$"
+  },
+  {
+   "id": "f45",
+   "kind": "inline",
+   "latex": "k \\neq 0",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "For a put with normalized price $p = P/D/F$ and $k \\neq 0$ , the probability argument in the inverse Gaussian quantile is $(e^k - p)/\\eta_k$ .",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    8319,
+    8329
+   ],
+   "raw": "$k \\neq 0$"
+  },
+  {
+   "id": "f46",
+   "kind": "inline",
+   "latex": "(e^k - p)/\\eta_k",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "For a put with normalized price $p = P/D/F$ and $k \\neq 0$ , the probability argument in the inverse Gaussian quantile is $(e^k - p)/\\eta_k$ .",
+   "symbols": [
+    "k",
+    "p",
+    "\\eta_k"
+   ],
+   "offset": [
+    8394,
+    8412
+   ],
+   "raw": "$(e^k - p)/\\eta_k$"
+  },
+  {
+   "id": "f47",
+   "kind": "display",
+   "latex": "\\sigma(k, p) = \\frac{2}{\\sqrt{T}} \\frac{1}{\\sqrt{\\mathcal{F}_{IG}^{-1} \\left( \\frac{e^k - p}{\\eta_k}, \\frac{2}{|k|}, 1 \\right)}}.",
+   "number": "9",
+   "numbers": [
+    "9"
+   ],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Hence the put implied volatility is $$\\sigma(k, p) = \\frac{2}{\\sqrt{T}} \\frac{1}{\\sqrt{\\mathcal{F}_{IG}^{-1} \\left( \\frac{e^k - p}{\\eta_k}, \\frac{2}{|k|}, 1 \\right)}}.$$",
+   "symbols": [
+    "\\sigma",
+    "k",
+    "p",
+    "T",
+    "\\mathcal{F}_{IG}",
+    "\\eta_k"
+   ],
+   "offset": [
+    8452,
+    8593
+   ],
+   "raw": "$$\\sigma(k, p) = \\frac{2}{\\sqrt{T}} \\frac{1}{\\sqrt{\\mathcal{F}_{IG}^{-1} \\left( \\frac{e^k - p}{\\eta_k}, \\frac{2}{|k|}, 1 \\right)}}. \\tag{9}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: Invalid LaTeX"
+  },
+  {
+   "id": "f48",
+   "kind": "inline",
+   "latex": "\\sigma",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Besides $\\sigma$ , another important metric is total implied variance $w = \\sigma^2 T$ .",
+   "symbols": [
+    "\\sigma"
+   ],
+   "offset": [
+    8623,
+    8631
+   ],
+   "raw": "$\\sigma$"
+  },
+  {
+   "id": "f49",
+   "kind": "inline",
+   "latex": "w = \\sigma^2 T",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Besides $\\sigma$ , another important metric is total implied variance $w = \\sigma^2 T$ .",
+   "symbols": [
+    "w",
+    "\\sigma",
+    "T"
+   ],
+   "offset": [
+    8686,
+    8702
+   ],
+   "raw": "$w = \\sigma^2 T$"
+  },
+  {
+   "id": "f50",
+   "kind": "inline",
+   "latex": "IG",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "For this purpose, observe that we can establish an equivalent representation between the inverse Gaussian $IG$ and the generalized inverse Gaussian distribution $GIG$ ,",
+   "symbols": [
+    "I",
+    "G"
+   ],
+   "offset": [
+    8999,
+    9003
+   ],
+   "raw": "$IG$"
+  },
+  {
+   "id": "f51",
+   "kind": "inline",
+   "latex": "GIG",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "For this purpose, observe that we can establish an equivalent representation between the inverse Gaussian $IG$ and the generalized inverse Gaussian distribution $GIG$ ,",
+   "symbols": [
+    "G",
+    "I"
+   ],
+   "offset": [
+    9056,
+    9061
+   ],
+   "raw": "$GIG$"
+  },
+  {
+   "id": "f52",
+   "kind": "display",
+   "latex": "1 - \\mathcal{F}_{IG}\\left(\\frac{4}{w}; \\frac{2}{k}, 1\\right) = \\mathcal{F}_{GIG}\\left(w, \\frac{1}{2}, \\frac{1}{4}, k^2\\right)",
+   "number": "10",
+   "numbers": [
+    "10"
+   ],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "For this purpose, observe that we can establish an equivalent representation between the inverse Gaussian $IG$ and the generalized inverse Gaussian distribution $GIG$ , $$1 - \\mathcal{F}_{IG}\\left(\\frac{4}{w}; \\frac{2}{k}, 1\\right) = \\mathcal{F}_{GIG}\\left(w, \\frac{1}{2}, \\frac{1}{4}, k^2\\right)$$",
+   "symbols": [
+    "\\mathcal{F}_{IG}",
+    "w",
+    "k",
+    "\\mathcal{F}_{GIG}"
+   ],
+   "offset": [
+    9065,
+    9203
+   ],
+   "raw": "$$1 - \\mathcal{F}_{IG}\\left(\\frac{4}{w}; \\frac{2}{k}, 1\\right) = \\mathcal{F}_{GIG}\\left(w, \\frac{1}{2}, \\frac{1}{4}, k^2\\right) \\tag{10}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: Invalid LaTeX"
+  },
+  {
+   "id": "f53",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "The generalized form is especially appealing because it shows that implied variance $w$ is a pure quantile of the $GIG$ family,",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    9386,
+    9389
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f54",
+   "kind": "inline",
+   "latex": "GIG",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "The generalized form is especially appealing because it shows that implied variance $w$ is a pure quantile of the $GIG$ family,",
+   "symbols": [
+    "G",
+    "I"
+   ],
+   "offset": [
+    9418,
+    9423
+   ],
+   "raw": "$GIG$"
+  },
+  {
+   "id": "f55",
+   "kind": "display",
+   "latex": "w = \\mathcal{F}_{GIG}^{-1}(c; \\frac{1}{2}, \\frac{1}{4}, k^2), \\quad k > 0.",
+   "number": "11",
+   "numbers": [
+    "11"
+   ],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "The generalized form is especially appealing because it shows that implied variance $w$ is a pure quantile of the $GIG$ family, $$w = \\mathcal{F}_{GIG}^{-1}(c; \\frac{1}{2}, \\frac{1}{4}, k^2), \\quad k > 0.$$",
+   "symbols": [
+    "w",
+    "\\mathcal{F}_{GIG}",
+    "c",
+    "k"
+   ],
+   "offset": [
+    9434,
+    9521
+   ],
+   "raw": "$$w = \\mathcal{F}_{GIG}^{-1}(c; \\frac{1}{2}, \\frac{1}{4}, k^2), \\quad k > 0. \\tag{11}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: missing '}' at 'de'"
+  },
+  {
+   "id": "f56",
+   "kind": "inline",
+   "latex": "\\tilde{c}",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "^1To see this, use Eq. (3) to express $\\tilde{c}$ under a flipped sign of $k$ .",
+   "symbols": [
+    "\\tilde{c}"
+   ],
+   "offset": [
+    9572,
+    9583
+   ],
+   "raw": "$\\tilde{c}$"
+  },
+  {
+   "id": "f57",
+   "kind": "inline",
+   "latex": "k",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "^1To see this, use Eq. (3) to express $\\tilde{c}$ under a flipped sign of $k$ .",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    9610,
+    9613
+   ],
+   "raw": "$k$"
+  },
+  {
+   "id": "f58",
+   "kind": "inline",
+   "latex": "\\Phi\\left(\\frac{k}{v} + \\frac{v}{2}\\right) = 1 - \\Phi\\left(-\\frac{k}{v} - \\frac{v}{2}\\right)",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Note that $\\Phi\\left(\\frac{k}{v} + \\frac{v}{2}\\right) = 1 - \\Phi\\left(-\\frac{k}{v} - \\frac{v}{2}\\right)$ , so rearranging terms and substituting $c$ gives Eq. (7).",
+   "symbols": [
+    "\\Phi",
+    "k",
+    "v"
+   ],
+   "offset": [
+    9627,
+    9721
+   ],
+   "raw": "$\\Phi\\left(\\frac{k}{v} + \\frac{v}{2}\\right) = 1 - \\Phi\\left(-\\frac{k}{v} - \\frac{v}{2}\\right)$"
+  },
+  {
+   "id": "f59",
+   "kind": "inline",
+   "latex": "c",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Note that $\\Phi\\left(\\frac{k}{v} + \\frac{v}{2}\\right) = 1 - \\Phi\\left(-\\frac{k}{v} - \\frac{v}{2}\\right)$ , so rearranging terms and substituting $c$ gives Eq. (7).",
+   "symbols": [
+    "c"
+   ],
+   "offset": [
+    9763,
+    9766
+   ],
+   "raw": "$c$"
+  },
+  {
+   "id": "f60",
+   "kind": "inline",
+   "latex": "\\eta_k",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "A smooth definition of $\\eta_k$ is $\\eta_k := e^{(|k|)/2}$ , which is identical to $\\eta_k = \\min(1, e^k)$ .",
+   "symbols": [
+    "\\eta_k"
+   ],
+   "offset": [
+    9807,
+    9815
+   ],
+   "raw": "$\\eta_k$"
+  },
+  {
+   "id": "f61",
+   "kind": "inline",
+   "latex": "\\eta_k := e^{(|k|)/2}",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "A smooth definition of $\\eta_k$ is $\\eta_k := e^{(|k|)/2}$ , which is identical to $\\eta_k = \\min(1, e^k)$ .",
+   "symbols": [
+    "\\eta_k",
+    "k"
+   ],
+   "offset": [
+    9821,
+    9844
+   ],
+   "raw": "$\\eta_k := e^{(|k|)/2}$"
+  },
+  {
+   "id": "f62",
+   "kind": "inline",
+   "latex": "\\eta_k = \\min(1, e^k)",
+   "number": null,
+   "numbers": [],
+   "page": 5,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "A smooth definition of $\\eta_k$ is $\\eta_k := e^{(|k|)/2}$ , which is identical to $\\eta_k = \\min(1, e^k)$ .",
+   "symbols": [
+    "\\eta_k",
+    "k"
+   ],
+   "offset": [
+    9870,
+    9893
+   ],
+   "raw": "$\\eta_k = \\min(1, e^k)$"
+  },
+  {
+   "id": "f63",
+   "kind": "inline",
+   "latex": "\\sigma",
+   "number": null,
+   "numbers": [],
+   "page": 6,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Similarly, because $\\sigma$ is an increasing function of $w$ , implied volatility is also a quantile.",
+   "symbols": [
+    "\\sigma"
+   ],
+   "offset": [
+    9934,
+    9942
+   ],
+   "raw": "$\\sigma$"
+  },
+  {
+   "id": "f64",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 6,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Similarly, because $\\sigma$ is an increasing function of $w$ , implied volatility is also a quantile.",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    9974,
+    9977
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f65",
+   "kind": "display",
+   "latex": "\\sigma = \\mathcal{F}_{\\sqrt{Z_k/T}}^{-1}(c), \\quad k > 0,",
+   "number": "12",
+   "numbers": [
+    "12"
+   ],
+   "page": 6,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "Specifically, $$\\sigma = \\mathcal{F}_{\\sqrt{Z_k/T}}^{-1}(c), \\quad k > 0,$$ where $Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$ is a strike-dependent GIG* random variable.",
+   "symbols": [
+    "\\sigma",
+    "\\mathcal{F}_{\\sqrt{Z_k/T}}",
+    "c",
+    "k"
+   ],
+   "offset": [
+    10034,
+    10104
+   ],
+   "raw": "$$\\sigma = \\mathcal{F}_{\\sqrt{Z_k/T}}^{-1}(c), \\quad k > 0, \\tag{12}$$",
+   "python": null,
+   "parse_error": "subscript contains an expression"
+  },
+  {
+   "id": "f66",
+   "kind": "inline",
+   "latex": "Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)",
+   "number": null,
+   "numbers": [],
+   "page": 6,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "where $Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$ is a strike-dependent GIG* random variable.",
+   "symbols": [
+    "Z_k",
+    "G",
+    "I",
+    "k"
+   ],
+   "offset": [
+    10113,
+    10158
+   ],
+   "raw": "$Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$"
+  },
+  {
+   "id": "f67",
+   "kind": "inline",
+   "latex": "K",
+   "number": null,
+   "numbers": [],
+   "page": 6,
+   "section": "2 Implied Volatility is a Quantile",
+   "sentence": "The incomplete Gamma, incomplete Bessel- $K$ , tilted Levy, tilted Chi-square and tilted Gamma representations all invert directly in total variance.",
+   "symbols": [
+    "K"
+   ],
+   "offset": [
+    10414,
+    10417
+   ],
+   "raw": "$K$"
+  },
+  {
+   "id": "f68",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Focusing on the OTM call branch $k > 0$ , and keeping $w = v^2$ ,",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    12196,
+    12203
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f69",
+   "kind": "inline",
+   "latex": "w = v^2",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Focusing on the OTM call branch $k > 0$ , and keeping $w = v^2$ ,",
+   "symbols": [
+    "w",
+    "v"
+   ],
+   "offset": [
+    12219,
+    12228
+   ],
+   "raw": "$w = v^2$"
+  },
+  {
+   "id": "f70",
+   "kind": "display",
+   "latex": "c_{BS}(k, v) = \\mathbb{P} \\left( Y_k > \\frac{4}{w} \\right), \\quad Y_k \\sim IG \\left( \\frac{2}{k}, 1 \\right).",
+   "number": "13",
+   "numbers": [
+    "13"
+   ],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Focusing on the OTM call branch $k > 0$ , and keeping $w = v^2$ , $$c_{BS}(k, v) = \\mathbb{P} \\left( Y_k > \\frac{4}{w} \\right), \\quad Y_k \\sim IG \\left( \\frac{2}{k}, 1 \\right).$$",
+   "symbols": [
+    "c_{BS}",
+    "k",
+    "v",
+    "Y_k",
+    "w",
+    "I",
+    "G"
+   ],
+   "offset": [
+    12232,
+    12353
+   ],
+   "raw": "$$c_{BS}(k, v) = \\mathbb{P} \\left( Y_k > \\frac{4}{w} \\right), \\quad Y_k \\sim IG \\left( \\frac{2}{k}, 1 \\right). \\tag{13}$$",
+   "python": null,
+   "parse_error": "contains \\mathbb{P} (expectation, probability, set or series notation)"
+  },
+  {
+   "id": "f71",
+   "kind": "inline",
+   "latex": "B_t",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Let $B_t$ denote standard Brownian motion and define",
+   "symbols": [
+    "B_t"
+   ],
+   "offset": [
+    12360,
+    12365
+   ],
+   "raw": "$B_t$"
+  },
+  {
+   "id": "f72",
+   "kind": "display",
+   "latex": "\\tau_k = \\inf \\left\\{ t > 0 : B_t + \\frac{k}{2}t = 1 \\right\\}.",
+   "number": "14",
+   "numbers": [
+    "14"
+   ],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Let $B_t$ denote standard Brownian motion and define $$\\tau_k = \\inf \\left\\{ t > 0 : B_t + \\frac{k}{2}t = 1 \\right\\}.$$",
+   "symbols": [
+    "\\tau_k",
+    "t",
+    "B_t",
+    "k"
+   ],
+   "offset": [
+    12411,
+    12486
+   ],
+   "raw": "$$\\tau_k = \\inf \\left\\{ t > 0 : B_t + \\frac{k}{2}t = 1 \\right\\}. \\tag{14}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: Invalid LaTeX"
+  },
+  {
+   "id": "f73",
+   "kind": "inline",
+   "latex": "\\tau_k \\sim IG(2/k, 1)",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Then $\\tau_k \\sim IG(2/k, 1)$ , so $Y_k$ has the same law as the first hitting time of level 1 by a Brownian motion with drift $k/2$ and unit diffusion volatility.",
+   "symbols": [
+    "\\tau_k",
+    "I",
+    "G",
+    "k"
+   ],
+   "offset": [
+    12494,
+    12518
+   ],
+   "raw": "$\\tau_k \\sim IG(2/k, 1)$"
+  },
+  {
+   "id": "f74",
+   "kind": "inline",
+   "latex": "Y_k",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Then $\\tau_k \\sim IG(2/k, 1)$ , so $Y_k$ has the same law as the first hitting time of level 1 by a Brownian motion with drift $k/2$ and unit diffusion volatility.",
+   "symbols": [
+    "Y_k"
+   ],
+   "offset": [
+    12525,
+    12530
+   ],
+   "raw": "$Y_k$"
+  },
+  {
+   "id": "f75",
+   "kind": "inline",
+   "latex": "k/2",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Then $\\tau_k \\sim IG(2/k, 1)$ , so $Y_k$ has the same law as the first hitting time of level 1 by a Brownian motion with drift $k/2$ and unit diffusion volatility.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    12619,
+    12624
+   ],
+   "raw": "$k/2$"
+  },
+  {
+   "id": "f76",
+   "kind": "inline",
+   "latex": "4/w",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Hence the normalized call price is the probability that this process has not yet hit level 1 by variance-clock time $4/w$ .",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    12774,
+    12779
+   ],
+   "raw": "$4/w$"
+  },
+  {
+   "id": "f77",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Total implied variance $w$ thus plays the role of a speed in the first-passage picture—larger $w$ runs the variance clock faster against the fixed budget 4, shortening the time available to hit level one.",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    12806,
+    12809
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f78",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Total implied variance $w$ thus plays the role of a speed in the first-passage picture—larger $w$ runs the variance clock faster against the fixed budget 4, shortening the time available to hit level one.",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    12879,
+    12882
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f79",
+   "kind": "inline",
+   "latex": "Z_k = 4/Y_k",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Equivalently, with $Z_k = 4/Y_k$ ,",
+   "symbols": [
+    "Z_k",
+    "Y_k"
+   ],
+   "offset": [
+    13011,
+    13024
+   ],
+   "raw": "$Z_k = 4/Y_k$"
+  },
+  {
+   "id": "f80",
+   "kind": "display",
+   "latex": "c_{BS}(k, v) = \\mathbb{P}(Z_k \\leq w), \\quad Z_k \\sim GIG\\left(\\frac{1}{2}, \\frac{1}{4}, k^2\\right).",
+   "number": "15",
+   "numbers": [
+    "15"
+   ],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Equivalently, with $Z_k = 4/Y_k$ , $$c_{BS}(k, v) = \\mathbb{P}(Z_k \\leq w), \\quad Z_k \\sim GIG\\left(\\frac{1}{2}, \\frac{1}{4}, k^2\\right).$$",
+   "symbols": [
+    "c_{BS}",
+    "k",
+    "v",
+    "Z_k",
+    "w",
+    "G",
+    "I"
+   ],
+   "offset": [
+    13028,
+    13141
+   ],
+   "raw": "$$c_{BS}(k, v) = \\mathbb{P}(Z_k \\leq w), \\quad Z_k \\sim GIG\\left(\\frac{1}{2}, \\frac{1}{4}, k^2\\right). \\tag{15}$$",
+   "python": null,
+   "parse_error": "contains \\mathbb{P} (expectation, probability, set or series notation)"
+  },
+  {
+   "id": "f81",
+   "kind": "inline",
+   "latex": "Z_k",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Here $Z_k$ is the variance budget the drifted Brownian motion requires to reach level one, so the call price is the probability that this required budget falls within what the implied variance $w$ supplies.",
+   "symbols": [
+    "Z_k"
+   ],
+   "offset": [
+    13149,
+    13154
+   ],
+   "raw": "$Z_k$"
+  },
+  {
+   "id": "f82",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "Here $Z_k$ is the variance budget the drifted Brownian motion requires to reach level one, so the call price is the probability that this required budget falls within what the implied variance $w$ supplies.",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    13339,
+    13342
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f83",
+   "kind": "inline",
+   "latex": "Z_k",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.1 Probabilistic Interpretation",
+   "sentence": "The market price fixes the probability level, and the implied total variance is the corresponding quantile of $Z_k$ .",
+   "symbols": [
+    "Z_k"
+   ],
+   "offset": [
+    13465,
+    13470
+   ],
+   "raw": "$Z_k$"
+  },
+  {
+   "id": "f84",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "Focus on the OTM call branch $k > 0$ , the remaining cases follow from the transformations used above.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    13635,
+    13642
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f85",
+   "kind": "inline",
+   "latex": "f_k",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "Let $f_k$ denote the density of $Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$ , and write the primitive Black–Scholes price in variance coordinates as $c_{BS}(k, w)$ .",
+   "symbols": [
+    "f_k"
+   ],
+   "offset": [
+    13714,
+    13719
+   ],
+   "raw": "$f_k$"
+  },
+  {
+   "id": "f86",
+   "kind": "inline",
+   "latex": "Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "Let $f_k$ denote the density of $Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$ , and write the primitive Black–Scholes price in variance coordinates as $c_{BS}(k, w)$ .",
+   "symbols": [
+    "Z_k",
+    "G",
+    "I",
+    "k"
+   ],
+   "offset": [
+    13744,
+    13789
+   ],
+   "raw": "$Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$"
+  },
+  {
+   "id": "f87",
+   "kind": "inline",
+   "latex": "c_{BS}(k, w)",
+   "number": null,
+   "numbers": [],
+   "page": 7,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "Let $f_k$ denote the density of $Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$ , and write the primitive Black–Scholes price in variance coordinates as $c_{BS}(k, w)$ .",
+   "symbols": [
+    "c_{BS}",
+    "k",
+    "w"
+   ],
+   "offset": [
+    13864,
+    13878
+   ],
+   "raw": "$c_{BS}(k, w)$"
+  },
+  {
+   "id": "f88",
+   "kind": "inline",
+   "latex": "(k, w)",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "below are taken with respect to $(k, w)$ with arguments suppressed.",
+   "symbols": [
+    "k",
+    "w"
+   ],
+   "offset": [
+    13956,
+    13964
+   ],
+   "raw": "$(k, w)$"
+  },
+  {
+   "id": "f89",
+   "kind": "inline",
+   "latex": "\\partial_{ww} c_{BS} = f_k(w) \\left( -\\frac{1}{2w} - \\frac{1}{8} + \\frac{k^2}{2w^2} \\right),",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "variance-volga $\\partial_{ww} c_{BS} = f_k(w) \\left( -\\frac{1}{2w} - \\frac{1}{8} + \\frac{k^2}{2w^2} \\right),$ (17)",
+   "symbols": [
+    "w",
+    "c_{BS}",
+    "f_k",
+    "k"
+   ],
+   "offset": [
+    14010,
+    14104
+   ],
+   "raw": "$\\partial_{ww} c_{BS} = f_k(w) \\left( -\\frac{1}{2w} - \\frac{1}{8} + \\frac{k^2}{2w^2} \\right),$"
+  },
+  {
+   "id": "f90",
+   "kind": "inline",
+   "latex": "\\partial_w c_{BS} = f_k(w),",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "variance-vega $\\partial_w c_{BS} = f_k(w),$ (16)",
+   "symbols": [
+    "w",
+    "c_{BS}",
+    "f_k"
+   ],
+   "offset": [
+    14127,
+    14156
+   ],
+   "raw": "$\\partial_w c_{BS} = f_k(w),$"
+  },
+  {
+   "id": "f91",
+   "kind": "inline",
+   "latex": "\\quad \\partial_{kw} c_{BS} = f_k(w) \\left( \\frac{1}{2} - \\frac{k}{w} \\right), \\quad (18)",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "variance-vanna $\\quad \\partial_{kw} c_{BS} = f_k(w) \\left( \\frac{1}{2} - \\frac{k}{w} \\right), \\quad (18)$",
+   "symbols": [
+    "k",
+    "w",
+    "c_{BS}",
+    "f_k"
+   ],
+   "offset": [
+    14180,
+    14270
+   ],
+   "raw": "$\\quad \\partial_{kw} c_{BS} = f_k(w) \\left( \\frac{1}{2} - \\frac{k}{w} \\right), \\quad (18)$"
+  },
+  {
+   "id": "f92",
+   "kind": "inline",
+   "latex": "\\quad \\partial_k c_{BS} = \\int_0^w f_k(x) \\left( \\frac{1}{2} - \\frac{k}{x} \\right) dx, \\quad (19)",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "moneyness sensitivity $\\quad \\partial_k c_{BS} = \\int_0^w f_k(x) \\left( \\frac{1}{2} - \\frac{k}{x} \\right) dx, \\quad (19)$",
+   "symbols": [
+    "k",
+    "c_{BS}",
+    "w",
+    "f_k",
+    "x"
+   ],
+   "offset": [
+    14295,
+    14394
+   ],
+   "raw": "$\\quad \\partial_k c_{BS} = \\int_0^w f_k(x) \\left( \\frac{1}{2} - \\frac{k}{x} \\right) dx, \\quad (19)$"
+  },
+  {
+   "id": "f93",
+   "kind": "display",
+   "latex": "\\text{moneyness curvature} \\quad \\partial_{kk} c_{BS} = \\int_0^w f_k(x) \\left[ \\left( \\frac{1}{2} - \\frac{k}{x} \\right)^2 - \\frac{1}{x} \\right] dx.",
+   "number": "20",
+   "numbers": [
+    "20"
+   ],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "moneyness sensitivity $\\quad \\partial_k c_{BS} = \\int_0^w f_k(x) \\left( \\frac{1}{2} - \\frac{k}{x} \\right) dx, \\quad (19)$ $$\\text{moneyness curvature} \\quad \\partial_{kk} c_{BS} = \\int_0^w f_k(x) \\left[ \\left( \\frac{1}{2} - \\frac{k}{x} \\right)^2 - \\frac{1}{x} \\right] dx.$$",
+   "symbols": [
+    "k",
+    "c_{BS}",
+    "w",
+    "f_k",
+    "x"
+   ],
+   "offset": [
+    14396,
+    14556
+   ],
+   "raw": "$$\\text{moneyness curvature} \\quad \\partial_{kk} c_{BS} = \\int_0^w f_k(x) \\left[ \\left( \\frac{1}{2} - \\frac{k}{x} \\right)^2 - \\frac{1}{x} \\right] dx. \\tag{20}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: \\partial is not supported"
+  },
+  {
+   "id": "f94",
+   "kind": "inline",
+   "latex": "\\Phi",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "The standard Black–Scholes sensitivities, traditionally written as combinations of $\\Phi$ and $\\phi$ , become derivatives of a single probability law.",
+   "symbols": [
+    "\\Phi"
+   ],
+   "offset": [
+    14753,
+    14759
+   ],
+   "raw": "$\\Phi$"
+  },
+  {
+   "id": "f95",
+   "kind": "inline",
+   "latex": "\\phi",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "The standard Black–Scholes sensitivities, traditionally written as combinations of $\\Phi$ and $\\phi$ , become derivatives of a single probability law.",
+   "symbols": [
+    "\\phi"
+   ],
+   "offset": [
+    14766,
+    14772
+   ],
+   "raw": "$\\phi$"
+  },
+  {
+   "id": "f96",
+   "kind": "inline",
+   "latex": "1/w",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "Variance-vega is the GIG* density itself, and the higher local sensitivities are the same density weighted by terms at most quadratic in $1/w$ and $k/w$ .",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    14962,
+    14967
+   ],
+   "raw": "$1/w$"
+  },
+  {
+   "id": "f97",
+   "kind": "inline",
+   "latex": "k/w",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.2 Greeks in Variance-Space",
+   "sentence": "Variance-vega is the GIG* density itself, and the higher local sensitivities are the same density weighted by terms at most quadratic in $1/w$ and $k/w$ .",
+   "symbols": [
+    "k",
+    "w"
+   ],
+   "offset": [
+    14974,
+    14979
+   ],
+   "raw": "$k/w$"
+  },
+  {
+   "id": "f98",
+   "kind": "inline",
+   "latex": "c(k, T)",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "The observed call surface is $c(k, T)$ and the total implied-variance surface is $w(k, T)$ , linked by $c(k, T) = c_{BS} \\left( k, \\sqrt{w(k, T)} \\right)$ .",
+   "symbols": [
+    "c",
+    "k",
+    "T"
+   ],
+   "offset": [
+    15573,
+    15582
+   ],
+   "raw": "$c(k, T)$"
+  },
+  {
+   "id": "f99",
+   "kind": "inline",
+   "latex": "w(k, T)",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "The observed call surface is $c(k, T)$ and the total implied-variance surface is $w(k, T)$ , linked by $c(k, T) = c_{BS} \\left( k, \\sqrt{w(k, T)} \\right)$ .",
+   "symbols": [
+    "w",
+    "k",
+    "T"
+   ],
+   "offset": [
+    15627,
+    15636
+   ],
+   "raw": "$w(k, T)$"
+  },
+  {
+   "id": "f100",
+   "kind": "inline",
+   "latex": "c(k, T) = c_{BS} \\left( k, \\sqrt{w(k, T)} \\right)",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "The observed call surface is $c(k, T)$ and the total implied-variance surface is $w(k, T)$ , linked by $c(k, T) = c_{BS} \\left( k, \\sqrt{w(k, T)} \\right)$ .",
+   "symbols": [
+    "c",
+    "k",
+    "T",
+    "c_{BS}",
+    "w"
+   ],
+   "offset": [
+    15650,
+    15701
+   ],
+   "raw": "$c(k, T) = c_{BS} \\left( k, \\sqrt{w(k, T)} \\right)$"
+  },
+  {
+   "id": "f101",
+   "kind": "inline",
+   "latex": "w = w(k, T)",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "At a fixed point, write $w = w(k, T)$ .",
+   "symbols": [
+    "w",
+    "k",
+    "T"
+   ],
+   "offset": [
+    15729,
+    15742
+   ],
+   "raw": "$w = w(k, T)$"
+  },
+  {
+   "id": "f102",
+   "kind": "inline",
+   "latex": "c",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Subscripts on $c$ and $w$ denote derivatives of the observed surfaces.",
+   "symbols": [
+    "c"
+   ],
+   "offset": [
+    15760,
+    15763
+   ],
+   "raw": "$c$"
+  },
+  {
+   "id": "f103",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Subscripts on $c$ and $w$ denote derivatives of the observed surfaces.",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    15770,
+    15773
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f104",
+   "kind": "inline",
+   "latex": "c_{BS}",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "All derivatives of $c_{BS}$ below are variance-coordinate derivatives, evaluated at the current $(k, w)$ , with arguments suppressed.",
+   "symbols": [
+    "c_{BS}"
+   ],
+   "offset": [
+    15840,
+    15848
+   ],
+   "raw": "$c_{BS}$"
+  },
+  {
+   "id": "f105",
+   "kind": "inline",
+   "latex": "(k, w)",
+   "number": null,
+   "numbers": [],
+   "page": 8,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "All derivatives of $c_{BS}$ below are variance-coordinate derivatives, evaluated at the current $(k, w)$ , with arguments suppressed.",
+   "symbols": [
+    "k",
+    "w"
+   ],
+   "offset": [
+    15919,
+    15927
+   ],
+   "raw": "$(k, w)$"
+  },
+  {
+   "id": "f106",
+   "kind": "inline",
+   "latex": "T_2 > T_1",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Therefore, for $T_2 > T_1$ ,",
+   "symbols": [
+    "T_2",
+    "T_1"
+   ],
+   "offset": [
+    16187,
+    16198
+   ],
+   "raw": "$T_2 > T_1$"
+  },
+  {
+   "id": "f107",
+   "kind": "display",
+   "latex": "c(k, T_2) - c(k, T_1) = \\mathbb{P} (w(k, T_1) < Z_k \\leq w(k, T_2)).",
+   "number": "21",
+   "numbers": [
+    "21"
+   ],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Therefore, for $T_2 > T_1$ , $$c(k, T_2) - c(k, T_1) = \\mathbb{P} (w(k, T_1) < Z_k \\leq w(k, T_2)).$$",
+   "symbols": [
+    "c",
+    "k",
+    "T_2",
+    "T_1",
+    "w",
+    "Z_k"
+   ],
+   "offset": [
+    16202,
+    16283
+   ],
+   "raw": "$$c(k, T_2) - c(k, T_1) = \\mathbb{P} (w(k, T_1) < Z_k \\leq w(k, T_2)). \\tag{21}$$",
+   "python": null,
+   "parse_error": "contains \\mathbb{P} (expectation, probability, set or series notation)"
+  },
+  {
+   "id": "f108",
+   "kind": "inline",
+   "latex": "c_T = \\partial_w c_{BS} w_T = f_k(w) w_T",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Equivalently, $c_T = \\partial_w c_{BS} w_T = f_k(w) w_T$ , and since $f_k(w) > 0$ , calendar no-arbitrage is equivalent to $w_T \\geq 0$ , matching the standard monotonicity condition for total implied variance (cp.",
+   "symbols": [
+    "c_T",
+    "w",
+    "c_{BS}",
+    "w_T",
+    "f_k"
+   ],
+   "offset": [
+    16379,
+    16421
+   ],
+   "raw": "$c_T = \\partial_w c_{BS} w_T = f_k(w) w_T$"
+  },
+  {
+   "id": "f109",
+   "kind": "inline",
+   "latex": "f_k(w) > 0",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Equivalently, $c_T = \\partial_w c_{BS} w_T = f_k(w) w_T$ , and since $f_k(w) > 0$ , calendar no-arbitrage is equivalent to $w_T \\geq 0$ , matching the standard monotonicity condition for total implied variance (cp.",
+   "symbols": [
+    "f_k",
+    "w"
+   ],
+   "offset": [
+    16435,
+    16447
+   ],
+   "raw": "$f_k(w) > 0$"
+  },
+  {
+   "id": "f110",
+   "kind": "inline",
+   "latex": "w_T \\geq 0",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Equivalently, $c_T = \\partial_w c_{BS} w_T = f_k(w) w_T$ , and since $f_k(w) > 0$ , calendar no-arbitrage is equivalent to $w_T \\geq 0$ , matching the standard monotonicity condition for total implied variance (cp.",
+   "symbols": [
+    "w_T"
+   ],
+   "offset": [
+    16490,
+    16502
+   ],
+   "raw": "$w_T \\geq 0$"
+  },
+  {
+   "id": "f111",
+   "kind": "inline",
+   "latex": "c_k",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "In the forward direction, the chain rule along the observed surface expresses $c_k$ and $c_{kk}$ as combinations of the variance-Greeks and the smile derivatives $w_k, w_{kk}$ .",
+   "symbols": [
+    "c_k"
+   ],
+   "offset": [
+    16842,
+    16847
+   ],
+   "raw": "$c_k$"
+  },
+  {
+   "id": "f112",
+   "kind": "inline",
+   "latex": "c_{kk}",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "In the forward direction, the chain rule along the observed surface expresses $c_k$ and $c_{kk}$ as combinations of the variance-Greeks and the smile derivatives $w_k, w_{kk}$ .",
+   "symbols": [
+    "c_{kk}"
+   ],
+   "offset": [
+    16854,
+    16862
+   ],
+   "raw": "$c_{kk}$"
+  },
+  {
+   "id": "f113",
+   "kind": "inline",
+   "latex": "w_k, w_{kk}",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "In the forward direction, the chain rule along the observed surface expresses $c_k$ and $c_{kk}$ as combinations of the variance-Greeks and the smile derivatives $w_k, w_{kk}$ .",
+   "symbols": [
+    "w_k",
+    "w_{kk}"
+   ],
+   "offset": [
+    16930,
+    16943
+   ],
+   "raw": "$w_k, w_{kk}$"
+  },
+  {
+   "id": "f114",
+   "kind": "inline",
+   "latex": "c_{kk} \\geq c_k",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Substituting into the butterfly condition $c_{kk} \\geq c_k$ yields",
+   "symbols": [
+    "c_{kk}",
+    "c_k"
+   ],
+   "offset": [
+    16989,
+    17006
+   ],
+   "raw": "$c_{kk} \\geq c_k$"
+  },
+  {
+   "id": "f115",
+   "kind": "display",
+   "latex": "\\partial_{kk}c_{BS} - \\partial_k c_{BS} + (2\\partial_{kw}c_{BS} - \\partial_w c_{BS}) w_k + \\partial_{ww}c_{BS} w_k^2 + \\partial_w c_{BS} w_{kk} \\geq 0.",
+   "number": "22",
+   "numbers": [
+    "22"
+   ],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Substituting into the butterfly condition $c_{kk} \\geq c_k$ yields $$\\partial_{kk}c_{BS} - \\partial_k c_{BS} + (2\\partial_{kw}c_{BS} - \\partial_w c_{BS}) w_k + \\partial_{ww}c_{BS} w_k^2 + \\partial_w c_{BS} w_{kk} \\geq 0.$$",
+   "symbols": [
+    "k",
+    "c_{BS}",
+    "w",
+    "w_k",
+    "w_{kk}"
+   ],
+   "offset": [
+    17016,
+    17180
+   ],
+   "raw": "$$\\partial_{kk}c_{BS} - \\partial_k c_{BS} + (2\\partial_{kw}c_{BS} - \\partial_w c_{BS}) w_k + \\partial_{ww}c_{BS} w_k^2 + \\partial_w c_{BS} w_{kk} \\geq 0. \\tag{22}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: \\partial is not supported"
+  },
+  {
+   "id": "f116",
+   "kind": "inline",
+   "latex": "w_k",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Butterfly no-arbitrage is therefore a sign condition on the same Greek hierarchy from above—moneyness sensitivity, moneyness curvature, variance-vega, variance-vanna, variance-volga—combined with the slope $w_k$ and curvature $w_{kk}$ of the variance smile (cp.",
+   "symbols": [
+    "w_k"
+   ],
+   "offset": [
+    17389,
+    17394
+   ],
+   "raw": "$w_k$"
+  },
+  {
+   "id": "f117",
+   "kind": "inline",
+   "latex": "w_{kk}",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Butterfly no-arbitrage is therefore a sign condition on the same Greek hierarchy from above—moneyness sensitivity, moneyness curvature, variance-vega, variance-vanna, variance-volga—combined with the slope $w_k$ and curvature $w_{kk}$ of the variance smile (cp.",
+   "symbols": [
+    "w_{kk}"
+   ],
+   "offset": [
+    17411,
+    17419
+   ],
+   "raw": "$w_{kk}$"
+  },
+  {
+   "id": "f118",
+   "kind": "inline",
+   "latex": "q(k, u) := \\mathcal{F}_{GIG}^{-1}(u; \\frac{1}{2}, \\frac{1}{4}, k^2)",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "In the inverse direction, the variance quantile map $q(k, u) := \\mathcal{F}_{GIG}^{-1}(u; \\frac{1}{2}, \\frac{1}{4}, k^2)$ inverts the price-to-variance step, giving $w = q(k, c)$ with $q_u = 1/f_k > 0$ .",
+   "symbols": [
+    "q",
+    "k",
+    "u",
+    "\\mathcal{F}_{GIG}"
+   ],
+   "offset": [
+    17533,
+    17602
+   ],
+   "raw": "$q(k, u) := \\mathcal{F}_{GIG}^{-1}(u; \\frac{1}{2}, \\frac{1}{4}, k^2)$"
+  },
+  {
+   "id": "f119",
+   "kind": "inline",
+   "latex": "w = q(k, c)",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "In the inverse direction, the variance quantile map $q(k, u) := \\mathcal{F}_{GIG}^{-1}(u; \\frac{1}{2}, \\frac{1}{4}, k^2)$ inverts the price-to-variance step, giving $w = q(k, c)$ with $q_u = 1/f_k > 0$ .",
+   "symbols": [
+    "w",
+    "q",
+    "k",
+    "c"
+   ],
+   "offset": [
+    17648,
+    17661
+   ],
+   "raw": "$w = q(k, c)$"
+  },
+  {
+   "id": "f120",
+   "kind": "inline",
+   "latex": "q_u = 1/f_k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "In the inverse direction, the variance quantile map $q(k, u) := \\mathcal{F}_{GIG}^{-1}(u; \\frac{1}{2}, \\frac{1}{4}, k^2)$ inverts the price-to-variance step, giving $w = q(k, c)$ with $q_u = 1/f_k > 0$ .",
+   "symbols": [
+    "q_u",
+    "f_k"
+   ],
+   "offset": [
+    17669,
+    17686
+   ],
+   "raw": "$q_u = 1/f_k > 0$"
+  },
+  {
+   "id": "f121",
+   "kind": "inline",
+   "latex": "(k, c)",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "The chain rule in $(k, c)$ -coordinates substituted into $c_{kk} \\geq c_k$ yields",
+   "symbols": [
+    "k",
+    "c"
+   ],
+   "offset": [
+    17708,
+    17716
+   ],
+   "raw": "$(k, c)$"
+  },
+  {
+   "id": "f122",
+   "kind": "inline",
+   "latex": "c_{kk} \\geq c_k",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "The chain rule in $(k, c)$ -coordinates substituted into $c_{kk} \\geq c_k$ yields",
+   "symbols": [
+    "c_{kk}",
+    "c_k"
+   ],
+   "offset": [
+    17748,
+    17765
+   ],
+   "raw": "$c_{kk} \\geq c_k$"
+  },
+  {
+   "id": "f123",
+   "kind": "display",
+   "latex": "w_{kk} \\geq q_{kk} + 2q_{ku}c_k + q_{uu}c_k^2 + q_uc_k.",
+   "number": "23",
+   "numbers": [
+    "23"
+   ],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "The chain rule in $(k, c)$ -coordinates substituted into $c_{kk} \\geq c_k$ yields $$w_{kk} \\geq q_{kk} + 2q_{ku}c_k + q_{uu}c_k^2 + q_uc_k.$$",
+   "symbols": [
+    "w_{kk}",
+    "q_{kk}",
+    "q_{ku}",
+    "c_k",
+    "q_{uu}",
+    "q_u"
+   ],
+   "offset": [
+    17775,
+    17843
+   ],
+   "raw": "$$w_{kk} \\geq q_{kk} + 2q_{ku}c_k + q_{uu}c_k^2 + q_uc_k. \\tag{23}$$",
+   "python": "eq_23",
+   "parse_error": null
+  },
+  {
+   "id": "f124",
+   "kind": "inline",
+   "latex": "w_{kk}",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Butterfly no-arbitrage is now a quadratic lower bound on the implied-variance curvature $w_{kk}$ in terms of the observed call slope $c_k$ , with coefficients given by partials of the variance quantile map.",
+   "symbols": [
+    "w_{kk}"
+   ],
+   "offset": [
+    17934,
+    17942
+   ],
+   "raw": "$w_{kk}$"
+  },
+  {
+   "id": "f125",
+   "kind": "inline",
+   "latex": "c_k",
+   "number": null,
+   "numbers": [],
+   "page": 9,
+   "section": "3.3 No-arbitrage in Variance-Space",
+   "sentence": "Butterfly no-arbitrage is now a quadratic lower bound on the implied-variance curvature $w_{kk}$ in terms of the observed call slope $c_k$ , with coefficients given by partials of the variance quantile map.",
+   "symbols": [
+    "c_k"
+   ],
+   "offset": [
+    17981,
+    17986
+   ],
+   "raw": "$c_k$"
+  },
+  {
+   "id": "f126",
+   "kind": "inline",
+   "latex": "v",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "LBR solves directly in total volatility $v$ , while the present implementation solves in total variance $w$ and takes the square root only at the end.",
+   "symbols": [
+    "v"
+   ],
+   "offset": [
+    18931,
+    18934
+   ],
+   "raw": "$v$"
+  },
+  {
+   "id": "f127",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "LBR solves directly in total volatility $v$ , while the present implementation solves in total variance $w$ and takes the square root only at the end.",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    18996,
+    18999
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f128",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The numerical reason for using $w$ can be stated without introducing separate price maps.",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    19077,
+    19080
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f129",
+   "kind": "inline",
+   "latex": "k",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "For fixed $k$ , with $w = v^2$ ,",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    19148,
+    19151
+   ],
+   "raw": "$k$"
+  },
+  {
+   "id": "f130",
+   "kind": "inline",
+   "latex": "w = v^2",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "For fixed $k$ , with $w = v^2$ ,",
+   "symbols": [
+    "w",
+    "v"
+   ],
+   "offset": [
+    19160,
+    19169
+   ],
+   "raw": "$w = v^2$"
+  },
+  {
+   "id": "f131",
+   "kind": "display",
+   "latex": "\\left. \\frac{\\partial w}{\\partial c} \\right|_k = \\frac{1}{\\partial_w c_{BS}} \\quad \\text{and} \\quad \\left. \\frac{\\partial v}{\\partial c} \\right|_k = \\frac{1}{\\partial_v c_{BS}} = \\frac{1}{2v \\partial_w c_{BS}}.",
+   "number": "24",
+   "numbers": [
+    "24"
+   ],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "For fixed $k$ , with $w = v^2$ , $$\\left. \\frac{\\partial w}{\\partial c} \\right|_k = \\frac{1}{\\partial_w c_{BS}} \\quad \\text{and} \\quad \\left. \\frac{\\partial v}{\\partial c} \\right|_k = \\frac{1}{\\partial_v c_{BS}} = \\frac{1}{2v \\partial_w c_{BS}}.$$",
+   "symbols": [
+    "w",
+    "c",
+    "k",
+    "c_{BS}",
+    "v"
+   ],
+   "offset": [
+    19173,
+    19396
+   ],
+   "raw": "$$\\left. \\frac{\\partial w}{\\partial c} \\right|_k = \\frac{1}{\\partial_w c_{BS}} \\quad \\text{and} \\quad \\left. \\frac{\\partial v}{\\partial c} \\right|_k = \\frac{1}{\\partial_v c_{BS}} = \\frac{1}{2v \\partial_w c_{BS}}. \\tag{24}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: I don't understand this"
+  },
+  {
+   "id": "f132",
+   "kind": "inline",
+   "latex": "1/(2v)",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The volatility-space inverse therefore carries the extra factor $1/(2v)$ , which becomes large when $v$ is small.",
+   "symbols": [
+    "v"
+   ],
+   "offset": [
+    19463,
+    19471
+   ],
+   "raw": "$1/(2v)$"
+  },
+  {
+   "id": "f133",
+   "kind": "inline",
+   "latex": "v",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The volatility-space inverse therefore carries the extra factor $1/(2v)$ , which becomes large when $v$ is small.",
+   "symbols": [
+    "v"
+   ],
+   "offset": [
+    19500,
+    19503
+   ],
+   "raw": "$v$"
+  },
+  {
+   "id": "f134",
+   "kind": "inline",
+   "latex": "v = 20\\%",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "For example, at $v = 20\\%$ it is 2.5, at $v = 5\\%$ it is 10, and at $v = 1\\%$ it is 50.",
+   "symbols": [
+    "v"
+   ],
+   "offset": [
+    19532,
+    19542
+   ],
+   "raw": "$v = 20\\%$"
+  },
+  {
+   "id": "f135",
+   "kind": "inline",
+   "latex": "v = 5\\%",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "For example, at $v = 20\\%$ it is 2.5, at $v = 5\\%$ it is 10, and at $v = 1\\%$ it is 50.",
+   "symbols": [
+    "v"
+   ],
+   "offset": [
+    19559,
+    19568
+   ],
+   "raw": "$v = 5\\%$"
+  },
+  {
+   "id": "f136",
+   "kind": "inline",
+   "latex": "v = 1\\%",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "For example, at $v = 20\\%$ it is 2.5, at $v = 5\\%$ it is 10, and at $v = 1\\%$ it is 50.",
+   "symbols": [
+    "v"
+   ],
+   "offset": [
+    19588,
+    19597
+   ],
+   "raw": "$v = 1\\%$"
+  },
+  {
+   "id": "f137",
+   "kind": "display",
+   "latex": "\\partial_v c_{BS} = \\phi\\left(-\\frac{k}{v} + \\frac{v}{2}\\right) = \\frac{e^{k/2}}{\\sqrt{2\\pi}} \\exp\\left(-\\frac{v^2}{8} - \\frac{k^2}{2v^2}\\right).",
+   "number": "25",
+   "numbers": [
+    "25"
+   ],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The variance structure is already present in the classical Black–Scholes vega, $$\\partial_v c_{BS} = \\phi\\left(-\\frac{k}{v} + \\frac{v}{2}\\right) = \\frac{e^{k/2}}{\\sqrt{2\\pi}} \\exp\\left(-\\frac{v^2}{8} - \\frac{k^2}{2v^2}\\right).$$",
+   "symbols": [
+    "v",
+    "c_{BS}",
+    "\\phi",
+    "k",
+    "\\pi"
+   ],
+   "offset": [
+    19729,
+    19887
+   ],
+   "raw": "$$\\partial_v c_{BS} = \\phi\\left(-\\frac{k}{v} + \\frac{v}{2}\\right) = \\frac{e^{k/2}}{\\sqrt{2\\pi}} \\exp\\left(-\\frac{v^2}{8} - \\frac{k^2}{2v^2}\\right). \\tag{25}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: \\partial is not supported"
+  },
+  {
+   "id": "f138",
+   "kind": "inline",
+   "latex": "-k^2/(2v^2)",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The variance term $-k^2/(2v^2)$ sits inside the standard normal density.",
+   "symbols": [
+    "k",
+    "v"
+   ],
+   "offset": [
+    19908,
+    19921
+   ],
+   "raw": "$-k^2/(2v^2)$"
+  },
+  {
+   "id": "f139",
+   "kind": "display",
+   "latex": "\\Delta v = -\\frac{c_{BS} - c}{\\partial_v c_{BS}} = -\\frac{c_{BS} - c}{2v \\partial_w c_{BS}}.",
+   "number": "26",
+   "numbers": [
+    "26"
+   ],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The same asymmetry appears in Newton refinement, $$\\Delta v = -\\frac{c_{BS} - c}{\\partial_v c_{BS}} = -\\frac{c_{BS} - c}{2v \\partial_w c_{BS}}.$$",
+   "symbols": [
+    "\\Delta",
+    "v",
+    "c_{BS}",
+    "c",
+    "w"
+   ],
+   "offset": [
+    20014,
+    20119
+   ],
+   "raw": "$$\\Delta v = -\\frac{c_{BS} - c}{\\partial_v c_{BS}} = -\\frac{c_{BS} - c}{2v \\partial_w c_{BS}}. \\tag{26}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: \\partial is not supported"
+  },
+  {
+   "id": "f140",
+   "kind": "inline",
+   "latex": "v",
+   "number": null,
+   "numbers": [],
+   "page": 10,
+   "section": "4 Numerical Evaluation",
+   "sentence": "Halley and higher-order Householder methods inherit analogous inverse powers of $v$ through their higher derivatives.",
+   "symbols": [
+    "v"
+   ],
+   "offset": [
+    20202,
+    20205
+   ],
+   "raw": "$v$"
+  },
+  {
+   "id": "f141",
+   "kind": "inline",
+   "latex": "(v, \\Delta)",
+   "number": null,
+   "numbers": [],
+   "page": 11,
+   "section": "4 Numerical Evaluation",
+   "sentence": "For each draw $(v, \\Delta)$ , the corresponding forward log-moneyness is obtained from the Black–Scholes delta relation,",
+   "symbols": [
+    "v",
+    "\\Delta"
+   ],
+   "offset": [
+    21109,
+    21122
+   ],
+   "raw": "$(v, \\Delta)$"
+  },
+  {
+   "id": "f142",
+   "kind": "display",
+   "latex": "k = v \\left( \\frac{v}{2} - \\Phi^{-1}(\\Delta) \\right).",
+   "number": "27",
+   "numbers": [
+    "27"
+   ],
+   "page": 11,
+   "section": "4 Numerical Evaluation",
+   "sentence": "For each draw $(v, \\Delta)$ , the corresponding forward log-moneyness is obtained from the Black–Scholes delta relation, $$k = v \\left( \\frac{v}{2} - \\Phi^{-1}(\\Delta) \\right).$$",
+   "symbols": [
+    "k",
+    "v",
+    "\\Phi",
+    "\\Delta"
+   ],
+   "offset": [
+    21217,
+    21283
+   ],
+   "raw": "$$k = v \\left( \\frac{v}{2} - \\Phi^{-1}(\\Delta) \\right). \\tag{27}$$",
+   "python": "eq_27_k",
+   "parse_error": null
+  },
+  {
+   "id": "f143",
+   "kind": "inline",
+   "latex": "1.39 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 11,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The median absolute recovery errors are $1.39 \\times 10^{-16}$ for the explicit formula and $1.67 \\times 10^{-16}$ for LBR, while the maximum absolute errors are $1.33 \\times 10^{-15}$ and $1.55 \\times 10^{-15}$ , respectively.",
+   "symbols": [],
+   "offset": [
+    22308,
+    22330
+   ],
+   "raw": "$1.39 \\times 10^{-16}$"
+  },
+  {
+   "id": "f144",
+   "kind": "inline",
+   "latex": "1.67 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 11,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The median absolute recovery errors are $1.39 \\times 10^{-16}$ for the explicit formula and $1.67 \\times 10^{-16}$ for LBR, while the maximum absolute errors are $1.33 \\times 10^{-15}$ and $1.55 \\times 10^{-15}$ , respectively.",
+   "symbols": [],
+   "offset": [
+    22362,
+    22384
+   ],
+   "raw": "$1.67 \\times 10^{-16}$"
+  },
+  {
+   "id": "f145",
+   "kind": "inline",
+   "latex": "1.33 \\times 10^{-15}",
+   "number": null,
+   "numbers": [],
+   "page": 11,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The median absolute recovery errors are $1.39 \\times 10^{-16}$ for the explicit formula and $1.67 \\times 10^{-16}$ for LBR, while the maximum absolute errors are $1.33 \\times 10^{-15}$ and $1.55 \\times 10^{-15}$ , respectively.",
+   "symbols": [],
+   "offset": [
+    22434,
+    22456
+   ],
+   "raw": "$1.33 \\times 10^{-15}$"
+  },
+  {
+   "id": "f146",
+   "kind": "inline",
+   "latex": "1.55 \\times 10^{-15}",
+   "number": null,
+   "numbers": [],
+   "page": 11,
+   "section": "4 Numerical Evaluation",
+   "sentence": "The median absolute recovery errors are $1.39 \\times 10^{-16}$ for the explicit formula and $1.67 \\times 10^{-16}$ for LBR, while the maximum absolute errors are $1.33 \\times 10^{-15}$ and $1.55 \\times 10^{-15}$ , respectively.",
+   "symbols": [],
+   "offset": [
+    22463,
+    22485
+   ],
+   "raw": "$1.55 \\times 10^{-15}$"
+  },
+  {
+   "id": "f147",
+   "kind": "inline",
+   "latex": "180.03/59.49 \\approx 3.03",
+   "number": null,
+   "numbers": [],
+   "page": 11,
+   "section": "4 Numerical Evaluation",
+   "sentence": "On the speed test, the explicit formula requires 59.49 nanoseconds per evaluation at the median run, compared with 180.03 nanoseconds for LBR, implying a median speed ratio of about $180.03/59.49 \\approx 3.03$ .",
+   "symbols": [],
+   "offset": [
+    22685,
+    22712
+   ],
+   "raw": "$180.03/59.49 \\approx 3.03$"
+  },
+  {
+   "id": "f148",
+   "kind": "inline",
+   "latex": "1.39 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "",
+   "symbols": [],
+   "offset": [
+    24194,
+    24216
+   ],
+   "raw": "$1.39 \\times 10^{-16}$"
+  },
+  {
+   "id": "f149",
+   "kind": "inline",
+   "latex": "1.33 \\times 10^{-15}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "",
+   "symbols": [],
+   "offset": [
+    24219,
+    24241
+   ],
+   "raw": "$1.33 \\times 10^{-15}$"
+  },
+  {
+   "id": "f150",
+   "kind": "inline",
+   "latex": "1.59 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "",
+   "symbols": [],
+   "offset": [
+    24244,
+    24266
+   ],
+   "raw": "$1.59 \\times 10^{-16}$"
+  },
+  {
+   "id": "f151",
+   "kind": "inline",
+   "latex": "4.23 \\times 10^{-14}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "",
+   "symbols": [],
+   "offset": [
+    24269,
+    24291
+   ],
+   "raw": "$4.23 \\times 10^{-14}$"
+  },
+  {
+   "id": "f152",
+   "kind": "inline",
+   "latex": "1.67 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "",
+   "symbols": [],
+   "offset": [
+    24331,
+    24353
+   ],
+   "raw": "$1.67 \\times 10^{-16}$"
+  },
+  {
+   "id": "f153",
+   "kind": "inline",
+   "latex": "1.55 \\times 10^{-15}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "",
+   "symbols": [],
+   "offset": [
+    24356,
+    24378
+   ],
+   "raw": "$1.55 \\times 10^{-15}$"
+  },
+  {
+   "id": "f154",
+   "kind": "inline",
+   "latex": "1.68 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "",
+   "symbols": [],
+   "offset": [
+    24381,
+    24403
+   ],
+   "raw": "$1.68 \\times 10^{-16}$"
+  },
+  {
+   "id": "f155",
+   "kind": "inline",
+   "latex": "2.68 \\times 10^{-14}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "",
+   "symbols": [],
+   "offset": [
+    24406,
+    24428
+   ],
+   "raw": "$2.68 \\times 10^{-14}$"
+  },
+  {
+   "id": "f156",
+   "kind": "inline",
+   "latex": "v \\in \\{0.01, 0.05, 0.10, \\dots, 2.00\\}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "Total volatility is set to $v \\in \\{0.01, 0.05, 0.10, \\dots, 2.00\\}$ and call delta is restricted to the tail and near-tail levels $\\Delta \\in \\{0.01, 0.05, 0.10, 0.90, 0.95, 0.99\\}$ , giving 246 fixed-grid test cases.",
+   "symbols": [
+    "v"
+   ],
+   "offset": [
+    24574,
+    24615
+   ],
+   "raw": "$v \\in \\{0.01, 0.05, 0.10, \\dots, 2.00\\}$"
+  },
+  {
+   "id": "f157",
+   "kind": "inline",
+   "latex": "\\Delta \\in \\{0.01, 0.05, 0.10, 0.90, 0.95, 0.99\\}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "Total volatility is set to $v \\in \\{0.01, 0.05, 0.10, \\dots, 2.00\\}$ and call delta is restricted to the tail and near-tail levels $\\Delta \\in \\{0.01, 0.05, 0.10, 0.90, 0.95, 0.99\\}$ , giving 246 fixed-grid test cases.",
+   "symbols": [
+    "\\Delta"
+   ],
+   "offset": [
+    24680,
+    24731
+   ],
+   "raw": "$\\Delta \\in \\{0.01, 0.05, 0.10, 0.90, 0.95, 0.99\\}$"
+  },
+  {
+   "id": "f158",
+   "kind": "inline",
+   "latex": "2.22 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "On this tail-accuracy grid, the explicit formula attains a median absolute recovery error of $2.22 \\times 10^{-16}$ and a maximum relative error of $2.43 \\times 10^{-14}$ , while LBR attains a median absolute recovery error of $2.20 \\times 10^{-16}$ and a maximum relative error of $2.32 \\times 10^{-14}$ .",
+   "symbols": [],
+   "offset": [
+    25009,
+    25031
+   ],
+   "raw": "$2.22 \\times 10^{-16}$"
+  },
+  {
+   "id": "f159",
+   "kind": "inline",
+   "latex": "2.43 \\times 10^{-14}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "On this tail-accuracy grid, the explicit formula attains a median absolute recovery error of $2.22 \\times 10^{-16}$ and a maximum relative error of $2.43 \\times 10^{-14}$ , while LBR attains a median absolute recovery error of $2.20 \\times 10^{-16}$ and a maximum relative error of $2.32 \\times 10^{-14}$ .",
+   "symbols": [],
+   "offset": [
+    25066,
+    25088
+   ],
+   "raw": "$2.43 \\times 10^{-14}$"
+  },
+  {
+   "id": "f160",
+   "kind": "inline",
+   "latex": "2.20 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "On this tail-accuracy grid, the explicit formula attains a median absolute recovery error of $2.22 \\times 10^{-16}$ and a maximum relative error of $2.43 \\times 10^{-14}$ , while LBR attains a median absolute recovery error of $2.20 \\times 10^{-16}$ and a maximum relative error of $2.32 \\times 10^{-14}$ .",
+   "symbols": [],
+   "offset": [
+    25146,
+    25168
+   ],
+   "raw": "$2.20 \\times 10^{-16}$"
+  },
+  {
+   "id": "f161",
+   "kind": "inline",
+   "latex": "2.32 \\times 10^{-14}",
+   "number": null,
+   "numbers": [],
+   "page": 12,
+   "section": "4 Numerical Evaluation",
+   "sentence": "On this tail-accuracy grid, the explicit formula attains a median absolute recovery error of $2.22 \\times 10^{-16}$ and a maximum relative error of $2.43 \\times 10^{-14}$ , while LBR attains a median absolute recovery error of $2.20 \\times 10^{-16}$ and a maximum relative error of $2.32 \\times 10^{-14}$ .",
+   "symbols": [],
+   "offset": [
+    25203,
+    25225
+   ],
+   "raw": "$2.32 \\times 10^{-14}$"
+  },
+  {
+   "id": "f162",
+   "kind": "inline",
+   "latex": "1.39 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 13,
+   "section": "5 Conclusion",
+   "sentence": "In the numerical experiment, the formula recovers implied volatility to machine precision faster than Jäckel (2024)’s reference implementation on the benchmark considered: median absolute recovery errors of $1.39 \\times 10^{-16}$ versus $1.67 \\times 10^{-16}$ , at median evaluation times of 59.49 versus 180.03 nanoseconds.",
+   "symbols": [],
+   "offset": [
+    26307,
+    26329
+   ],
+   "raw": "$1.39 \\times 10^{-16}$"
+  },
+  {
+   "id": "f163",
+   "kind": "inline",
+   "latex": "1.67 \\times 10^{-16}",
+   "number": null,
+   "numbers": [],
+   "page": 13,
+   "section": "5 Conclusion",
+   "sentence": "In the numerical experiment, the formula recovers implied volatility to machine precision faster than Jäckel (2024)’s reference implementation on the benchmark considered: median absolute recovery errors of $1.39 \\times 10^{-16}$ versus $1.67 \\times 10^{-16}$ , at median evaluation times of 59.49 versus 180.03 nanoseconds.",
+   "symbols": [],
+   "offset": [
+    26339,
+    26361
+   ],
+   "raw": "$1.67 \\times 10^{-16}$"
+  },
+  {
+   "id": "f164",
+   "kind": "inline",
+   "latex": "n",
+   "number": null,
+   "numbers": [],
+   "page": 14,
+   "section": "References",
+   "sentence": "On the non-holonomic character of logarithms, powers and the $n$ th prime function.",
+   "symbols": [
+    "n"
+   ],
+   "offset": [
+    29302,
+    29305
+   ],
+   "raw": "$n$"
+  },
+  {
+   "id": "f165",
+   "kind": "inline",
+   "latex": "\\chi^2",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1 Alternatives to the inverse Gaussian representation",
+   "sentence": "The same Black–Scholes identity can be rewritten in several equivalent forms, each revealing a different aspect: the tilted $\\chi^2$ / generalized incomplete gamma representation connects implied volatility to classical special-function families with developed numerical and asymptotic literatures; the incomplete Bessel- $K$ representation locates the non- $D$ -finiteness of implied volatility at the truncation-and-inversion step; the tilted Levy representation exhibits the call price as a Girsanov-tilted first-passage probability of undrifted Brownian motion; and the tilted half-normal / Nakagami representation states the same identity in volatility coordinates.",
+   "symbols": [
+    "\\chi"
+   ],
+   "offset": [
+    32186,
+    32194
+   ],
+   "raw": "$\\chi^2$"
+  },
+  {
+   "id": "f166",
+   "kind": "inline",
+   "latex": "K",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1 Alternatives to the inverse Gaussian representation",
+   "sentence": "The same Black–Scholes identity can be rewritten in several equivalent forms, each revealing a different aspect: the tilted $\\chi^2$ / generalized incomplete gamma representation connects implied volatility to classical special-function families with developed numerical and asymptotic literatures; the incomplete Bessel- $K$ representation locates the non- $D$ -finiteness of implied volatility at the truncation-and-inversion step; the tilted Levy representation exhibits the call price as a Girsanov-tilted first-passage probability of undrifted Brownian motion; and the tilted half-normal / Nakagami representation states the same identity in volatility coordinates.",
+   "symbols": [
+    "K"
+   ],
+   "offset": [
+    32385,
+    32388
+   ],
+   "raw": "$K$"
+  },
+  {
+   "id": "f167",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1 Alternatives to the inverse Gaussian representation",
+   "sentence": "The same Black–Scholes identity can be rewritten in several equivalent forms, each revealing a different aspect: the tilted $\\chi^2$ / generalized incomplete gamma representation connects implied volatility to classical special-function families with developed numerical and asymptotic literatures; the incomplete Bessel- $K$ representation locates the non- $D$ -finiteness of implied volatility at the truncation-and-inversion step; the tilted Levy representation exhibits the call price as a Girsanov-tilted first-passage probability of undrifted Brownian motion; and the tilted half-normal / Nakagami representation states the same identity in volatility coordinates.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    32422,
+    32425
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f168",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1 Alternatives to the inverse Gaussian representation",
+   "sentence": "Throughout, I restrict attention to the OTM call branch $k > 0$ and use $w = \\sigma^2 T$ .",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    32988,
+    32995
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f169",
+   "kind": "inline",
+   "latex": "w = \\sigma^2 T",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1 Alternatives to the inverse Gaussian representation",
+   "sentence": "Throughout, I restrict attention to the OTM call branch $k > 0$ and use $w = \\sigma^2 T$ .",
+   "symbols": [
+    "w",
+    "\\sigma",
+    "T"
+   ],
+   "offset": [
+    33006,
+    33022
+   ],
+   "raw": "$w = \\sigma^2 T$"
+  },
+  {
+   "id": "f170",
+   "kind": "inline",
+   "latex": "\\chi_1^2",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "The inverse Gaussian law admits an equivalent reading as an inverse-square exponentially tilted $\\chi_1^2$ , equivalently $\\Gamma(\\frac{1}{2}, \\frac{1}{2})$ , distribution.",
+   "symbols": [
+    "\\chi_1"
+   ],
+   "offset": [
+    33421,
+    33431
+   ],
+   "raw": "$\\chi_1^2$"
+  },
+  {
+   "id": "f171",
+   "kind": "inline",
+   "latex": "\\Gamma(\\frac{1}{2}, \\frac{1}{2})",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "The inverse Gaussian law admits an equivalent reading as an inverse-square exponentially tilted $\\chi_1^2$ , equivalently $\\Gamma(\\frac{1}{2}, \\frac{1}{2})$ , distribution.",
+   "symbols": [
+    "\\Gamma"
+   ],
+   "offset": [
+    33448,
+    33482
+   ],
+   "raw": "$\\Gamma(\\frac{1}{2}, \\frac{1}{2})$"
+  },
+  {
+   "id": "f172",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "For $k > 0$ , define",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    33504,
+    33511
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f173",
+   "kind": "display",
+   "latex": "\\mathcal{F}_{\\chi,k}(x) := \\frac{e^{k/2}}{\\sqrt{2\\pi}} \\int_0^x \\omega^{-1/2} \\exp \\left\\{ -\\frac{\\omega}{2} - \\frac{k^2}{8\\omega} \\right\\} d\\omega, \\quad x > 0.",
+   "number": "28",
+   "numbers": [
+    "28"
+   ],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "For $k > 0$ , define $$\\mathcal{F}_{\\chi,k}(x) := \\frac{e^{k/2}}{\\sqrt{2\\pi}} \\int_0^x \\omega^{-1/2} \\exp \\left\\{ -\\frac{\\omega}{2} - \\frac{k^2}{8\\omega} \\right\\} d\\omega, \\quad x > 0.$$",
+   "symbols": [
+    "\\mathcal{F}_{\\chi,k}",
+    "x",
+    "k",
+    "\\pi",
+    "\\omega"
+   ],
+   "offset": [
+    33522,
+    33696
+   ],
+   "raw": "$$\\mathcal{F}_{\\chi,k}(x) := \\frac{e^{k/2}}{\\sqrt{2\\pi}} \\int_0^x \\omega^{-1/2} \\exp \\left\\{ -\\frac{\\omega}{2} - \\frac{k^2}{8\\omega} \\right\\} d\\omega, \\quad x > 0. \\tag{28}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: missing '}' at 'de'"
+  },
+  {
+   "id": "f174",
+   "kind": "inline",
+   "latex": "\\mathcal{F}_{\\chi,k}",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "Then $\\mathcal{F}_{\\chi,k}$ is the distribution function of a $\\chi_1^2$ law exponentially tilted by $\\exp\\{-k^2/(8\\omega)\\}$ .",
+   "symbols": [
+    "\\mathcal{F}_{\\chi,k}"
+   ],
+   "offset": [
+    33704,
+    33726
+   ],
+   "raw": "$\\mathcal{F}_{\\chi,k}$"
+  },
+  {
+   "id": "f175",
+   "kind": "inline",
+   "latex": "\\chi_1^2",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "Then $\\mathcal{F}_{\\chi,k}$ is the distribution function of a $\\chi_1^2$ law exponentially tilted by $\\exp\\{-k^2/(8\\omega)\\}$ .",
+   "symbols": [
+    "\\chi_1"
+   ],
+   "offset": [
+    33763,
+    33773
+   ],
+   "raw": "$\\chi_1^2$"
+  },
+  {
+   "id": "f176",
+   "kind": "inline",
+   "latex": "\\exp\\{-k^2/(8\\omega)\\}",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "Then $\\mathcal{F}_{\\chi,k}$ is the distribution function of a $\\chi_1^2$ law exponentially tilted by $\\exp\\{-k^2/(8\\omega)\\}$ .",
+   "symbols": [
+    "k",
+    "\\omega"
+   ],
+   "offset": [
+    33804,
+    33828
+   ],
+   "raw": "$\\exp\\{-k^2/(8\\omega)\\}$"
+  },
+  {
+   "id": "f177",
+   "kind": "inline",
+   "latex": "\\mathcal{F}_{\\chi,k}^{-1}",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "Letting $\\mathcal{F}_{\\chi,k}^{-1}$ denote its inverse, for $k > 0$ ,",
+   "symbols": [
+    "\\mathcal{F}_{\\chi,k}"
+   ],
+   "offset": [
+    33840,
+    33867
+   ],
+   "raw": "$\\mathcal{F}_{\\chi,k}^{-1}$"
+  },
+  {
+   "id": "f178",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "Letting $\\mathcal{F}_{\\chi,k}^{-1}$ denote its inverse, for $k > 0$ ,",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    33894,
+    33901
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f179",
+   "kind": "display",
+   "latex": "c = \\mathcal{F}_{\\chi,k} \\left( \\frac{w}{4} \\right), \\quad w = 4 \\mathcal{F}_{\\chi,k}^{-1}(c).",
+   "number": "29",
+   "numbers": [
+    "29"
+   ],
+   "page": 17,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "Letting $\\mathcal{F}_{\\chi,k}^{-1}$ denote its inverse, for $k > 0$ , $$c = \\mathcal{F}_{\\chi,k} \\left( \\frac{w}{4} \\right), \\quad w = 4 \\mathcal{F}_{\\chi,k}^{-1}(c).$$",
+   "symbols": [
+    "c",
+    "\\mathcal{F}_{\\chi,k}",
+    "w"
+   ],
+   "offset": [
+    33905,
+    34012
+   ],
+   "raw": "$$c = \\mathcal{F}_{\\chi,k} \\left( \\frac{w}{4} \\right), \\quad w = 4 \\mathcal{F}_{\\chi,k}^{-1}(c). \\tag{29}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: missing '}' at 'de'"
+  },
+  {
+   "id": "f180",
+   "kind": "inline",
+   "latex": "1/2",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "The same object is, up to rescaling, a normalized lower generalized incomplete-gamma function of order $1/2$ in the sense of Chaudhry and Zubair (1994); Chaudhry et al. (1996): the substitution $\\omega \\mapsto \\omega/2$ in the integrand yields the identity $e^{-k/2}c = \\mathcal{F}_{\\Gamma,k}(w/8)$ with $\\mathcal{F}_{\\Gamma,k}(x) := \\pi^{-1/2} \\int_0^x \\omega^{-1/2} \\exp\\{-\\omega - k^2/(16\\omega)\\} d\\omega$ .",
+   "symbols": [],
+   "offset": [
+    34136,
+    34141
+   ],
+   "raw": "$1/2$"
+  },
+  {
+   "id": "f181",
+   "kind": "inline",
+   "latex": "\\omega \\mapsto \\omega/2",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "The same object is, up to rescaling, a normalized lower generalized incomplete-gamma function of order $1/2$ in the sense of Chaudhry and Zubair (1994); Chaudhry et al. (1996): the substitution $\\omega \\mapsto \\omega/2$ in the integrand yields the identity $e^{-k/2}c = \\mathcal{F}_{\\Gamma,k}(w/8)$ with $\\mathcal{F}_{\\Gamma,k}(x) := \\pi^{-1/2} \\int_0^x \\omega^{-1/2} \\exp\\{-\\omega - k^2/(16\\omega)\\} d\\omega$ .",
+   "symbols": [
+    "\\omega"
+   ],
+   "offset": [
+    34229,
+    34254
+   ],
+   "raw": "$\\omega \\mapsto \\omega/2$"
+  },
+  {
+   "id": "f182",
+   "kind": "inline",
+   "latex": "e^{-k/2}c = \\mathcal{F}_{\\Gamma,k}(w/8)",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "The same object is, up to rescaling, a normalized lower generalized incomplete-gamma function of order $1/2$ in the sense of Chaudhry and Zubair (1994); Chaudhry et al. (1996): the substitution $\\omega \\mapsto \\omega/2$ in the integrand yields the identity $e^{-k/2}c = \\mathcal{F}_{\\Gamma,k}(w/8)$ with $\\mathcal{F}_{\\Gamma,k}(x) := \\pi^{-1/2} \\int_0^x \\omega^{-1/2} \\exp\\{-\\omega - k^2/(16\\omega)\\} d\\omega$ .",
+   "symbols": [
+    "k",
+    "c",
+    "\\mathcal{F}_{\\Gamma,k}",
+    "w"
+   ],
+   "offset": [
+    34294,
+    34335
+   ],
+   "raw": "$e^{-k/2}c = \\mathcal{F}_{\\Gamma,k}(w/8)$"
+  },
+  {
+   "id": "f183",
+   "kind": "inline",
+   "latex": "\\mathcal{F}_{\\Gamma,k}(x) := \\pi^{-1/2} \\int_0^x \\omega^{-1/2} \\exp\\{-\\omega - k^2/(16\\omega)\\} d\\omega",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "The same object is, up to rescaling, a normalized lower generalized incomplete-gamma function of order $1/2$ in the sense of Chaudhry and Zubair (1994); Chaudhry et al. (1996): the substitution $\\omega \\mapsto \\omega/2$ in the integrand yields the identity $e^{-k/2}c = \\mathcal{F}_{\\Gamma,k}(w/8)$ with $\\mathcal{F}_{\\Gamma,k}(x) := \\pi^{-1/2} \\int_0^x \\omega^{-1/2} \\exp\\{-\\omega - k^2/(16\\omega)\\} d\\omega$ .",
+   "symbols": [
+    "\\mathcal{F}_{\\Gamma,k}",
+    "x",
+    "\\pi",
+    "\\omega",
+    "k"
+   ],
+   "offset": [
+    34343,
+    34448
+   ],
+   "raw": "$\\mathcal{F}_{\\Gamma,k}(x) := \\pi^{-1/2} \\int_0^x \\omega^{-1/2} \\exp\\{-\\omega - k^2/(16\\omega)\\} d\\omega$"
+  },
+  {
+   "id": "f184",
+   "kind": "inline",
+   "latex": "k",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.1 Tilted Chi-square / generalized incomplete gamma",
+   "sentence": "This places the Black–Scholes inversion within the developed numerical, asymptotic, and series-expansion literature for generalized incomplete gamma functions, with the moneyness parameter $k$ entering as the upper tilt.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    34641,
+    34644
+   ],
+   "raw": "$k$"
+  },
+  {
+   "id": "f185",
+   "kind": "inline",
+   "latex": "K",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "",
+   "symbols": [
+    "K"
+   ],
+   "offset": [
+    34706,
+    34709
+   ],
+   "raw": "$K$"
+  },
+  {
+   "id": "f186",
+   "kind": "display",
+   "latex": "\\mathcal{B}_\\alpha(z) := \\frac{1}{2} \\int_0^\\infty \\omega^{\\alpha-1} \\exp \\left\\{ -\\frac{z}{2} \\left( \\omega + \\frac{1}{\\omega} \\right) \\right\\} d\\omega, \\quad z > 0,",
+   "number": "30",
+   "numbers": [
+    "30"
+   ],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "The modified Bessel function of the second kind admits the integral representation $$\\mathcal{B}_\\alpha(z) := \\frac{1}{2} \\int_0^\\infty \\omega^{\\alpha-1} \\exp \\left\\{ -\\frac{z}{2} \\left( \\omega + \\frac{1}{\\omega} \\right) \\right\\} d\\omega, \\quad z > 0,$$ with lower incomplete version obtained by truncating the upper limit,",
+   "symbols": [
+    "\\mathcal{B}_{\\alpha}",
+    "z",
+    "\\omega",
+    "\\alpha"
+   ],
+   "offset": [
+    34797,
+    34976
+   ],
+   "raw": "$$\\mathcal{B}_\\alpha(z) := \\frac{1}{2} \\int_0^\\infty \\omega^{\\alpha-1} \\exp \\left\\{ -\\frac{z}{2} \\left( \\omega + \\frac{1}{\\omega} \\right) \\right\\} d\\omega, \\quad z > 0, \\tag{30}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: missing '}' at 'de'"
+  },
+  {
+   "id": "f187",
+   "kind": "display",
+   "latex": "\\mathcal{B}_{\\alpha,z}(x) := \\frac{1}{2} \\int_0^x \\omega^{\\alpha-1} \\exp \\left\\{ -\\frac{z}{2} \\left( \\omega + \\frac{1}{\\omega} \\right) \\right\\} d\\omega, \\quad x > 0.",
+   "number": "31",
+   "numbers": [
+    "31"
+   ],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "with lower incomplete version obtained by truncating the upper limit, $$\\mathcal{B}_{\\alpha,z}(x) := \\frac{1}{2} \\int_0^x \\omega^{\\alpha-1} \\exp \\left\\{ -\\frac{z}{2} \\left( \\omega + \\frac{1}{\\omega} \\right) \\right\\} d\\omega, \\quad x > 0.$$",
+   "symbols": [
+    "\\mathcal{B}_{\\alpha,z}",
+    "x",
+    "\\omega",
+    "\\alpha",
+    "z"
+   ],
+   "offset": [
+    35049,
+    35227
+   ],
+   "raw": "$$\\mathcal{B}_{\\alpha,z}(x) := \\frac{1}{2} \\int_0^x \\omega^{\\alpha-1} \\exp \\left\\{ -\\frac{z}{2} \\left( \\omega + \\frac{1}{\\omega} \\right) \\right\\} d\\omega, \\quad x > 0. \\tag{31}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: missing '}' at 'de'"
+  },
+  {
+   "id": "f188",
+   "kind": "inline",
+   "latex": "\\mathcal{B}_{\\alpha,z}^{-1}",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "Letting $\\mathcal{B}_{\\alpha,z}^{-1}$ denote the inverse in $x$ , for $k > 0$ ,",
+   "symbols": [
+    "\\mathcal{B}_{\\alpha,z}"
+   ],
+   "offset": [
+    35238,
+    35267
+   ],
+   "raw": "$\\mathcal{B}_{\\alpha,z}^{-1}$"
+  },
+  {
+   "id": "f189",
+   "kind": "inline",
+   "latex": "x",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "Letting $\\mathcal{B}_{\\alpha,z}^{-1}$ denote the inverse in $x$ , for $k > 0$ ,",
+   "symbols": [
+    "x"
+   ],
+   "offset": [
+    35292,
+    35295
+   ],
+   "raw": "$x$"
+  },
+  {
+   "id": "f190",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "Letting $\\mathcal{B}_{\\alpha,z}^{-1}$ denote the inverse in $x$ , for $k > 0$ ,",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    35303,
+    35310
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f191",
+   "kind": "display",
+   "latex": "c \\mathcal{B}_{1/2} \\left( \\frac{k}{2} \\right) = \\mathcal{B}_{1/2,k/2} \\left( \\frac{w}{2k} \\right), \\quad w = 2k \\mathcal{B}_{1/2,k/2}^{-1} \\left( c \\mathcal{B}_{1/2} \\left( \\frac{k}{2} \\right) \\right).",
+   "number": "32",
+   "numbers": [
+    "32"
+   ],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "Letting $\\mathcal{B}_{\\alpha,z}^{-1}$ denote the inverse in $x$ , for $k > 0$ , $$c \\mathcal{B}_{1/2} \\left( \\frac{k}{2} \\right) = \\mathcal{B}_{1/2,k/2} \\left( \\frac{w}{2k} \\right), \\quad w = 2k \\mathcal{B}_{1/2,k/2}^{-1} \\left( c \\mathcal{B}_{1/2} \\left( \\frac{k}{2} \\right) \\right).$$",
+   "symbols": [
+    "c",
+    "\\mathcal{B}_{1/2}",
+    "k",
+    "\\mathcal{B}_{1/2,k/2}",
+    "w"
+   ],
+   "offset": [
+    35314,
+    35529
+   ],
+   "raw": "$$c \\mathcal{B}_{1/2} \\left( \\frac{k}{2} \\right) = \\mathcal{B}_{1/2,k/2} \\left( \\frac{w}{2k} \\right), \\quad w = 2k \\mathcal{B}_{1/2,k/2}^{-1} \\left( c \\mathcal{B}_{1/2} \\left( \\frac{k}{2} \\right) \\right). \\tag{32}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: Invalid LaTeX"
+  },
+  {
+   "id": "f192",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "This representation is analytically informative for the non- $D$ -finiteness question.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    35592,
+    35595
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f193",
+   "kind": "inline",
+   "latex": "K_{1/2}",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "The untruncated Bessel- $K_{1/2}$ is itself $D$ -finite, and so is the integrand of $\\mathcal{B}_{1/2,k/2}$ ; non- $D$ -finiteness of implied volatility therefore cannot enter through the integrand but must enter through the combination of finite truncation and functional inversion.",
+   "symbols": [
+    "K_{1/2}"
+   ],
+   "offset": [
+    35642,
+    35651
+   ],
+   "raw": "$K_{1/2}$"
+  },
+  {
+   "id": "f194",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "The untruncated Bessel- $K_{1/2}$ is itself $D$ -finite, and so is the integrand of $\\mathcal{B}_{1/2,k/2}$ ; non- $D$ -finiteness of implied volatility therefore cannot enter through the integrand but must enter through the combination of finite truncation and functional inversion.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    35664,
+    35667
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f195",
+   "kind": "inline",
+   "latex": "\\mathcal{B}_{1/2,k/2}",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "The untruncated Bessel- $K_{1/2}$ is itself $D$ -finite, and so is the integrand of $\\mathcal{B}_{1/2,k/2}$ ; non- $D$ -finiteness of implied volatility therefore cannot enter through the integrand but must enter through the combination of finite truncation and functional inversion.",
+   "symbols": [
+    "\\mathcal{B}_{1/2,k/2}"
+   ],
+   "offset": [
+    35705,
+    35728
+   ],
+   "raw": "$\\mathcal{B}_{1/2,k/2}$"
+  },
+  {
+   "id": "f196",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 18,
+   "section": "A.1.2 Incomplete Bessel- $K$",
+   "sentence": "The untruncated Bessel- $K_{1/2}$ is itself $D$ -finite, and so is the integrand of $\\mathcal{B}_{1/2,k/2}$ ; non- $D$ -finiteness of implied volatility therefore cannot enter through the integrand but must enter through the combination of finite truncation and functional inversion.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    35736,
+    35739
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f197",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.3 Tilted Levy",
+   "sentence": "For $k > 0$ , define",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    36180,
+    36187
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f198",
+   "kind": "display",
+   "latex": "\\mathcal{F}_{\\ell,k}(x) := \\frac{e^{k/2}}{\\sqrt{2\\pi}} \\int_0^x \\omega^{-3/2} \\exp \\left\\{ -\\frac{1}{2\\omega} - \\frac{k^2\\omega}{8} \\right\\} d\\omega, \\quad x > 0.",
+   "number": "33",
+   "numbers": [
+    "33"
+   ],
+   "page": 19,
+   "section": "A.1.3 Tilted Levy",
+   "sentence": "For $k > 0$ , define $$\\mathcal{F}_{\\ell,k}(x) := \\frac{e^{k/2}}{\\sqrt{2\\pi}} \\int_0^x \\omega^{-3/2} \\exp \\left\\{ -\\frac{1}{2\\omega} - \\frac{k^2\\omega}{8} \\right\\} d\\omega, \\quad x > 0.$$",
+   "symbols": [
+    "\\mathcal{F}_{\\ell,k}",
+    "x",
+    "k",
+    "\\pi",
+    "\\omega"
+   ],
+   "offset": [
+    36198,
+    36373
+   ],
+   "raw": "$$\\mathcal{F}_{\\ell,k}(x) := \\frac{e^{k/2}}{\\sqrt{2\\pi}} \\int_0^x \\omega^{-3/2} \\exp \\left\\{ -\\frac{1}{2\\omega} - \\frac{k^2\\omega}{8} \\right\\} d\\omega, \\quad x > 0. \\tag{33}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: missing '}' at 'de'"
+  },
+  {
+   "id": "f199",
+   "kind": "inline",
+   "latex": "\\exp\\{-k^2\\omega/8\\}",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.3 Tilted Levy",
+   "sentence": "This is the distribution function of a Levy law exponentially tilted by $\\exp\\{-k^2\\omega/8\\}$ .",
+   "symbols": [
+    "k",
+    "\\omega"
+   ],
+   "offset": [
+    36448,
+    36470
+   ],
+   "raw": "$\\exp\\{-k^2\\omega/8\\}$"
+  },
+  {
+   "id": "f200",
+   "kind": "inline",
+   "latex": "\\mathcal{F}_{\\ell,k}^{-1}",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.3 Tilted Levy",
+   "sentence": "Letting $\\mathcal{F}_{\\ell,k}^{-1}$ denote its inverse, for $k > 0$ ,",
+   "symbols": [
+    "\\mathcal{F}_{\\ell,k}"
+   ],
+   "offset": [
+    36482,
+    36509
+   ],
+   "raw": "$\\mathcal{F}_{\\ell,k}^{-1}$"
+  },
+  {
+   "id": "f201",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.3 Tilted Levy",
+   "sentence": "Letting $\\mathcal{F}_{\\ell,k}^{-1}$ denote its inverse, for $k > 0$ ,",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    36536,
+    36543
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f202",
+   "kind": "display",
+   "latex": "c = 1 - \\mathcal{F}_{\\ell,k} \\left( \\frac{4}{w} \\right), \\quad w = \\frac{4}{\\mathcal{F}_{\\ell,k}^{-1}(1-c)}.",
+   "number": "34",
+   "numbers": [
+    "34"
+   ],
+   "page": 19,
+   "section": "A.1.3 Tilted Levy",
+   "sentence": "Letting $\\mathcal{F}_{\\ell,k}^{-1}$ denote its inverse, for $k > 0$ , $$c = 1 - \\mathcal{F}_{\\ell,k} \\left( \\frac{4}{w} \\right), \\quad w = \\frac{4}{\\mathcal{F}_{\\ell,k}^{-1}(1-c)}.$$",
+   "symbols": [
+    "c",
+    "\\mathcal{F}_{\\ell,k}",
+    "w"
+   ],
+   "offset": [
+    36547,
+    36668
+   ],
+   "raw": "$$c = 1 - \\mathcal{F}_{\\ell,k} \\left( \\frac{4}{w} \\right), \\quad w = \\frac{4}{\\mathcal{F}_{\\ell,k}^{-1}(1-c)}. \\tag{34}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: Invalid LaTeX"
+  },
+  {
+   "id": "f203",
+   "kind": "inline",
+   "latex": "\\exp\\{-k^2\\omega/8\\}",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.3 Tilted Levy",
+   "sentence": "The exponential tilt $\\exp\\{-k^2\\omega/8\\}$ is the Radon–Nikodym density that, under Girsanov’s theorem, introduces the drift $k/2$ .",
+   "symbols": [
+    "k",
+    "\\omega"
+   ],
+   "offset": [
+    36866,
+    36888
+   ],
+   "raw": "$\\exp\\{-k^2\\omega/8\\}$"
+  },
+  {
+   "id": "f204",
+   "kind": "inline",
+   "latex": "k/2",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.3 Tilted Levy",
+   "sentence": "The exponential tilt $\\exp\\{-k^2\\omega/8\\}$ is the Radon–Nikodym density that, under Girsanov’s theorem, introduces the drift $k/2$ .",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    36973,
+    36978
+   ],
+   "raw": "$k/2$"
+  },
+  {
+   "id": "f205",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "The previous representations all invert in total variance $w$ .",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    37306,
+    37309
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f206",
+   "kind": "inline",
+   "latex": "\\chi^2",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "Applying the square-root change of variable to the tilted $\\chi^2$ representation in Section A.1.1 yields an equivalent representation in total volatility $v = \\sqrt{w}$ .",
+   "symbols": [
+    "\\chi"
+   ],
+   "offset": [
+    37371,
+    37379
+   ],
+   "raw": "$\\chi^2$"
+  },
+  {
+   "id": "f207",
+   "kind": "inline",
+   "latex": "v = \\sqrt{w}",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "Applying the square-root change of variable to the tilted $\\chi^2$ representation in Section A.1.1 yields an equivalent representation in total volatility $v = \\sqrt{w}$ .",
+   "symbols": [
+    "v",
+    "w"
+   ],
+   "offset": [
+    37470,
+    37484
+   ],
+   "raw": "$v = \\sqrt{w}$"
+  },
+  {
+   "id": "f208",
+   "kind": "inline",
+   "latex": "\\Gamma(\\frac{1}{2}, \\frac{1}{2})",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "The square root of a $\\Gamma(\\frac{1}{2}, \\frac{1}{2})$ variable follows the standard half-normal law, equivalently a Nakagami distribution with shape parameter $1/2$ and spread parameter $1$ .",
+   "symbols": [
+    "\\Gamma"
+   ],
+   "offset": [
+    37509,
+    37543
+   ],
+   "raw": "$\\Gamma(\\frac{1}{2}, \\frac{1}{2})$"
+  },
+  {
+   "id": "f209",
+   "kind": "inline",
+   "latex": "1/2",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "The square root of a $\\Gamma(\\frac{1}{2}, \\frac{1}{2})$ variable follows the standard half-normal law, equivalently a Nakagami distribution with shape parameter $1/2$ and spread parameter $1$ .",
+   "symbols": [],
+   "offset": [
+    37651,
+    37656
+   ],
+   "raw": "$1/2$"
+  },
+  {
+   "id": "f210",
+   "kind": "inline",
+   "latex": "1",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "The square root of a $\\Gamma(\\frac{1}{2}, \\frac{1}{2})$ variable follows the standard half-normal law, equivalently a Nakagami distribution with shape parameter $1/2$ and spread parameter $1$ .",
+   "symbols": [],
+   "offset": [
+    37680,
+    37683
+   ],
+   "raw": "$1$"
+  },
+  {
+   "id": "f211",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "For $k > 0$ , define",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    37691,
+    37698
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f212",
+   "kind": "display",
+   "latex": "\\mathcal{F}_{N,k}(x) := e^{k/2} \\sqrt{\\frac{2}{\\pi}} \\int_0^x \\exp \\left\\{ -\\frac{\\nu^2}{2} - \\frac{k^2}{8\\nu^2} \\right\\} d\\nu, \\quad x > 0.",
+   "number": "35",
+   "numbers": [
+    "35"
+   ],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "For $k > 0$ , define $$\\mathcal{F}_{N,k}(x) := e^{k/2} \\sqrt{\\frac{2}{\\pi}} \\int_0^x \\exp \\left\\{ -\\frac{\\nu^2}{2} - \\frac{k^2}{8\\nu^2} \\right\\} d\\nu, \\quad x > 0.$$",
+   "symbols": [
+    "\\mathcal{F}_{N,k}",
+    "x",
+    "k",
+    "\\pi",
+    "\\nu"
+   ],
+   "offset": [
+    37709,
+    37862
+   ],
+   "raw": "$$\\mathcal{F}_{N,k}(x) := e^{k/2} \\sqrt{\\frac{2}{\\pi}} \\int_0^x \\exp \\left\\{ -\\frac{\\nu^2}{2} - \\frac{k^2}{8\\nu^2} \\right\\} d\\nu, \\quad x > 0. \\tag{35}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: missing '}' at 'de'"
+  },
+  {
+   "id": "f213",
+   "kind": "inline",
+   "latex": "\\mathcal{F}_{N,k}",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "Then $\\mathcal{F}_{N,k}$ is the distribution function of a standard half-normal, or Nakagami( $\\frac{1}{2}$ , 1), law exponentially tilted by $\\exp\\{-k^2/(8\\nu^2)\\}$ , and for $k > 0$ ,",
+   "symbols": [
+    "\\mathcal{F}_{N,k}"
+   ],
+   "offset": [
+    37870,
+    37889
+   ],
+   "raw": "$\\mathcal{F}_{N,k}$"
+  },
+  {
+   "id": "f214",
+   "kind": "inline",
+   "latex": "\\frac{1}{2}",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "Then $\\mathcal{F}_{N,k}$ is the distribution function of a standard half-normal, or Nakagami( $\\frac{1}{2}$ , 1), law exponentially tilted by $\\exp\\{-k^2/(8\\nu^2)\\}$ , and for $k > 0$ ,",
+   "symbols": [],
+   "offset": [
+    37960,
+    37973
+   ],
+   "raw": "$\\frac{1}{2}$"
+  },
+  {
+   "id": "f215",
+   "kind": "inline",
+   "latex": "\\exp\\{-k^2/(8\\nu^2)\\}",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "Then $\\mathcal{F}_{N,k}$ is the distribution function of a standard half-normal, or Nakagami( $\\frac{1}{2}$ , 1), law exponentially tilted by $\\exp\\{-k^2/(8\\nu^2)\\}$ , and for $k > 0$ ,",
+   "symbols": [
+    "k",
+    "\\nu"
+   ],
+   "offset": [
+    38009,
+    38032
+   ],
+   "raw": "$\\exp\\{-k^2/(8\\nu^2)\\}$"
+  },
+  {
+   "id": "f216",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "Then $\\mathcal{F}_{N,k}$ is the distribution function of a standard half-normal, or Nakagami( $\\frac{1}{2}$ , 1), law exponentially tilted by $\\exp\\{-k^2/(8\\nu^2)\\}$ , and for $k > 0$ ,",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    38044,
+    38051
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f217",
+   "kind": "display",
+   "latex": "c = \\mathcal{F}_{N,k} \\left( \\frac{v}{2} \\right), \\quad w = 4 \\left( \\mathcal{F}_{N,k}^{-1}(c) \\right)^2, \\quad v = 2 \\mathcal{F}_{N,k}^{-1}(c).",
+   "number": "36",
+   "numbers": [
+    "36"
+   ],
+   "page": 19,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "Then $\\mathcal{F}_{N,k}$ is the distribution function of a standard half-normal, or Nakagami( $\\frac{1}{2}$ , 1), law exponentially tilted by $\\exp\\{-k^2/(8\\nu^2)\\}$ , and for $k > 0$ , $$c = \\mathcal{F}_{N,k} \\left( \\frac{v}{2} \\right), \\quad w = 4 \\left( \\mathcal{F}_{N,k}^{-1}(c) \\right)^2, \\quad v = 2 \\mathcal{F}_{N,k}^{-1}(c).$$",
+   "symbols": [
+    "c",
+    "\\mathcal{F}_{N,k}",
+    "v",
+    "w"
+   ],
+   "offset": [
+    38055,
+    38212
+   ],
+   "raw": "$$c = \\mathcal{F}_{N,k} \\left( \\frac{v}{2} \\right), \\quad w = 4 \\left( \\mathcal{F}_{N,k}^{-1}(c) \\right)^2, \\quad v = 2 \\mathcal{F}_{N,k}^{-1}(c). \\tag{36}$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: missing '}' at 'de'"
+  },
+  {
+   "id": "f218",
+   "kind": "inline",
+   "latex": "k^2/(8\\nu^2)",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "However, the tilt term $k^2/(8\\nu^2)$ is itself a function of inverse variance, so the construction still carries the variance-space structure even when stated in volatility coordinates.",
+   "symbols": [
+    "k",
+    "\\nu"
+   ],
+   "offset": [
+    38344,
+    38358
+   ],
+   "raw": "$k^2/(8\\nu^2)$"
+  },
+  {
+   "id": "f219",
+   "kind": "inline",
+   "latex": "1/(2\\nu)",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.1.4 Tilted half-normal / Nakagami",
+   "sentence": "This is consistent with the numerical observation in Section 4 that the inverse is more stable in variance than in volatility, with the $1/(2\\nu)$ factor in the volatility-space inverse sensitivity being the differential analogue of the same square-root projection.",
+   "symbols": [
+    "\\nu"
+   ],
+   "offset": [
+    38808,
+    38818
+   ],
+   "raw": "$1/(2\\nu)$"
+  },
+  {
+   "id": "f220",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Fix $k > 0$ and define*",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    39002,
+    39009
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f221",
+   "kind": "display",
+   "latex": "w(c) := \\mathcal{F}_{GIG}^{-1}\\left(c; \\frac{1}{2}, \\frac{1}{4}, k^2\\right), \\quad 0 < c < 1.",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Fix $k > 0$ and define* $$w(c) := \\mathcal{F}_{GIG}^{-1}\\left(c; \\frac{1}{2}, \\frac{1}{4}, k^2\\right), \\quad 0 < c < 1.$$",
+   "symbols": [
+    "w",
+    "c",
+    "\\mathcal{F}_{GIG}",
+    "k"
+   ],
+   "offset": [
+    39024,
+    39121
+   ],
+   "raw": "$$w(c) := \\mathcal{F}_{GIG}^{-1}\\left(c; \\frac{1}{2}, \\frac{1}{4}, k^2\\right), \\quad 0 < c < 1.$$",
+   "python": null,
+   "parse_error": "sympy could not parse it: missing '}' at 'de'"
+  },
+  {
+   "id": "f222",
+   "kind": "inline",
+   "latex": "Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Proof.* For $Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$ the density is",
+   "symbols": [
+    "Z_k",
+    "G",
+    "I",
+    "k"
+   ],
+   "offset": [
+    39137,
+    39182
+   ],
+   "raw": "$Z_k \\sim GIG(\\frac{1}{2}, \\frac{1}{4}, k^2)$"
+  },
+  {
+   "id": "f223",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Then $w$ is not $D$ -finite as a function of $c$ .",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    39207,
+    39210
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f224",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Then $w$ is not $D$ -finite as a function of $c$ .",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    39220,
+    39223
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f225",
+   "kind": "inline",
+   "latex": "c",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Then $w$ is not $D$ -finite as a function of $c$ .",
+   "symbols": [
+    "c"
+   ],
+   "offset": [
+    39250,
+    39253
+   ],
+   "raw": "$c$"
+  },
+  {
+   "id": "f226",
+   "kind": "display",
+   "latex": "f_k(w) = \\frac{e^{k/2}}{2\\sqrt{2\\pi}} w^{-1/2} \\exp\\left(-\\frac{w}{8} - \\frac{k^2}{2w}\\right), \\quad w > 0.",
+   "number": "37",
+   "numbers": [
+    "37"
+   ],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Then $w$ is not $D$ -finite as a function of $c$ . $$f_k(w) = \\frac{e^{k/2}}{2\\sqrt{2\\pi}} w^{-1/2} \\exp\\left(-\\frac{w}{8} - \\frac{k^2}{2w}\\right), \\quad w > 0.$$",
+   "symbols": [
+    "f_k",
+    "w",
+    "k",
+    "\\pi"
+   ],
+   "offset": [
+    39258,
+    39378
+   ],
+   "raw": "$$f_k(w) = \\frac{e^{k/2}}{2\\sqrt{2\\pi}} w^{-1/2} \\exp\\left(-\\frac{w}{8} - \\frac{k^2}{2w}\\right), \\quad w > 0. \\tag{37}$$",
+   "python": "eq_37_f_k",
+   "parse_error": null
+  },
+  {
+   "id": "f227",
+   "kind": "inline",
+   "latex": "w \\downarrow 0",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 1: small-w asymptotic of the cdf.* As $w \\downarrow 0$ , the factor $e^{-x/8} \\rightarrow 1$ uniformly on $[0, w]$ , so",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    39425,
+    39441
+   ],
+   "raw": "$w \\downarrow 0$"
+  },
+  {
+   "id": "f228",
+   "kind": "inline",
+   "latex": "e^{-x/8} \\rightarrow 1",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 1: small-w asymptotic of the cdf.* As $w \\downarrow 0$ , the factor $e^{-x/8} \\rightarrow 1$ uniformly on $[0, w]$ , so",
+   "symbols": [
+    "x"
+   ],
+   "offset": [
+    39456,
+    39480
+   ],
+   "raw": "$e^{-x/8} \\rightarrow 1$"
+  },
+  {
+   "id": "f229",
+   "kind": "inline",
+   "latex": "[0, w]",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 1: small-w asymptotic of the cdf.* As $w \\downarrow 0$ , the factor $e^{-x/8} \\rightarrow 1$ uniformly on $[0, w]$ , so",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    39496,
+    39504
+   ],
+   "raw": "$[0, w]$"
+  },
+  {
+   "id": "f230",
+   "kind": "display",
+   "latex": "\\begin{aligned}\\mathcal{F}_{GIG,k}(w) &= \\frac{e^{k/2}}{2\\sqrt{2\\pi}} \\int_0^w x^{-1/2} \\exp\\left(-\\frac{x}{8} - \\frac{k^2}{2x}\\right) dx \\\\ &\\sim \\frac{e^{k/2}}{2\\sqrt{2\\pi}} \\int_0^w x^{-1/2} \\exp\\left(-\\frac{k^2}{2x}\\right) dx.\\end{aligned}",
+   "number": "38",
+   "numbers": [
+    "38"
+   ],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 1: small-w asymptotic of the cdf.* As $w \\downarrow 0$ , the factor $e^{-x/8} \\rightarrow 1$ uniformly on $[0, w]$ , so $$\\begin{aligned}\\mathcal{F}_{GIG,k}(w) &= \\frac{e^{k/2}}{2\\sqrt{2\\pi}} \\int_0^w x^{-1/2} \\exp\\left(-\\frac{x}{8} - \\frac{k^2}{2x}\\right) dx \\\\ &\\sim \\frac{e^{k/2}}{2\\sqrt{2\\pi}} \\int_0^w x^{-1/2} \\exp\\left(-\\frac{k^2}{2x}\\right) dx.\\end{aligned}$$",
+   "symbols": [
+    "\\mathcal{F}_{GIG,k}",
+    "w",
+    "k",
+    "\\pi",
+    "x"
+   ],
+   "offset": [
+    39511,
+    39767
+   ],
+   "raw": "$$\\begin{aligned}\\mathcal{F}_{GIG,k}(w) &= \\frac{e^{k/2}}{2\\sqrt{2\\pi}} \\int_0^w x^{-1/2} \\exp\\left(-\\frac{x}{8} - \\frac{k^2}{2x}\\right) dx \\\\ &\\sim \\frac{e^{k/2}}{2\\sqrt{2\\pi}} \\int_0^w x^{-1/2} \\exp\\left(-\\frac{k^2}{2x}\\right) dx.\\end{aligned} \\tag{38}$$",
+   "python": null,
+   "parse_error": "contains a aligned environment (not supported by the LaTeX parser)"
+  },
+  {
+   "id": "f231",
+   "kind": "inline",
+   "latex": "u = k^2/(2x)",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Substituting $u = k^2/(2x)$ yields",
+   "symbols": [
+    "u",
+    "k",
+    "x"
+   ],
+   "offset": [
+    39783,
+    39797
+   ],
+   "raw": "$u = k^2/(2x)$"
+  },
+  {
+   "id": "f232",
+   "kind": "display",
+   "latex": "\\int_0^w x^{-1/2} \\exp\\left(-\\frac{k^2}{2x}\\right) dx = \\frac{k}{\\sqrt{2}} \\int_{k^2/(2w)}^\\infty u^{-3/2} e^{-u} du \\sim \\frac{2w^{3/2}}{k^2} e^{-k^2/(2w)},",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Substituting $u = k^2/(2x)$ yields $$\\int_0^w x^{-1/2} \\exp\\left(-\\frac{k^2}{2x}\\right) dx = \\frac{k}{\\sqrt{2}} \\int_{k^2/(2w)}^\\infty u^{-3/2} e^{-u} du \\sim \\frac{2w^{3/2}}{k^2} e^{-k^2/(2w)},$$ where the last step uses the standard tail expansion $\\int_A^\\infty u^{-3/2} e^{-u} du \\sim A^{-3/2} e^{-A}$ as $A \\rightarrow \\infty$ .",
+   "symbols": [
+    "w",
+    "x",
+    "k",
+    "u"
+   ],
+   "offset": [
+    39807,
+    39968
+   ],
+   "raw": "$$\\int_0^w x^{-1/2} \\exp\\left(-\\frac{k^2}{2x}\\right) dx = \\frac{k}{\\sqrt{2}} \\int_{k^2/(2w)}^\\infty u^{-3/2} e^{-u} du \\sim \\frac{2w^{3/2}}{k^2} e^{-k^2/(2w)},$$",
+   "python": null,
+   "parse_error": "contains \\sim (expectation, probability, set or series notation)"
+  },
+  {
+   "id": "f233",
+   "kind": "inline",
+   "latex": "\\int_A^\\infty u^{-3/2} e^{-u} du \\sim A^{-3/2} e^{-A}",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "where the last step uses the standard tail expansion $\\int_A^\\infty u^{-3/2} e^{-u} du \\sim A^{-3/2} e^{-A}$ as $A \\rightarrow \\infty$ .",
+   "symbols": [
+    "A",
+    "u"
+   ],
+   "offset": [
+    40024,
+    40079
+   ],
+   "raw": "$\\int_A^\\infty u^{-3/2} e^{-u} du \\sim A^{-3/2} e^{-A}$"
+  },
+  {
+   "id": "f234",
+   "kind": "inline",
+   "latex": "A \\rightarrow \\infty",
+   "number": null,
+   "numbers": [],
+   "page": 20,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "where the last step uses the standard tail expansion $\\int_A^\\infty u^{-3/2} e^{-u} du \\sim A^{-3/2} e^{-A}$ as $A \\rightarrow \\infty$ .",
+   "symbols": [
+    "A"
+   ],
+   "offset": [
+    40085,
+    40107
+   ],
+   "raw": "$A \\rightarrow \\infty$"
+  },
+  {
+   "id": "f235",
+   "kind": "display",
+   "latex": "\\mathcal{F}_{GIG,k}(w) \\sim \\frac{e^{k/2}}{k^2 \\sqrt{2\\pi}} w^{3/2} \\exp\\left(-\\frac{k^2}{2w}\\right), \\quad w \\downarrow 0.",
+   "number": "39",
+   "numbers": [
+    "39"
+   ],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Hence $$\\mathcal{F}_{GIG,k}(w) \\sim \\frac{e^{k/2}}{k^2 \\sqrt{2\\pi}} w^{3/2} \\exp\\left(-\\frac{k^2}{2w}\\right), \\quad w \\downarrow 0.$$",
+   "symbols": [
+    "\\mathcal{F}_{GIG,k}",
+    "w",
+    "k",
+    "\\pi"
+   ],
+   "offset": [
+    40136,
+    40272
+   ],
+   "raw": "$$\\mathcal{F}_{GIG,k}(w) \\sim \\frac{e^{k/2}}{k^2 \\sqrt{2\\pi}} w^{3/2} \\exp\\left(-\\frac{k^2}{2w}\\right), \\quad w \\downarrow 0. \\tag{39}$$",
+   "python": null,
+   "parse_error": "contains \\sim (expectation, probability, set or series notation)"
+  },
+  {
+   "id": "f236",
+   "kind": "inline",
+   "latex": "c = \\mathcal{F}_{GIG,k}(w)",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 2: inversion by bootstrap.* Set $c = \\mathcal{F}_{GIG,k}(w)$ .",
+   "symbols": [
+    "c",
+    "\\mathcal{F}_{GIG,k}",
+    "w"
+   ],
+   "offset": [
+    40313,
+    40341
+   ],
+   "raw": "$c = \\mathcal{F}_{GIG,k}(w)$"
+  },
+  {
+   "id": "f237",
+   "kind": "display",
+   "latex": "\\log \\frac{1}{c} = \\frac{k^2}{2w} - \\frac{3}{2} \\log w + \\log \\left( \\frac{k^2 \\sqrt{2\\pi}}{e^{k/2}} \\right) + o(1), \\quad w \\downarrow 0.",
+   "number": "40",
+   "numbers": [
+    "40"
+   ],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Taking logarithms in (39) gives $$\\log \\frac{1}{c} = \\frac{k^2}{2w} - \\frac{3}{2} \\log w + \\log \\left( \\frac{k^2 \\sqrt{2\\pi}}{e^{k/2}} \\right) + o(1), \\quad w \\downarrow 0.$$",
+   "symbols": [
+    "c",
+    "k",
+    "w",
+    "\\pi",
+    "o"
+   ],
+   "offset": [
+    40377,
+    40528
+   ],
+   "raw": "$$\\log \\frac{1}{c} = \\frac{k^2}{2w} - \\frac{3}{2} \\log w + \\log \\left( \\frac{k^2 \\sqrt{2\\pi}}{e^{k/2}} \\right) + o(1), \\quad w \\downarrow 0. \\tag{40}$$",
+   "python": "eq_40",
+   "parse_error": null
+  },
+  {
+   "id": "f238",
+   "kind": "inline",
+   "latex": "w \\approx k^2/(2\\log(1/c))",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "A first-pass estimate ignoring all but the leading term yields $w \\approx k^2/(2\\log(1/c))$ , so",
+   "symbols": [
+    "w",
+    "k",
+    "c"
+   ],
+   "offset": [
+    40594,
+    40622
+   ],
+   "raw": "$w \\approx k^2/(2\\log(1/c))$"
+  },
+  {
+   "id": "f239",
+   "kind": "display",
+   "latex": "\\log w \\sim -\\log \\log(1/c), \\quad c \\downarrow 0,",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "A first-pass estimate ignoring all but the leading term yields $w \\approx k^2/(2\\log(1/c))$ , so $$\\log w \\sim -\\log \\log(1/c), \\quad c \\downarrow 0,$$ which is $O(\\log \\log(1/c))$ .",
+   "symbols": [
+    "w",
+    "c"
+   ],
+   "offset": [
+    40629,
+    40683
+   ],
+   "raw": "$$\\log w \\sim -\\log \\log(1/c), \\quad c \\downarrow 0,$$",
+   "python": null,
+   "parse_error": "contains \\sim (expectation, probability, set or series notation)"
+  },
+  {
+   "id": "f240",
+   "kind": "inline",
+   "latex": "O(\\log \\log(1/c))",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "which is $O(\\log \\log(1/c))$ .",
+   "symbols": [
+    "c"
+   ],
+   "offset": [
+    40695,
+    40714
+   ],
+   "raw": "$O(\\log \\log(1/c))$"
+  },
+  {
+   "id": "f241",
+   "kind": "display",
+   "latex": "\\log \\frac{1}{c} = \\frac{k^2}{2w} + O\\left(\\log \\log \\frac{1}{c}\\right),",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Substituting back into (40), $$\\log \\frac{1}{c} = \\frac{k^2}{2w} + O\\left(\\log \\log \\frac{1}{c}\\right),$$ and solving for $w$ ,",
+   "symbols": [
+    "c",
+    "k",
+    "w"
+   ],
+   "offset": [
+    40747,
+    40823
+   ],
+   "raw": "$$\\log \\frac{1}{c} = \\frac{k^2}{2w} + O\\left(\\log \\log \\frac{1}{c}\\right),$$",
+   "python": "f241",
+   "parse_error": null
+  },
+  {
+   "id": "f242",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "and solving for $w$ ,",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    40842,
+    40845
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f243",
+   "kind": "display",
+   "latex": "w(c) = \\frac{k^2}{2 \\log(1/c)} \\left( 1 + O\\left( \\frac{\\log \\log(1/c)}{\\log(1/c)} \\right) \\right), \\quad c \\downarrow 0.",
+   "number": "41",
+   "numbers": [
+    "41"
+   ],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "and solving for $w$ , $$w(c) = \\frac{k^2}{2 \\log(1/c)} \\left( 1 + O\\left( \\frac{\\log \\log(1/c)}{\\log(1/c)} \\right) \\right), \\quad c \\downarrow 0.$$",
+   "symbols": [
+    "w",
+    "c",
+    "k"
+   ],
+   "offset": [
+    40849,
+    40983
+   ],
+   "raw": "$$w(c) = \\frac{k^2}{2 \\log(1/c)} \\left( 1 + O\\left( \\frac{\\log \\log(1/c)}{\\log(1/c)} \\right) \\right), \\quad c \\downarrow 0. \\tag{41}$$",
+   "python": "eq_41_w",
+   "parse_error": null
+  },
+  {
+   "id": "f244",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 3: incompatibility with $D$ -finiteness.* A univariate $D$ -finite function admits, at each finite singularity, an asymptotic expansion whose building blocks are products of $(c - c_0)^\\alpha$ for $\\alpha \\in \\mathbb{C}$ , exponentials $\\exp(P((c - c_0)^{-1/r}))$ for some polynomial $P$ and integer $r \\geq 1$ , and nonnegative integer* powers of $\\log(c - c_0)$ ; see (Flajolet et al., 2005, Thm. 1).",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    41016,
+    41019
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f245",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 3: incompatibility with $D$ -finiteness.* A univariate $D$ -finite function admits, at each finite singularity, an asymptotic expansion whose building blocks are products of $(c - c_0)^\\alpha$ for $\\alpha \\in \\mathbb{C}$ , exponentials $\\exp(P((c - c_0)^{-1/r}))$ for some polynomial $P$ and integer $r \\geq 1$ , and nonnegative integer* powers of $\\log(c - c_0)$ ; see (Flajolet et al., 2005, Thm. 1).",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    41048,
+    41051
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f246",
+   "kind": "inline",
+   "latex": "(c - c_0)^\\alpha",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 3: incompatibility with $D$ -finiteness.* A univariate $D$ -finite function admits, at each finite singularity, an asymptotic expansion whose building blocks are products of $(c - c_0)^\\alpha$ for $\\alpha \\in \\mathbb{C}$ , exponentials $\\exp(P((c - c_0)^{-1/r}))$ for some polynomial $P$ and integer $r \\geq 1$ , and nonnegative integer* powers of $\\log(c - c_0)$ ; see (Flajolet et al., 2005, Thm. 1).",
+   "symbols": [
+    "c",
+    "c_0",
+    "\\alpha"
+   ],
+   "offset": [
+    41168,
+    41186
+   ],
+   "raw": "$(c - c_0)^\\alpha$"
+  },
+  {
+   "id": "f247",
+   "kind": "inline",
+   "latex": "\\alpha \\in \\mathbb{C}",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 3: incompatibility with $D$ -finiteness.* A univariate $D$ -finite function admits, at each finite singularity, an asymptotic expansion whose building blocks are products of $(c - c_0)^\\alpha$ for $\\alpha \\in \\mathbb{C}$ , exponentials $\\exp(P((c - c_0)^{-1/r}))$ for some polynomial $P$ and integer $r \\geq 1$ , and nonnegative integer* powers of $\\log(c - c_0)$ ; see (Flajolet et al., 2005, Thm. 1).",
+   "symbols": [
+    "\\alpha"
+   ],
+   "offset": [
+    41193,
+    41216
+   ],
+   "raw": "$\\alpha \\in \\mathbb{C}$"
+  },
+  {
+   "id": "f248",
+   "kind": "inline",
+   "latex": "\\exp(P((c - c_0)^{-1/r}))",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 3: incompatibility with $D$ -finiteness.* A univariate $D$ -finite function admits, at each finite singularity, an asymptotic expansion whose building blocks are products of $(c - c_0)^\\alpha$ for $\\alpha \\in \\mathbb{C}$ , exponentials $\\exp(P((c - c_0)^{-1/r}))$ for some polynomial $P$ and integer $r \\geq 1$ , and nonnegative integer* powers of $\\log(c - c_0)$ ; see (Flajolet et al., 2005, Thm. 1).",
+   "symbols": [
+    "P",
+    "c",
+    "c_0",
+    "r"
+   ],
+   "offset": [
+    41233,
+    41260
+   ],
+   "raw": "$\\exp(P((c - c_0)^{-1/r}))$"
+  },
+  {
+   "id": "f249",
+   "kind": "inline",
+   "latex": "P",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 3: incompatibility with $D$ -finiteness.* A univariate $D$ -finite function admits, at each finite singularity, an asymptotic expansion whose building blocks are products of $(c - c_0)^\\alpha$ for $\\alpha \\in \\mathbb{C}$ , exponentials $\\exp(P((c - c_0)^{-1/r}))$ for some polynomial $P$ and integer $r \\geq 1$ , and nonnegative integer* powers of $\\log(c - c_0)$ ; see (Flajolet et al., 2005, Thm. 1).",
+   "symbols": [
+    "P"
+   ],
+   "offset": [
+    41283,
+    41286
+   ],
+   "raw": "$P$"
+  },
+  {
+   "id": "f250",
+   "kind": "inline",
+   "latex": "r \\geq 1",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 3: incompatibility with $D$ -finiteness.* A univariate $D$ -finite function admits, at each finite singularity, an asymptotic expansion whose building blocks are products of $(c - c_0)^\\alpha$ for $\\alpha \\in \\mathbb{C}$ , exponentials $\\exp(P((c - c_0)^{-1/r}))$ for some polynomial $P$ and integer $r \\geq 1$ , and nonnegative integer* powers of $\\log(c - c_0)$ ; see (Flajolet et al., 2005, Thm. 1).",
+   "symbols": [
+    "r"
+   ],
+   "offset": [
+    41301,
+    41311
+   ],
+   "raw": "$r \\geq 1$"
+  },
+  {
+   "id": "f251",
+   "kind": "inline",
+   "latex": "\\log(c - c_0)",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Step 3: incompatibility with $D$ -finiteness.* A univariate $D$ -finite function admits, at each finite singularity, an asymptotic expansion whose building blocks are products of $(c - c_0)^\\alpha$ for $\\alpha \\in \\mathbb{C}$ , exponentials $\\exp(P((c - c_0)^{-1/r}))$ for some polynomial $P$ and integer $r \\geq 1$ , and nonnegative integer* powers of $\\log(c - c_0)$ ; see (Flajolet et al., 2005, Thm. 1).",
+   "symbols": [
+    "c",
+    "c_0"
+   ],
+   "offset": [
+    41351,
+    41366
+   ],
+   "raw": "$\\log(c - c_0)$"
+  },
+  {
+   "id": "f252",
+   "kind": "inline",
+   "latex": "(\\log(1/c))^{-1}",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The asymptotic (41) contains the factor $(\\log(1/c))^{-1}$ , a reciprocal logarithmic power, which is incompatible with this structure.",
+   "symbols": [
+    "c"
+   ],
+   "offset": [
+    41447,
+    41465
+   ],
+   "raw": "$(\\log(1/c))^{-1}$"
+  },
+  {
+   "id": "f253",
+   "kind": "inline",
+   "latex": "w",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Hence $w$ is not $D$ -finite.",
+   "symbols": [
+    "w"
+   ],
+   "offset": [
+    41550,
+    41553
+   ],
+   "raw": "$w$"
+  },
+  {
+   "id": "f254",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Hence $w$ is not $D$ -finite.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    41563,
+    41566
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f255",
+   "kind": "inline",
+   "latex": "\\square",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "$\\square$",
+   "symbols": [],
+   "offset": [
+    41577,
+    41586
+   ],
+   "raw": "$\\square$"
+  },
+  {
+   "id": "f256",
+   "kind": "inline",
+   "latex": "w(c) \\sim k^2/(2 \\log(1/c))",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "In particular, $w(c) \\sim k^2/(2 \\log(1/c))$ as $c \\downarrow 0$ .",
+   "symbols": [
+    "w",
+    "c",
+    "k"
+   ],
+   "offset": [
+    41604,
+    41633
+   ],
+   "raw": "$w(c) \\sim k^2/(2 \\log(1/c))$"
+  },
+  {
+   "id": "f257",
+   "kind": "inline",
+   "latex": "c \\downarrow 0",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "In particular, $w(c) \\sim k^2/(2 \\log(1/c))$ as $c \\downarrow 0$ .",
+   "symbols": [
+    "c"
+   ],
+   "offset": [
+    41639,
+    41655
+   ],
+   "raw": "$c \\downarrow 0$"
+  },
+  {
+   "id": "f258",
+   "kind": "inline",
+   "latex": "T > 0",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Fix $T > 0$ , $k > 0$ .",
+   "symbols": [
+    "T"
+   ],
+   "offset": [
+    41681,
+    41688
+   ],
+   "raw": "$T > 0$"
+  },
+  {
+   "id": "f259",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Fix $T > 0$ , $k > 0$ .",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    41692,
+    41699
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f260",
+   "kind": "inline",
+   "latex": "c \\mapsto \\sigma(k, c)",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The implied-volatility map $c \\mapsto \\sigma(k, c)$ on $(0, 1)$ is not $D$ -finite.",
+   "symbols": [
+    "c",
+    "\\sigma",
+    "k"
+   ],
+   "offset": [
+    41730,
+    41754
+   ],
+   "raw": "$c \\mapsto \\sigma(k, c)$"
+  },
+  {
+   "id": "f261",
+   "kind": "inline",
+   "latex": "(0, 1)",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The implied-volatility map $c \\mapsto \\sigma(k, c)$ on $(0, 1)$ is not $D$ -finite.",
+   "symbols": [],
+   "offset": [
+    41760,
+    41768
+   ],
+   "raw": "$(0, 1)$"
+  },
+  {
+   "id": "f262",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The implied-volatility map $c \\mapsto \\sigma(k, c)$ on $(0, 1)$ is not $D$ -finite.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    41778,
+    41781
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f263",
+   "kind": "inline",
+   "latex": "(k, c) \\mapsto \\sigma(k, c)",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The joint map $(k, c) \\mapsto \\sigma(k, c)$ on the OTM region $\\{k > 0, 0 < c < 1\\}$ is not $D$ -finite either.",
+   "symbols": [
+    "k",
+    "c",
+    "\\sigma"
+   ],
+   "offset": [
+    41806,
+    41835
+   ],
+   "raw": "$(k, c) \\mapsto \\sigma(k, c)$"
+  },
+  {
+   "id": "f264",
+   "kind": "inline",
+   "latex": "\\{k > 0, 0 < c < 1\\}",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The joint map $(k, c) \\mapsto \\sigma(k, c)$ on the OTM region $\\{k > 0, 0 < c < 1\\}$ is not $D$ -finite either.",
+   "symbols": [
+    "k",
+    "c"
+   ],
+   "offset": [
+    41856,
+    41878
+   ],
+   "raw": "$\\{k > 0, 0 < c < 1\\}$"
+  },
+  {
+   "id": "f265",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The joint map $(k, c) \\mapsto \\sigma(k, c)$ on the OTM region $\\{k > 0, 0 < c < 1\\}$ is not $D$ -finite either.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    41888,
+    41891
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f266",
+   "kind": "inline",
+   "latex": "\\sigma(k, \\cdot)",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Proof.* If $\\sigma(k, \\cdot)$ were $D$ -finite at fixed $k$ , then so would be $w(c) = T\\sigma(k, c)^2$ by closure of the $D$ -finite class under products and scalar multiplication, contradicting Proposition 1.",
+   "symbols": [
+    "\\sigma",
+    "k"
+   ],
+   "offset": [
+    41922,
+    41940
+   ],
+   "raw": "$\\sigma(k, \\cdot)$"
+  },
+  {
+   "id": "f267",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Proof.* If $\\sigma(k, \\cdot)$ were $D$ -finite at fixed $k$ , then so would be $w(c) = T\\sigma(k, c)^2$ by closure of the $D$ -finite class under products and scalar multiplication, contradicting Proposition 1.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    41948,
+    41951
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f268",
+   "kind": "inline",
+   "latex": "k",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Proof.* If $\\sigma(k, \\cdot)$ were $D$ -finite at fixed $k$ , then so would be $w(c) = T\\sigma(k, c)^2$ by closure of the $D$ -finite class under products and scalar multiplication, contradicting Proposition 1.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    41970,
+    41973
+   ],
+   "raw": "$k$"
+  },
+  {
+   "id": "f269",
+   "kind": "inline",
+   "latex": "w(c) = T\\sigma(k, c)^2",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Proof.* If $\\sigma(k, \\cdot)$ were $D$ -finite at fixed $k$ , then so would be $w(c) = T\\sigma(k, c)^2$ by closure of the $D$ -finite class under products and scalar multiplication, contradicting Proposition 1.",
+   "symbols": [
+    "w",
+    "c",
+    "T",
+    "\\sigma",
+    "k"
+   ],
+   "offset": [
+    41994,
+    42018
+   ],
+   "raw": "$w(c) = T\\sigma(k, c)^2$"
+  },
+  {
+   "id": "f270",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 21,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Proof.* If $\\sigma(k, \\cdot)$ were $D$ -finite at fixed $k$ , then so would be $w(c) = T\\sigma(k, c)^2$ by closure of the $D$ -finite class under products and scalar multiplication, contradicting Proposition 1.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    42039,
+    42042
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f271",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "the joint map were $D$ -finite, specialization to any fixed $k > 0$ would yield a $D$ -finite function of $c$ alone, again contradicting Proposition 1.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    42170,
+    42173
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f272",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "the joint map were $D$ -finite, specialization to any fixed $k > 0$ would yield a $D$ -finite function of $c$ alone, again contradicting Proposition 1.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    42212,
+    42219
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f273",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "the joint map were $D$ -finite, specialization to any fixed $k > 0$ would yield a $D$ -finite function of $c$ alone, again contradicting Proposition 1.",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    42236,
+    42239
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f274",
+   "kind": "inline",
+   "latex": "c",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "the joint map were $D$ -finite, specialization to any fixed $k > 0$ would yield a $D$ -finite function of $c$ alone, again contradicting Proposition 1.",
+   "symbols": [
+    "c"
+   ],
+   "offset": [
+    42261,
+    42264
+   ],
+   "raw": "$c$"
+  },
+  {
+   "id": "f275",
+   "kind": "inline",
+   "latex": "\\square",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "$\\square$",
+   "symbols": [],
+   "offset": [
+    42309,
+    42318
+   ],
+   "raw": "$\\square$"
+  },
+  {
+   "id": "f276",
+   "kind": "inline",
+   "latex": "k = 0",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The case $k = 0$ admits the closed-form solution $\\sigma = (2/\\sqrt{T}) \\Phi^{-1}((1+c)/2)$ and is excluded from the present argument.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    42362,
+    42369
+   ],
+   "raw": "$k = 0$"
+  },
+  {
+   "id": "f277",
+   "kind": "inline",
+   "latex": "\\sigma = (2/\\sqrt{T}) \\Phi^{-1}((1+c)/2)",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The case $k = 0$ admits the closed-form solution $\\sigma = (2/\\sqrt{T}) \\Phi^{-1}((1+c)/2)$ and is excluded from the present argument.",
+   "symbols": [
+    "\\sigma",
+    "T",
+    "\\Phi",
+    "c"
+   ],
+   "offset": [
+    42404,
+    42446
+   ],
+   "raw": "$\\sigma = (2/\\sqrt{T}) \\Phi^{-1}((1+c)/2)$"
+  },
+  {
+   "id": "f278",
+   "kind": "inline",
+   "latex": "D",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Gerhold (2012) established non- $D$ -finiteness of implied volatility through a univariate specialization $S = eK$ , $c = (e - 1)K + eK^2$ , recovering the obstruction $F^{-1}(x) \\sim 1/\\sqrt{2 \\log(1/x)}$ as $x \\downarrow 0$ .",
+   "symbols": [
+    "D"
+   ],
+   "offset": [
+    42747,
+    42750
+   ],
+   "raw": "$D$"
+  },
+  {
+   "id": "f279",
+   "kind": "inline",
+   "latex": "S = eK",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Gerhold (2012) established non- $D$ -finiteness of implied volatility through a univariate specialization $S = eK$ , $c = (e - 1)K + eK^2$ , recovering the obstruction $F^{-1}(x) \\sim 1/\\sqrt{2 \\log(1/x)}$ as $x \\downarrow 0$ .",
+   "symbols": [
+    "S",
+    "e",
+    "K"
+   ],
+   "offset": [
+    42822,
+    42830
+   ],
+   "raw": "$S = eK$"
+  },
+  {
+   "id": "f280",
+   "kind": "inline",
+   "latex": "c = (e - 1)K + eK^2",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Gerhold (2012) established non- $D$ -finiteness of implied volatility through a univariate specialization $S = eK$ , $c = (e - 1)K + eK^2$ , recovering the obstruction $F^{-1}(x) \\sim 1/\\sqrt{2 \\log(1/x)}$ as $x \\downarrow 0$ .",
+   "symbols": [
+    "c",
+    "e",
+    "K"
+   ],
+   "offset": [
+    42834,
+    42855
+   ],
+   "raw": "$c = (e - 1)K + eK^2$"
+  },
+  {
+   "id": "f281",
+   "kind": "inline",
+   "latex": "F^{-1}(x) \\sim 1/\\sqrt{2 \\log(1/x)}",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Gerhold (2012) established non- $D$ -finiteness of implied volatility through a univariate specialization $S = eK$ , $c = (e - 1)K + eK^2$ , recovering the obstruction $F^{-1}(x) \\sim 1/\\sqrt{2 \\log(1/x)}$ as $x \\downarrow 0$ .",
+   "symbols": [
+    "F",
+    "x"
+   ],
+   "offset": [
+    42886,
+    42923
+   ],
+   "raw": "$F^{-1}(x) \\sim 1/\\sqrt{2 \\log(1/x)}$"
+  },
+  {
+   "id": "f282",
+   "kind": "inline",
+   "latex": "x \\downarrow 0",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "Gerhold (2012) established non- $D$ -finiteness of implied volatility through a univariate specialization $S = eK$ , $c = (e - 1)K + eK^2$ , recovering the obstruction $F^{-1}(x) \\sim 1/\\sqrt{2 \\log(1/x)}$ as $x \\downarrow 0$ .",
+   "symbols": [
+    "x"
+   ],
+   "offset": [
+    42929,
+    42945
+   ],
+   "raw": "$x \\downarrow 0$"
+  },
+  {
+   "id": "f283",
+   "kind": "inline",
+   "latex": "k > 0",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The variance-quantile representation makes the same obstruction transparent at every fixed log-moneyness $k > 0$ : the inverse Gaussian tail produces, via (39)–(41), a reciprocal-logarithmic asymptotic of the same forbidden type.",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    43054,
+    43061
+   ],
+   "raw": "$k > 0$"
+  },
+  {
+   "id": "f284",
+   "kind": "inline",
+   "latex": "k",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The present proof therefore confirms and slightly sharpens Gerhold (2012), in that the obstruction is identified pointwise in $k$ rather than only along a one-dimensional curve in $(S, K, c)$ -space.*",
+   "symbols": [
+    "k"
+   ],
+   "offset": [
+    43306,
+    43309
+   ],
+   "raw": "$k$"
+  },
+  {
+   "id": "f285",
+   "kind": "inline",
+   "latex": "(S, K, c)",
+   "number": null,
+   "numbers": [],
+   "page": 22,
+   "section": "A.2 The Quantile is not D-finite",
+   "sentence": "The present proof therefore confirms and slightly sharpens Gerhold (2012), in that the obstruction is identified pointwise in $k$ rather than only along a one-dimensional curve in $(S, K, c)$ -space.*",
+   "symbols": [
+    "S",
+    "K",
+    "c"
+   ],
+   "offset": [
+    43362,
+    43373
+   ],
+   "raw": "$(S, K, c)$"
+  }
+ ]
+}

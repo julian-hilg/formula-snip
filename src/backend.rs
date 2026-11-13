@@ -10,6 +10,8 @@ use std::sync::mpsc::{channel, Receiver};
 use std::time::Duration;
 
 const SERVER_PY: &str = include_str!("../backend/ocr_server.py");
+const CONVERT_PY: &str = include_str!("../backend/convert.py");
+const FORMULAS_PY: &str = include_str!("../backend/formulas.py");
 
 pub struct Backend {
     child: Child,
@@ -85,6 +87,51 @@ impl Backend {
             }
         }
     }
+}
+
+/// A command that runs the paper converter (`backend/convert.py`, embedded in the binary)
+/// with these arguments.
+pub fn tool_command(python: &Path, args: &[String]) -> Result<Command> {
+    let dir = crate::config::app_dir(dirs::data_local_dir()).join("convert");
+    let script = dir.join("convert.py");
+    std::fs::create_dir_all(&dir)
+        .and_then(|_| write_if_changed(&script, CONVERT_PY))
+        .and_then(|_| write_if_changed(&dir.join("formulas.py"), FORMULAS_PY))
+        .with_context(|| format!("could not write the converter to {}", dir.display()))?;
+    let mut cmd = Command::new(python);
+    cmd.arg("-u")
+        .arg(&script)
+        .args(args)
+        .env("PATH", search_path())
+        .env("TQDM_DISABLE", "1")
+        .env("FORMULA_SNIP_VERSION", env!("CARGO_PKG_VERSION"));
+    Ok(cmd)
+}
+
+/// `formula-snip convert …` / `formula-snip formulas …`: stdin/stdout/stderr are passed
+/// through, so `--json` output reaches the caller unchanged. Returns the exit code.
+pub fn run_tool(python: &Path, args: &[String]) -> i32 {
+    let status = tool_command(python, args).and_then(|mut c| {
+        c.status().with_context(|| format!("could not start Python at {}", python.display()))
+    });
+    match status {
+        Ok(s) => s.code().unwrap_or(1),
+        Err(e) => {
+            eprintln!("error: {e:#}");
+            1
+        }
+    }
+}
+
+/// Write via a temporary file + rename, so a converter that is already running never
+/// reads a half-written script.
+fn write_if_changed(path: &Path, content: &str) -> std::io::Result<()> {
+    if std::fs::read_to_string(path).is_ok_and(|old| old == content) {
+        return Ok(());
+    }
+    let tmp = path.with_extension(format!("tmp{}", std::process::id()));
+    std::fs::write(&tmp, content)?;
+    std::fs::rename(&tmp, path)
 }
 
 /// Apps started from Finder, the Start menu or at login get a minimal PATH, so the OCR

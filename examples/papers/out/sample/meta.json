@@ -1,0 +1,61 @@
+{
+ "schema": 1,
+ "formula_snip": "0.1.0",
+ "created": "2026-11-10T05:51:07+00:00",
+ "source": {
+  "path": "examples/papers/sample.pdf",
+  "name": "sample.pdf",
+  "sha256": "fbde899a8848bd8ae32c1ffdae1225a822d371cd6894c9fd7bc93e4688c3c37c",
+  "page_count": 2
+ },
+ "pages": [
+  1,
+  2
+ ],
+ "converter": {
+  "name": "marker",
+  "version": "2.1.0",
+  "surya": "0.23.0",
+  "mode": "ocr",
+  "settings": {
+   "mode": "fast",
+   "force_ocr": true,
+   "ocr_full_page": false
+  }
+ },
+ "sympy": "1.14.0",
+ "cached": true,
+ "timings": {
+  "models_s": 4.02,
+  "convert_s": 10.2,
+  "formulas_s": 0.63,
+  "total_s": 0.69
+ },
+ "quality": {
+  "pages": 2,
+  "tables": 1,
+  "images": 0,
+  "display": 6,
+  "numbered": 6,
+  "inline": 24,
+  "inline_split": 0
+ },
+ "summary": {
+  "formulas": 30,
+  "display": 6,
+  "inline": 24,
+  "numbered": 6,
+  "parsed": 5,
+  "unparsed": 1,
+  "variables": 29,
+  "variables_defined": 6,
+  "variables_undefined": 23
+ },
+ "files": [
+  "paper.md",
+  "formulas.json",
+  "variables.json",
+  "formulas.py",
+  "meta.json"
+ ]
+}

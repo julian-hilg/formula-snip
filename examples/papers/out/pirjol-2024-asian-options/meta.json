@@ -1,0 +1,77 @@
+{
+ "schema": 1,
+ "formula_snip": "0.1.0",
+ "created": "2026-11-10T05:51:09+00:00",
+ "source": {
+  "path": "examples/papers/pirjol-2024-asian-options.pdf",
+  "name": "pirjol-2024-asian-options.pdf",
+  "sha256": "4bb2e0645c03650af58ac7693ecaf21cdfeba33f75447fa79a584e48fd9b4e7b",
+  "page_count": 17
+ },
+ "pages": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17
+ ],
+ "converter": {
+  "name": "marker",
+  "version": "2.1.0",
+  "surya": "0.23.0",
+  "mode": "ocr",
+  "settings": {
+   "mode": "fast",
+   "force_ocr": true,
+   "ocr_full_page": false
+  }
+ },
+ "sympy": "1.14.0",
+ "cached": true,
+ "timings": {
+  "models_s": 3.69,
+  "convert_s": 129.89,
+  "formulas_s": 2.2,
+  "total_s": 2.24
+ },
+ "quality": {
+  "pages": 17,
+  "tables": 2,
+  "images": 1,
+  "display": 90,
+  "numbered": 90,
+  "inline": 269,
+  "inline_split": 0
+ },
+ "summary": {
+  "formulas": 359,
+  "display": 90,
+  "inline": 269,
+  "numbered": 90,
+  "parsed": 33,
+  "unparsed": 57,
+  "variables": 111,
+  "variables_defined": 17,
+  "variables_undefined": 94
+ },
+ "files": [
+  "paper.md",
+  "images/",
+  "formulas.json",
+  "variables.json",
+  "formulas.py",
+  "meta.json"
+ ]
+}

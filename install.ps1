@@ -25,6 +25,9 @@ if (-not ((pipx list --short) -match "^marker-pdf ")) {
   Say "Installing marker-pdf (downloads PyTorch, takes a few minutes)"
   pipx install marker-pdf
 }
+# sympy's LaTeX parser (used by `formula-snip convert` for formulas.py) needs this runtime
+pipx runpip marker-pdf show antlr4-python3-runtime *> $null
+if ($LASTEXITCODE -ne 0) { pipx inject marker-pdf "antlr4-python3-runtime==4.11.*" }
 
 if (-not (Get-Command llama-server -ErrorAction SilentlyContinue)) {
   Say "Installing llama.cpp (runs marker's OCR model)"
