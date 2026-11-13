@@ -363,7 +363,10 @@ impl App {
 
     /// The Paper tab: PDF -> Markdown + formula registry, via `formula-snip convert`.
     fn paper_tab(&mut self, ui: &mut egui::Ui) {
-        let phase = self.paper.lock().unwrap().phase.clone();
+        let (phase, running_name) = {
+            let st = self.paper.lock().unwrap();
+            (st.phase.clone(), st.pdf_name.clone())
+        };
         let running = matches!(phase, paper::Phase::Running { .. } | paper::Phase::Cancelling);
 
         if !running {
@@ -428,20 +431,28 @@ impl App {
             paper::Phase::Idle => {}
             paper::Phase::Running { text, done, total } => {
                 ui.horizontal(|ui| {
+                    ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
+                        if ui.button("Cancel").on_hover_text("Finished batches are kept: converting again resumes").clicked() {
+                            paper::cancel(&self.paper);
+                        }
+                        ui.with_layout(egui::Layout::left_to_right(egui::Align::Center), |ui| {
+                            ui.add(egui::Label::new(RichText::new(&running_name).strong()).truncate());
+                        });
+                    });
+                });
+                ui.horizontal(|ui| {
                     ui.spinner();
                     ui.label(text);
                 });
                 if total > 0 {
                     ui.add(egui::ProgressBar::new(done as f32 / total as f32).text(format!("{done} of {total} pages")));
                 }
-                if ui.button("Cancel").on_hover_text("Finished batches are kept: converting again resumes").clicked() {
-                    paper::cancel(&self.paper);
-                }
             }
             paper::Phase::Cancelling => {
+                ui.label(RichText::new(&running_name).strong());
                 ui.horizontal(|ui| {
                     ui.spinner();
-                    ui.label("Stopping …");
+                    ui.label("Stopping after the current step …");
                 });
             }
             paper::Phase::Done { out, summary, secs } => {

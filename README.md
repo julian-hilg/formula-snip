@@ -2,16 +2,22 @@
 
 <h1 align="center">Formula Snip</h1>
 
-<p align="center">Snip any formula on your screen and get its LaTeX in your clipboard.<br>
+<p align="center">Snip any formula on your screen and get its LaTeX in your clipboard, or turn a whole paper into Markdown with a registry of its formulas.<br>
 Runs fully offline on macOS, Windows and Linux, so it works as a local alternative to Mathpix Snip.</p>
 
-<p align="center"><img src="docs/screenshot.png" width="420" alt="Formula Snip panel showing a snipped formula and its LaTeX"></p>
+<p align="center">
+<img src="docs/screenshot.png" width="380" alt="Snip tab: a snipped Black-Scholes formula and its LaTeX">
+&nbsp;
+<img src="docs/screenshot-paper.png" width="380" alt="Paper tab: a 17-page paper converted, 359 formulas found">
+</p>
 
 ## Features
 
 - **Snip → LaTeX → clipboard.** Press your shortcut, drag a box around a formula, and the LaTeX is copied about 1–2 s later.
-- **Menu-bar / tray app.** The ƒx icon opens a small panel with the original image, the LaTeX, copy buttons (`LaTeX`, `$…$`, `\[…\]`) and **Cancel**. No history is kept.
-- **Drag & drop.** Drop an image onto the panel to convert it.
+- **Menu-bar / tray app.** The ƒx icon opens a small panel with two tabs:
+  - *Snip:* the original image, the LaTeX, copy buttons (`LaTeX`, `$…$`, `\[…\]`) and **Cancel**. No history is kept.
+  - *Paper:* whole-PDF conversion.
+- **Drag & drop.** Drop an image onto the panel to recognise it, or a PDF to open it in the *Paper* tab.
 - **Your own shortcut.** Nothing is preset. Pick any combination in *Settings*.
 - **Private.** OCR runs locally with the open-source [marker](https://github.com/datalab-to/marker) / surya model. Nothing leaves your computer.
 - **Text and math.** A single formula gives bare LaTeX. A paragraph gives text with `$inline$` and `\[display\]` math.
@@ -91,17 +97,33 @@ e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3
 
 ## Papers
 
+### In the panel
+
+1. Open the **Paper** tab.
+2. Drop a PDF, or click *Choose PDF …*. A page range is optional.
+3. Click *Convert*.
+
+<p align="center">
+<img src="docs/screenshot-paper-ready.png" width="380" alt="Paper tab with a PDF chosen: page range, Save to Downloads, Convert">
+&nbsp;
+<img src="docs/screenshot-paper-progress.png" width="380" alt="Paper tab while converting: pages 11-17, batch 2 of 2, 10 of 17 pages done">
+</p>
+
+- The result goes into a folder named after the PDF, in *Downloads*. *Change …* picks another folder, and the choice is saved as `papers_dir` in `config.json`.
+- The panel takes up to 100 pages per PDF. Pages are converted in batches of 10 with a progress bar.
+- *Cancel* keeps the finished batches, so converting again continues where it stopped.
+
+### From the command line
+
+The command line has no page limit:
+
 ```bash
 formula-snip convert paper.pdf --out paper/            # whole PDF
 formula-snip convert paper.pdf --out paper/ --pages 1-12 --json
 formula-snip formulas notes.md --out notes/            # registry only, for any Markdown
 ```
 
-In the panel, open the **Paper** tab, then drop a PDF or click *Choose PDF …*. A page range is optional. Click *Convert*.
-- The result goes into a folder named after the PDF, in *Downloads*. *Change …* picks another folder, and the choice is saved as `papers_dir` in `config.json`.
-- The panel takes up to 100 pages per PDF. Pages are converted in batches of 10 with a progress bar.
-- *Cancel* keeps the finished batches, so converting again continues where it stopped.
-- The command line has no page limit.
+### What you get
 
 `convert` runs marker's document pipeline locally (layout, tables, equations) and writes:
 
@@ -113,6 +135,24 @@ In the panel, open the **Paper** tab, then drop a PDF or click *Choose PDF …*.
 | `variables.json` | every symbol (`\sigma`, `r_f`, `\beta_i` …): where it first appears, which formulas use it, and its definition when the text says "where $r$ denotes …" or "let $S_t$ be …" |
 | `formulas.py` | one Python function per display formula sympy can parse. The rest are listed in `UNPARSED` with the reason. |
 | `meta.json` | source sha256, pages, marker version, timings, counts |
+
+Equation (2) of the [sample paper](examples/papers/sample.pdf), as it comes out:
+
+```markdown
+$$d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}} \tag{2}$$
+```
+
+```python
+def eq_2_d_1(K, S_0, T, r, sigma):
+    """d_1 = \\frac{\\ln(S_0/K) + (r + \\sigma^2/2)T}{\\sigma\\sqrt{T}}
+
+    Formula f9, page 1, section '1 The Black–Scholes model', equation (2). Returns the right-hand side (d_1 = …).
+
+    Variables:
+        r: the risk-free interest rate
+    """
+    return (T*(r + (1/2)*sigma**2) + math.log(S_0/K))/(math.sqrt(T)*sigma)
+```
 
 There is no AI anywhere in the formula pipeline. The registry comes from fixed rules, the
 same input always gives the same output, and notation that could be misread is listed with
@@ -134,9 +174,14 @@ same file again takes about a second (`--force` converts it again).
                       started once, model kept in memory; JSON lines over stdin/stdout
                          │
    clipboard + panel ◄── LaTeX
+
+ Paper tab / formula-snip convert
+                └─► backend/convert.py ─► marker document pipeline, 10 pages per batch
+                      progress as JSON lines │
+                                             └─► backend/formulas.py ─► formulas.json, variables.json, formulas.py
 ```
 
-The OCR model only exists as a Python package, so the Rust app starts one small Python helper (embedded in the binary) and keeps it running. Everything else is native.
+The OCR model only exists as a Python package. So the Rust app starts one small Python helper (embedded in the binary) and keeps it running. Paper conversion runs its own helper only while a PDF is being converted. Everything else is native.
 
 ## Configuration
 

@@ -29,6 +29,8 @@ pub enum Phase {
 #[derive(Default)]
 pub struct State {
     pub phase: Phase,
+    /// File name of the PDF being converted (shown while it runs).
+    pub pdf_name: String,
     stdin: Option<ChildStdin>,
     child: Option<Arc<Mutex<Child>>>,
 }
@@ -93,6 +95,7 @@ pub fn start(python: &Path, pdf: &Path, out: &Path, pages: &str, state: Arc<Mute
         let mut s = state.lock().unwrap();
         s.stdin = child.lock().unwrap().stdin.take();
         s.child = Some(child.clone());
+        s.pdf_name = pdf.file_name().map(|n| n.to_string_lossy().into_owned()).unwrap_or_default();
         s.phase = Phase::Running { text: "Starting …".into(), done: 0, total: 0 };
     }
     ctx.request_repaint();
