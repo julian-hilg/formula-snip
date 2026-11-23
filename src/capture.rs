@@ -1,4 +1,5 @@
-//! Interactive region screenshot using each OS's own selection tool.
+//! Interactive region screenshots: native selection tools on macOS/Linux,
+//! an embedded Python selector on Windows.
 //! Returns `Ok(None)` when the user cancels.
 
 use anyhow::Result;
@@ -43,23 +44,18 @@ fn platform_capture(path: &Path) -> Result<()> {
 
 #[cfg(target_os = "windows")]
 fn platform_capture(path: &Path) -> Result<()> {
-    // Windows' built-in Snipping overlay puts the region on the clipboard; wait for a new image.
-    use std::time::{Duration, Instant};
-    let mut cb = arboard::Clipboard::new()?;
-    let fingerprint = |cb: &mut arboard::Clipboard| cb.get_image().ok().map(|i| (i.width, i.height, i.bytes.len(), i.bytes.iter().step_by(97).map(|b| *b as u64).sum::<u64>()));
-    let before = fingerprint(&mut cb);
-    Command::new("explorer").arg("ms-screenclip:").spawn()?;
-    let start = Instant::now();
-    while start.elapsed() < Duration::from_secs(60) {
-        std::thread::sleep(Duration::from_millis(250));
-        let now = fingerprint(&mut cb);
-        if now.is_some() && now != before {
-            let img = cb.get_image()?;
-            image::RgbaImage::from_raw(img.width as u32, img.height as u32, img.bytes.into_owned())
-                .ok_or_else(|| anyhow::anyhow!("bad clipboard image"))?
-                .save(path)?;
-            return Ok(());
-        }
-    }
-    Ok(()) // timed out = cancelled
+    use std::os::windows::process::CommandExt;
+    let script = crate::config::app_dir(dirs::data_local_dir()).join("capture_windows.py");
+    std::fs::write(&script, include_str!("../backend/capture_windows.py"))?;
+    let output = Command::new(crate::config::Config::load().python_path())
+        .arg(&script)
+        .arg(path)
+        .creation_flags(0x0800_0000)
+        .output()?;
+    anyhow::ensure!(
+        output.status.success(),
+        "screen selection failed (Python needs tkinter and Pillow): {}",
+        String::from_utf8_lossy(&output.stderr)
+    );
+    Ok(())
 }

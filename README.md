@@ -231,6 +231,8 @@ Linux needs `libgtk-3-dev libxdo-dev libayatana-appindicator3-dev`. The global s
 
 ## Troubleshooting
 
+- **Windows selection.** Drag a rectangle to capture; press Esc or right-click to cancel. Selection runs inside Formula Snip's Python helper, without launching Windows Snipping Tool or polling the clipboard. Closing the panel minimizes it; use the tray menu to quit.
+- **Copy without opening the panel.** Uncheck *Settings → Show this panel after each snip*, then minimize the panel. Successful recognition still copies LaTeX to the clipboard.
 - **The shortcut does nothing.** Another app may own that combination (Settings shows an error). Pick a different one.
 - **The snip only shows wallpaper (macOS).** Allow Screen Recording under System Settings → Privacy & Security, then reopen the app.
 - **"OCR error".** Check the log (path shown in Settings), then click *Restart OCR*.

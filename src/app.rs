@@ -105,9 +105,17 @@ fn worker(rx: Receiver<Job>, shared: Arc<Mutex<Shared>>, ctx: egui::Context, sho
                 while rx.try_recv().is_ok() {} // drop shortcut presses made while selecting
                 match r {
                     Ok(Some(p)) => (p, true),
-                    Ok(None) => continue, // cancelled
+                    Ok(None) => {
+                        if cfg!(windows) && show_after.load(Ordering::Relaxed) {
+                            show_panel(&ctx);
+                        }
+                        continue;
+                    }
                     Err(e) => {
                         set_ocr(Ocr::Failed(format!("screenshot failed: {e:#}")));
+                        if cfg!(windows) {
+                            show_panel(&ctx);
+                        }
                         continue;
                     }
                 }
@@ -500,10 +508,15 @@ impl App {
 
 impl eframe::App for App {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        // Closing the window only hides it; quit from the tray menu.
+        // Keep the Windows window alive/minimized so subsequent snips can restore
+        // it reliably. Other platforms hide it. Quit explicitly from the tray.
         if ctx.input(|i| i.viewport().close_requested()) {
             ctx.send_viewport_cmd(ViewportCommand::CancelClose);
-            ctx.send_viewport_cmd(ViewportCommand::Visible(false));
+            if cfg!(windows) {
+                ctx.send_viewport_cmd(ViewportCommand::Minimized(true));
+            } else {
+                ctx.send_viewport_cmd(ViewportCommand::Visible(false));
+            }
         }
         for f in ctx.input(|i| i.raw.dropped_files.clone()) {
             if let Some(p) = f.path {
@@ -562,7 +575,11 @@ impl eframe::App for App {
                 let can = ocr == Ocr::Ready;
                 let busy = self.flags.busy.load(Ordering::Relaxed);
                 if ui.add_enabled(can && !busy, egui::Button::new("New Snip")).clicked() {
-                    ctx.send_viewport_cmd(ViewportCommand::Visible(false));
+                    // The Windows selection window covers the panel. Hiding this
+                    // viewport can prevent it from being restored after capture.
+                    if !cfg!(windows) {
+                        ctx.send_viewport_cmd(ViewportCommand::Visible(false));
+                    }
                     let _ = self.tx.send(Job::Snip);
                 }
                 if ui.add_enabled(busy, egui::Button::new("Cancel")).on_hover_text("Stop the current snip").clicked() {

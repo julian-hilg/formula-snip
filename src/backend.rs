@@ -32,6 +32,8 @@ impl Backend {
         let log = std::fs::File::create(log_path())?;
 
         let mut cmd = Command::new(python);
+        #[cfg(windows)]
+        configure_windows_backend(&mut cmd);
         cmd.arg("-u")
             .arg(&script)
             .env("PATH", search_path())
@@ -99,6 +101,8 @@ pub fn tool_command(python: &Path, args: &[String]) -> Result<Command> {
         .and_then(|_| write_if_changed(&dir.join("formulas.py"), FORMULAS_PY))
         .with_context(|| format!("could not write the converter to {}", dir.display()))?;
     let mut cmd = Command::new(python);
+    #[cfg(windows)]
+    configure_windows_backend(&mut cmd);
     cmd.arg("-u")
         .arg(&script)
         .args(args)
@@ -134,6 +138,17 @@ fn write_if_changed(path: &Path, content: &str) -> std::io::Result<()> {
     std::fs::rename(&tmp, path)
 }
 
+/// Surya auto-selects vLLM when it detects NVIDIA, but the Windows installer
+/// provides native llama.cpp. Respect explicit backend and concurrency settings.
+#[cfg(windows)]
+fn configure_windows_backend(cmd: &mut Command) {
+    for (key, value) in [("SURYA_INFERENCE_BACKEND", "llamacpp"), ("SURYA_INFERENCE_PARALLEL", "1")] {
+        if std::env::var_os(key).is_none() {
+            cmd.env(key, value);
+        }
+    }
+}
+
 /// Apps started from Finder, the Start menu or at login get a minimal PATH, so the OCR
 /// helper can't find `llama-server` (installed by Homebrew/winget). Add the usual places.
 fn search_path() -> std::ffi::OsString {
@@ -143,7 +158,19 @@ fn search_path() -> std::ffi::OsString {
         .unwrap_or_default();
     let extra: Vec<PathBuf> = if cfg!(windows) {
         let local = dirs::data_local_dir().unwrap_or_default();
-        vec![local.join("Microsoft/WinGet/Links"), home.join("scoop/shims")]
+        let mut extra = vec![local.join("Microsoft/WinGet/Links"), home.join("scoop/shims")];
+        // WinGet may add a portable package directory directly to PATH instead
+        // of creating a Links entry. Discover it without depending on a source ID.
+        if let Ok(packages) = std::fs::read_dir(local.join("Microsoft/WinGet/Packages")) {
+            for package in packages.flatten() {
+                if package.file_name().to_string_lossy().starts_with("ggml.llamacpp_")
+                    && package.path().join("llama-server.exe").is_file()
+                {
+                    extra.push(package.path());
+                }
+            }
+        }
+        extra
     } else {
         vec![
             "/opt/homebrew/bin".into(),

@@ -63,6 +63,10 @@ cargo build --release               # app
 
 If `marker-pdf` lives somewhere other than the pipx default, set the Python path in *Settings*, or set `"python"` in `config.json`.
 
+On Windows, region selection uses **tkinter** and **Pillow** in that Python environment. The standard python.org Windows installer includes Tcl/Tk by default, and `marker-pdf` installs Pillow. For a custom/minimal Python installation, enable the installer's **Tcl/Tk and IDLE** component. You can verify the environment with `python -c "import tkinter; from PIL import ImageGrab, ImageTk"` using the interpreter configured in Formula Snip.
+
+The Windows OCR helper defaults to native `llamacpp` with one inference slot, including on NVIDIA systems. Explicit `SURYA_INFERENCE_BACKEND` and `SURYA_INFERENCE_PARALLEL` environment variables take precedence.
+
 ## Updating / uninstalling
 
 ```bash
